@@ -1,0 +1,18 @@
+
+    - /img/base/cover/output.txt
+    - /img/base/cover/p (1).jpg
+    - /img/base/cover/p (1).png
+    - /img/base/cover/p (1).webp
+    - /img/base/cover/p (10).webp
+    - /img/base/cover/p (11).webp
+    - /img/base/cover/p (2).webp
+    - /img/base/cover/p (3).webp
+    - /img/base/cover/p (4).png
+    - /img/base/cover/p (4).webp
+    - /img/base/cover/p (5).png
+    - /img/base/cover/p (5).webp
+    - /img/base/cover/p (6).webp
+    - /img/base/cover/p (7).webp
+    - /img/base/cover/p (8).webp
+    - /img/base/cover/p (9).webp
+    - /img/base/cover/获取相对地址.bat
