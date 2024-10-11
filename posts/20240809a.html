@@ -27,7 +27,7 @@
 <meta property="og:description" content="下载项目初始化.Git1git init 添加库1git remote add origin 源码地址 将库里的代码下载到本地1git pull origin main 配置更新配置更新地址1git remote add upstream 想要拉取更新的库 依据此库来对本地代码进行更新 查看当前仓库的远程仓库地址和原仓库地址1git remote -v 获取更新1git fetch upstrea">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-09T12:00:09.000Z">
-<meta property="article:modified_time" content="2024-09-28T04:56:06.451Z">
+<meta property="article:modified_time" content="2024-10-06T13:13:22.648Z">
 <meta property="article:author" content="HaoDong Cui">
 <meta property="article:tag" content="软件使用">
 <meta property="article:tag" content="Git">
@@ -270,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          131 字
+          162 字
         
       </span>
     
@@ -429,7 +429,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-09-28T12:56:06+08:00
+                    本文最后更新于 2024-10-06T21:13:22+08:00
                   
                   
 
@@ -447,8 +447,9 @@
 <h3 id="查看当前仓库的远程仓库地址和原仓库地址"><a href="#查看当前仓库的远程仓库地址和原仓库地址" class="headerlink" title="查看当前仓库的远程仓库地址和原仓库地址"></a>查看当前仓库的远程仓库地址和原仓库地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote -v<br></code></pre></td></tr></table></figure>
 <h3 id="获取更新"><a href="#获取更新" class="headerlink" title="获取更新"></a>获取更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git fetch upstream<br></code></pre></td></tr></table></figure>
 <h3 id="将更新代码和本地代码合并"><a href="#将更新代码和本地代码合并" class="headerlink" title="将更新代码和本地代码合并"></a>将更新代码和本地代码合并</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git merge upstream/master<br></code></pre></td></tr></table></figure>
-<h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/ver-gas/Mathematical-modeling.git/">https://github.com/ver-gas/Mathematical-modeling.git/</a>‘: Failed to connect to github.com port 443 after 21274 ms: Couldn’t connect to server</p>
+<h1 id="报错及相关链接"><a href="#报错及相关链接" class="headerlink" title="报错及相关链接"></a>报错及相关链接</h1><p>fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/ver-gas/Mathematical-modeling.git/">https://github.com/ver-gas/Mathematical-modeling.git/</a>‘: Failed to connect to github.com port 443 after 21274 ms: Couldn’t connect to server</p>
 <p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43546721/article/details/139506583">完美解决 git 报错 “fatal: unable to access ‘https://github.com/…/.git‘: Recv failure Connection was rese-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/goloving/p/15017769.html#:~:text=%E6%B5%85%E6%9E%90.gitigno#:~:text=%E6%B5%85%E6%9E%90.gitigno">浅析.gitignore文件不起作用的原因及其解决办法 - 古兰精 - 博客园 (cnblogs.com)</a></p>
 
                 
               </div>
@@ -515,7 +516,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年9月28日</div>
+          <div>2024年10月6日</div>
         </div>
       
       
@@ -974,5 +975,20 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
