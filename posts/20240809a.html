@@ -27,7 +27,7 @@
 <meta property="og:description" content="下载项目初始化.Git1git init 添加库1git remote add origin 源码地址 将库里的代码下载到本地1git pull origin main 配置更新配置更新地址1git remote add upstream 想要拉取更新的库 依据此库来对本地代码进行更新 查看当前仓库的远程仓库地址和原仓库地址1git remote -v 获取更新1git fetch upstrea">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-09T12:00:09.000Z">
-<meta property="article:modified_time" content="2024-10-06T13:13:22.648Z">
+<meta property="article:modified_time" content="2024-10-15T16:50:39.248Z">
 <meta property="article:author" content="HaoDong Cui">
 <meta property="article:tag" content="软件使用">
 <meta property="article:tag" content="Git">
@@ -270,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          162 字
+          279 字
         
       </span>
     
@@ -281,7 +281,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -429,7 +429,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-10-06T21:13:22+08:00
+                    本文最后更新于 2024-10-16T00:50:39+08:00
                   
                   
 
@@ -450,6 +450,12 @@
 <h1 id="报错及相关链接"><a href="#报错及相关链接" class="headerlink" title="报错及相关链接"></a>报错及相关链接</h1><p>fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/ver-gas/Mathematical-modeling.git/">https://github.com/ver-gas/Mathematical-modeling.git/</a>‘: Failed to connect to github.com port 443 after 21274 ms: Couldn’t connect to server</p>
 <p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43546721/article/details/139506583">完美解决 git 报错 “fatal: unable to access ‘https://github.com/…/.git‘: Recv failure Connection was rese-CSDN博客</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/goloving/p/15017769.html#:~:text=%E6%B5%85%E6%9E%90.gitigno#:~:text=%E6%B5%85%E6%9E%90.gitigno">浅析.gitignore文件不起作用的原因及其解决办法 - 古兰精 - 博客园 (cnblogs.com)</a></p>
+<h2 id="git代理问题"><a href="#git代理问题" class="headerlink" title="git代理问题"></a>git代理问题</h2><p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wtl1992/article/details/131743283">开启了代理，但是git仍然连接拒绝的解决方法_git设置代理不起作用-CSDN博客</a></p>
+<p>windows 中 git 默认不会使用系统代理</p>
+<p><strong>设置代理命令：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 配置socks5代理</span><br>git config --global http.proxy socks5 127.0.0.1:7890<br>git config --global https.proxy socks5 127.0.0.1:7890<br> <br><span class="hljs-comment"># 配置http代理</span><br>git config --global http.proxy 127.0.0.1:7890<br>git config --global https.proxy 127.0.0.1:7890<br></code></pre></td></tr></table></figure>
+<p><strong>查看代理命令：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global --get http.proxy<br>git config --global --get https.proxy<br></code></pre></td></tr></table></figure></p>
+<p><strong>取消代理命令:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.proxy<br>git config --global --<span class="hljs-built_in">unset</span> https.proxy<br></code></pre></td></tr></table></figure></p>
 
                 
               </div>
@@ -516,7 +522,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月6日</div>
+          <div>2024年10月16日</div>
         </div>
       
       
