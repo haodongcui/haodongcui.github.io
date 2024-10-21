@@ -27,7 +27,7 @@
 <meta property="og:description" content="数学归纳法第一数学归纳法先证$n&#x3D;1$成立，再证若$n&#x3D;k$成立，推得$n&#x3D;k+1$成立 第二数学归纳法（完整归纳法）先证$n&#x3D;1$成立，再证若$n\leq k$成立，推得$n&#x3D;k+1$成立 反向归纳法先证对$\forall n&#x3D;2^{k}$成立，再证若$n&#x3D;k+1$成立，推得$n&#x3D;k$成立 $2^k$可替换为$k$的无穷序列 极限证明极限的存在性  $\varepsilon-N$定义及其否定 C">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-15T07:28:31.000Z">
-<meta property="article:modified_time" content="2024-10-15T14:22:36.506Z">
+<meta property="article:modified_time" content="2024-10-20T07:40:30.445Z">
 <meta property="article:author" content="HaoDong Cui">
 <meta property="article:tag" content="裴礼文">
 <meta property="article:tag" content="数学分析">
@@ -393,7 +393,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-10-15T22:22:36+08:00
+                    本文最后更新于 2024-10-20T15:40:30+08:00
                   
                   
 
@@ -601,7 +601,58 @@ f(x) & g(x) & h(x)
 </blockquote>
 </blockquote>
 <script type="math/tex; mode=display">
-x_{2} \sin \frac{1}{2}</script>
+x_{2} \sin \frac{1}{2}</script><h1 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h1><p>一致连续性</p>
+<ul>
+<li>定义</li>
+<li>Cauchy准则</li>
+<li>余项 放大法</li>
+<li>确界法</li>
+<li>反证+序列</li>
+</ul>
+<script type="math/tex; mode=display">
+(1-x)^{-\frac{1}{2}} = \sum_{i=1}^{\infty} \frac{(2n-1)!!}{(2n)!!} x^n , \quad |x|<1</script><h1 id="不等式专题"><a href="#不等式专题" class="headerlink" title="不等式专题"></a>不等式专题</h1><blockquote>
+<p>乘积到乘积：Cauchy不等式 -&gt; Holder不等式<br>加法到加法：三角不等式 -&gt; Minkowski不等式<br>乘积到加法：均值不等式 -&gt; Young不等式</p>
+<p>Cauchy不等式</p>
+<script type="math/tex; mode=display">
+||(x,y)|| \le ||x|| ||y||</script><p>Holder不等式</p>
+<script type="math/tex; mode=display">
+||fg||_{p} \le ||f||_{p} ||g||_{p}</script><p>Minkowski不等式</p>
+<script type="math/tex; mode=display">
+||f+g||_{p} \le ||f||_{p} + ||g||_{p}</script></blockquote>
+<p>Young不等式</p>
+<script type="math/tex; mode=display">
+ab \le \frac{1}{p} a^{p} + \frac{1}{q} b^{q}</script><p>Cauchy不等式（连续）</p>
+<script type="math/tex; mode=display">
+\Big(\int_{a}^{b} f(x)g(x)\mathrm{d}x \Big)^{2}
+\le
+\Big( \int_{a}^{b}f(x)^2 \Big)^{ \frac{1}{2} }
+\Big( \int_{a}^{b}g(x)^2 \Big)^{ \frac{1}{2} }</script><p>Holder不等式（连续）</p>
+<script type="math/tex; mode=display">
+\int_{\Omega} f(x)g(x)\mathrm{d}x
+\le
+\left(  \int_{\Omega} |f(x)|^p \mathrm{d}x \right)^{ \frac{1}{p} }
+\left(  \int_{\Omega} |g(x)|^q \mathrm{d}x \right)^{ \frac{1}{q} }</script><p>其中$p&gt;1,\frac{1}{p}+\frac{1}{q}=1$</p>
+<p>Minkowski不等式（连续）</p>
+<script type="math/tex; mode=display">
+\Big( \int_{\Omega} ( f(x)+g(x) )^p \mathrm{d}x \Big)^{\frac{1}{p}}
+\le
+\Big( \int_{\Omega} f^p(x) \mathrm{d}x \Big)^{\frac{1}{p}}
++
+\Big( \int_{\Omega} g^p(x) \mathrm{d}x \Big)^{\frac{1}{p}}</script><p>Holder不等式（离散）</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n a_{i}b_{i}
+\le
+\left( \sum_{i=1}^n a_{i}^p \right)^{\frac{1}{p}}
+\left( \sum_{i=1}^n b_{i}^q \right)^{\frac{1}{q}}</script><p>其中$p&gt;1,\frac{1}{p}+\frac{1}{q}=1$</p>
+<h1 id="多元函数"><a href="#多元函数" class="headerlink" title="多元函数"></a>多元函数</h1><p>多元函数求极限</p>
+<ul>
+<li>两边夹法则</li>
+<li>变量替换，转为一元函数</li>
+<li>极坐标</li>
+<li>初等变形</li>
+<li>若能事先看出极限，可用$\varepsilon-N$方法证明</li>
+</ul>
+
                 
               </div>
             
@@ -667,7 +718,7 @@ x_{2} \sin \frac{1}{2}</script>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月15日</div>
+          <div>2024年10月20日</div>
         </div>
       
       
