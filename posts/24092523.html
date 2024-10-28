@@ -1,0 +1,1007 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/base/favicon.png">
+  <link rel="icon" href="/img/base/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="HaoDong Cui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="查询图片导出12345678910111213# 导出为html# fig.write_html(&quot;my_plot.html&quot;)# 导出为其它格式：# 需安装kaleido# pip install kaleido # 如果图片导出陷入死循环，可限制kaleido版本，使用如下命令# pip install --upgrade &quot;kaleido&#x3D;&#x3D;0.1.*&amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Plotly 学习">
+<meta property="og:url" content="https://haodongcui.github.io/posts/24092523.html">
+<meta property="og:site_name" content="川无尽势">
+<meta property="og:description" content="查询图片导出12345678910111213# 导出为html# fig.write_html(&quot;my_plot.html&quot;)# 导出为其它格式：# 需安装kaleido# pip install kaleido # 如果图片导出陷入死循环，可限制kaleido版本，使用如下命令# pip install --upgrade &quot;kaleido&#x3D;&#x3D;0.1.*&amp;quot">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-25T15:46:55.000Z">
+<meta property="article:modified_time" content="2024-09-28T05:07:22.336Z">
+<meta property="article:author" content="HaoDong Cui">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Plotly">
+<meta property="article:tag" content="绘图">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Plotly 学习 - 川无尽势</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/custom/css/macpanel.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"haodongcui.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/base/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"286703200145fdc480403a6123937789","google":{"measurement_id":"G-D6T7D43Z24"},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"MpdQCG0Lx5c7K12ZHWYLIKPu-gzGzoHsz","app_key":"xmeTAtfM3ivQvLqoob3KxMEU","server_url":"https://mpdqcg0l.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?286703200145fdc480403a6123937789";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-D6T7D43Z24", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-D6T7D43Z24');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>川无尽势</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/base/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Plotly 学习"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-09-25 23:46" pubdate>
+          2024年9月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          24 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程及专业软件"
+        id="heading-27328539b595c654bf4a610199e9f59d" role="tab" data-toggle="collapse" href="#collapse-27328539b595c654bf4a610199e9f59d"
+        aria-expanded="true"
+      >
+        编程及专业软件
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-27328539b595c654bf4a610199e9f59d"
+           role="tabpanel" aria-labelledby="heading-27328539b595c654bf4a610199e9f59d">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/80c16b3c.html" title="Anaconda+conda常用命令汇总"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Anaconda+conda常用命令汇总</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/e2cd5a67.html" title="Latex常用汇总"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Latex常用汇总</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/24092812.html" title="Mathematica"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Mathematica</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/24092523.html" title="Plotly 学习"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Plotly 学习</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/20240830215215.html" title="Python 学习"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Python 学习</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Plotly 学习</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-09-28T13:07:22+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h1><h2 id="图片导出"><a href="#图片导出" class="headerlink" title="图片导出"></a>图片导出</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 导出为html</span><br><span class="hljs-comment"># fig.write_html(&quot;my_plot.html&quot;)</span><br><br><span class="hljs-comment"># 导出为其它格式：</span><br><br><span class="hljs-comment"># 需安装kaleido</span><br><span class="hljs-comment"># pip install kaleido </span><br><span class="hljs-comment"># 如果图片导出陷入死循环，可限制kaleido版本，使用如下命令</span><br><span class="hljs-comment"># pip install --upgrade &quot;kaleido==0.1.*&quot;</span><br><br><span class="hljs-comment"># 保存为png、pdf等</span><br><span class="hljs-comment"># fig.write_image(&quot;my_plot.png&quot;)</span><br><span class="hljs-comment"># fig.write_image(&quot;my_plot.pdf&quot;)</span><br></code></pre></td></tr></table></figure>
+<h2 id="所有px-data数据集"><a href="#所有px-data数据集" class="headerlink" title="所有px.data数据集"></a>所有px.data数据集</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># print(dir(px.data))</span><br></code></pre></td></tr></table></figure>
+<h2 id="预设主题"><a href="#预设主题" class="headerlink" title="预设主题"></a>预设主题</h2><p>内置主题列表：</p>
+<ul>
+<li>plotly: 默认的明亮主题</li>
+<li>plotly_dark: 暗色主题</li>
+<li>ggplot2: 模仿 ggplot2 风格的主题</li>
+<li>seaborn: 模仿 seaborn 风格的主题</li>
+<li>simple_white: 简洁的白色主题</li>
+<li>none: 无模板，默认不设置任何样式</li>
+<li>presentation: 为演示而设计的简洁主题</li>
+<li>xgridoff: 网格线关闭的主题</li>
+<li>ygridoff: 关闭 y 轴网格线的主题</li>
+<li>gridon: 打开网格线的主题</li>
+</ul>
+<p>使用方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">template=<span class="hljs-string">&#x27;presentation&#x27;</span><br></code></pre></td></tr></table></figure></p>
+<h2 id="内置色阶"><a href="#内置色阶" class="headerlink" title="内置色阶"></a>内置色阶</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># # 查看内置连续色阶</span><br><span class="hljs-comment"># fig1 = px.colors.sequential.swatches_continuous()#适用于大多数连续场景</span><br><span class="hljs-comment"># fig1.show()</span><br><br><span class="hljs-comment"># # 查看内置离散色阶</span><br><span class="hljs-comment"># fig2 = px.colors.qualitative.swatches()</span><br><span class="hljs-comment"># fig2.show()</span><br></code></pre></td></tr></table></figure>
+<h2 id="所有layout参数"><a href="#所有layout参数" class="headerlink" title="所有layout参数"></a>所有layout参数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">################################# 所有布局设置 #################################</span><br><span class="hljs-keyword">import</span> plotly.graph_objs <span class="hljs-keyword">as</span> go<br><br><br><span class="hljs-comment"># 示例数据</span><br>x_data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br>y_data = [<span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>]<br><br><span class="hljs-comment"># 创建基础散点图</span><br>scatter = go.Scatter(<br>    x=x_data,<br>    y=y_data,<br>    mode=<span class="hljs-string">&#x27;markers&#x27;</span><br>)<br><br><span class="hljs-comment"># 创建图表对象</span><br>fig = go.Figure(data=[scatter])<br><br><span class="hljs-comment"># 使用 update_layout 设置布局</span><br>fig.update_layout(<br>    title=<span class="hljs-string">&#x27;示例图表标题&#x27;</span>,                                     <span class="hljs-comment"># 图表主标题</span><br>    title_font=<span class="hljs-built_in">dict</span>(size=<span class="hljs-number">20</span>, color=<span class="hljs-string">&#x27;black&#x27;</span>, family=<span class="hljs-string">&#x27;Arial&#x27;</span>),  <span class="hljs-comment"># 标题字体样式</span><br>    title_x=<span class="hljs-number">0.5</span>,                                             <span class="hljs-comment"># 标题水平居中 (0.0 表示左对齐，1.0 表示右对齐)</span><br><br>    showlegend=<span class="hljs-literal">True</span>,                                         <span class="hljs-comment"># 是否显示图例</span><br>    legend_title=<span class="hljs-string">&#x27;图例标题&#x27;</span>,                                  <span class="hljs-comment"># 图例标题</span><br>    legend_title_font=<span class="hljs-built_in">dict</span>(size=<span class="hljs-number">15</span>, color=<span class="hljs-string">&#x27;black&#x27;</span>, family=<span class="hljs-string">&#x27;Arial&#x27;</span>),  <span class="hljs-comment"># 图例标题字体样式</span><br>    legend=<span class="hljs-built_in">dict</span>(                                             <span class="hljs-comment"># 图例属性</span><br>        x=<span class="hljs-number">0.8</span>,                                               <span class="hljs-comment"># 图例在 x 轴上的位置 (0-1 范围)</span><br>        y=<span class="hljs-number">1</span>,                                                 <span class="hljs-comment"># 图例在 y 轴上的位置 (0-1 范围)</span><br>        bgcolor=<span class="hljs-string">&#x27;rgba(255, 255, 255, 0.5)&#x27;</span>,                  <span class="hljs-comment"># 图例背景颜色及透明度</span><br>        bordercolor=<span class="hljs-string">&#x27;black&#x27;</span>,                                 <span class="hljs-comment"># 图例边框颜色</span><br>        borderwidth=<span class="hljs-number">2</span>                                        <span class="hljs-comment"># 图例边框宽度</span><br>    ),<br><br>    xaxis=<span class="hljs-built_in">dict</span>(                                              <span class="hljs-comment"># x 轴设置</span><br>        title=<span class="hljs-string">&#x27;X 轴标题&#x27;</span>,                                    <span class="hljs-comment"># x 轴标题</span><br>        title_font=<span class="hljs-built_in">dict</span>(size=<span class="hljs-number">18</span>, color=<span class="hljs-string">&#x27;blue&#x27;</span>, family=<span class="hljs-string">&#x27;Courier New&#x27;</span>),  <span class="hljs-comment"># x 轴标题字体样式</span><br>        showgrid=<span class="hljs-literal">True</span>,                                       <span class="hljs-comment"># 是否显示网格线</span><br>        gridcolor=<span class="hljs-string">&#x27;lightgrey&#x27;</span>,                               <span class="hljs-comment"># 网格线颜色</span><br>        gridwidth=<span class="hljs-number">1</span>,                                         <span class="hljs-comment"># 网格线宽度</span><br>        zeroline=<span class="hljs-literal">True</span>,                                       <span class="hljs-comment"># 是否显示 x 轴上的零线</span><br>        zerolinecolor=<span class="hljs-string">&#x27;grey&#x27;</span>,                                <span class="hljs-comment"># 零线颜色</span><br>        zerolinewidth=<span class="hljs-number">2</span>,                                     <span class="hljs-comment"># 零线宽度</span><br>        showline=<span class="hljs-literal">True</span>,                                       <span class="hljs-comment"># 是否显示坐标轴线</span><br>        linecolor=<span class="hljs-string">&#x27;black&#x27;</span>,                                   <span class="hljs-comment"># 坐标轴线颜色</span><br>        linewidth=<span class="hljs-number">2</span>,                                         <span class="hljs-comment"># 坐标轴线宽度</span><br>        ticks=<span class="hljs-string">&#x27;outside&#x27;</span>,                                     <span class="hljs-comment"># 显示刻度线在坐标轴外侧</span><br>        ticklen=<span class="hljs-number">5</span>,                                           <span class="hljs-comment"># 刻度线长度</span><br>        tickwidth=<span class="hljs-number">2</span>,                                         <span class="hljs-comment"># 刻度线宽度</span><br>        tickcolor=<span class="hljs-string">&#x27;black&#x27;</span>,                                   <span class="hljs-comment"># 刻度线颜色</span><br>        tickmode=<span class="hljs-string">&#x27;linear&#x27;</span>,                                   <span class="hljs-comment"># 刻度线模式，可以为 &#x27;auto&#x27; 或 &#x27;linear&#x27;</span><br>        tickangle=<span class="hljs-number">45</span>                                         <span class="hljs-comment"># 刻度线角度</span><br>    ),<br><br>    yaxis=<span class="hljs-built_in">dict</span>(                                              <span class="hljs-comment"># y 轴设置</span><br>        title=<span class="hljs-string">&#x27;Y 轴标题&#x27;</span>,                                    <span class="hljs-comment"># y 轴标题</span><br>        title_font=<span class="hljs-built_in">dict</span>(size=<span class="hljs-number">18</span>, color=<span class="hljs-string">&#x27;green&#x27;</span>, family=<span class="hljs-string">&#x27;Courier New&#x27;</span>),  <span class="hljs-comment"># y 轴标题字体样式</span><br>        showgrid=<span class="hljs-literal">True</span>,                                       <span class="hljs-comment"># 是否显示网格线</span><br>        gridcolor=<span class="hljs-string">&#x27;lightgrey&#x27;</span>,                               <span class="hljs-comment"># 网格线颜色</span><br>        gridwidth=<span class="hljs-number">1</span>,                                         <span class="hljs-comment"># 网格线宽度</span><br>        zeroline=<span class="hljs-literal">True</span>,                                       <span class="hljs-comment"># 是否显示 y 轴上的零线</span><br>        zerolinecolor=<span class="hljs-string">&#x27;grey&#x27;</span>,                                <span class="hljs-comment"># 零线颜色</span><br>        zerolinewidth=<span class="hljs-number">2</span>,                                     <span class="hljs-comment"># 零线宽度</span><br>        showline=<span class="hljs-literal">True</span>,                                       <span class="hljs-comment"># 是否显示坐标轴线</span><br>        linecolor=<span class="hljs-string">&#x27;black&#x27;</span>,                                   <span class="hljs-comment"># 坐标轴线颜色</span><br>        linewidth=<span class="hljs-number">2</span>,                                         <span class="hljs-comment"># 坐标轴线宽度</span><br>        ticks=<span class="hljs-string">&#x27;outside&#x27;</span>,                                     <span class="hljs-comment"># 显示刻度线在坐标轴外侧</span><br>        ticklen=<span class="hljs-number">5</span>,                                           <span class="hljs-comment"># 刻度线长度</span><br>        tickwidth=<span class="hljs-number">2</span>,                                         <span class="hljs-comment"># 刻度线宽度</span><br>        tickcolor=<span class="hljs-string">&#x27;black&#x27;</span>,                                   <span class="hljs-comment"># 刻度线颜色</span><br>        tickmode=<span class="hljs-string">&#x27;linear&#x27;</span>,                                   <span class="hljs-comment"># 刻度线模式，可以为 &#x27;auto&#x27; 或 &#x27;linear&#x27;</span><br>        tickangle=<span class="hljs-number">0</span>                                          <span class="hljs-comment"># 刻度线角度</span><br>    ),<br><br>    margin=<span class="hljs-built_in">dict</span>(                                             <span class="hljs-comment"># 控制图表的边距</span><br>        l=<span class="hljs-number">50</span>,                                                <span class="hljs-comment"># 左边距</span><br>        r=<span class="hljs-number">50</span>,                                                <span class="hljs-comment"># 右边距</span><br>        b=<span class="hljs-number">50</span>,                                                <span class="hljs-comment"># 底部边距</span><br>        t=<span class="hljs-number">80</span>,                                                <span class="hljs-comment"># 顶部边距</span><br>        pad=<span class="hljs-number">10</span>                                               <span class="hljs-comment"># 边距内衬</span><br>    ),<br><br>    paper_bgcolor=<span class="hljs-string">&#x27;rgba(255,255,255,1)&#x27;</span>,                     <span class="hljs-comment"># 整个图表区域的背景颜色</span><br>    plot_bgcolor=<span class="hljs-string">&#x27;rgba(240,240,240,1)&#x27;</span>,                      <span class="hljs-comment"># 绘图区的背景颜色</span><br><br>    hovermode=<span class="hljs-string">&#x27;closest&#x27;</span>,                                     <span class="hljs-comment"># 悬停显示最近的数据点信息</span><br>    dragmode=<span class="hljs-string">&#x27;zoom&#x27;</span>,                                         <span class="hljs-comment"># 图表拖动模式，可以设置为 &#x27;zoom&#x27;、&#x27;pan&#x27;、&#x27;select&#x27; 等</span><br>    hoverlabel=<span class="hljs-built_in">dict</span>(                                         <span class="hljs-comment"># 控制悬停标签的样式</span><br>        bgcolor=<span class="hljs-string">&#x27;white&#x27;</span>,                                     <span class="hljs-comment"># 悬停标签的背景颜色</span><br>        font_size=<span class="hljs-number">12</span>,                                        <span class="hljs-comment"># 悬停标签的字体大小</span><br>        font_family=<span class="hljs-string">&#x27;Arial&#x27;</span>                                  <span class="hljs-comment"># 悬停标签的字体</span><br>    ),<br><br>    font=<span class="hljs-built_in">dict</span>(                                               <span class="hljs-comment"># 控制整个图表的字体样式</span><br>        family=<span class="hljs-string">&#x27;Arial, sans-serif&#x27;</span>,                          <span class="hljs-comment"># 字体</span><br>        size=<span class="hljs-number">12</span>,                                             <span class="hljs-comment"># 字体大小</span><br>        color=<span class="hljs-string">&#x27;black&#x27;</span>                                        <span class="hljs-comment"># 字体颜色</span><br>    ),<br><br>    template=<span class="hljs-string">&#x27;plotly&#x27;</span>,                                       <span class="hljs-comment"># 使用 plotly 的默认模板</span><br><br>    modebar=<span class="hljs-built_in">dict</span>(                                            <span class="hljs-comment"># 模式栏设置</span><br>        orientation=<span class="hljs-string">&#x27;h&#x27;</span>,                                     <span class="hljs-comment"># 设置模式栏的方向为水平 (&#x27;v&#x27; 为垂直)</span><br>        bgcolor=<span class="hljs-string">&#x27;rgba(255,255,255,0.7)&#x27;</span>,                     <span class="hljs-comment"># 模式栏的背景颜色</span><br>        color=<span class="hljs-string">&#x27;black&#x27;</span>,                                       <span class="hljs-comment"># 模式栏图标颜色</span><br>        activecolor=<span class="hljs-string">&#x27;blue&#x27;</span>                                   <span class="hljs-comment"># 模式栏被激活图标的颜色</span><br>    ),<br><br>    annotations=[                                            <span class="hljs-comment"># 添加注释</span><br>        <span class="hljs-built_in">dict</span>(<br>            x=<span class="hljs-number">2</span>,                                             <span class="hljs-comment"># 注释的位置 (x 坐标)</span><br>            y=<span class="hljs-number">12</span>,                                            <span class="hljs-comment"># 注释的位置 (y 坐标)</span><br>            xref=<span class="hljs-string">&#x27;x&#x27;</span>,                                        <span class="hljs-comment"># 引用 x 轴的坐标</span><br>            yref=<span class="hljs-string">&#x27;y&#x27;</span>,                                        <span class="hljs-comment"># 引用 y 轴的坐标</span><br>            text=<span class="hljs-string">&#x27;注释示例&#x27;</span>,                                  <span class="hljs-comment"># 注释的文本</span><br>            showarrow=<span class="hljs-literal">True</span>,                                  <span class="hljs-comment"># 是否显示箭头</span><br>            arrowhead=<span class="hljs-number">2</span>,                                     <span class="hljs-comment"># 箭头样式</span><br>            ax=<span class="hljs-number">20</span>,                                           <span class="hljs-comment"># 箭头的 x 偏移量</span><br>            ay=-<span class="hljs-number">30</span>                                           <span class="hljs-comment"># 箭头的 y 偏移量</span><br>        )<br>    ]<br>)<br><br><span class="hljs-comment"># 显示图表</span><br>fig.show()<br></code></pre></td></tr></table></figure>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><h2 id="散点图"><a href="#散点图" class="headerlink" title="散点图"></a>散点图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.iris()  <span class="hljs-comment"># 使用 iris 数据集</span><br><br><span class="hljs-comment"># 绘制散点图</span><br>fig = px.scatter(<br>    df, <br>    x=<span class="hljs-string">&#x27;sepal_width&#x27;</span>, <br>    y=<span class="hljs-string">&#x27;sepal_length&#x27;</span>, <br>    color=<span class="hljs-string">&#x27;species&#x27;</span>,  <span class="hljs-comment"># 不同种类使用不同颜色</span><br>    title=<span class="hljs-string">&#x27;鸢尾花萼长与宽的散点图&#x27;</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="折线图"><a href="#折线图" class="headerlink" title="折线图"></a>折线图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.gapminder().query(<span class="hljs-string">&quot;country == &#x27;India&#x27;&quot;</span>)<br><br><span class="hljs-comment"># 绘制折线图</span><br>fig = px.line(<br>    df, <br>    x=<span class="hljs-string">&#x27;year&#x27;</span>, <br>    y=<span class="hljs-string">&#x27;gdpPercap&#x27;</span>, <br>    title=<span class="hljs-string">&#x27;印度GDP随年份变化图&#x27;</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="柱状图-Bar-Plot"><a href="#柱状图-Bar-Plot" class="headerlink" title="柱状图 (Bar Plot)"></a>柱状图 (Bar Plot)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.tips()<br><br><span class="hljs-comment"># 绘制柱状图</span><br>fig = px.bar(<br>    df, <br>    x=<span class="hljs-string">&#x27;day&#x27;</span>, <br>    y=<span class="hljs-string">&#x27;total_bill&#x27;</span>, <br>    color=<span class="hljs-string">&#x27;sex&#x27;</span>,  <span class="hljs-comment"># 按性别分色</span><br>    title=<span class="hljs-string">&#x27;每日小费总额柱状图&#x27;</span>,<br>    template=<span class="hljs-string">&#x27;presentation&#x27;</span>  <span class="hljs-comment"># 使用预设主题</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="直方图-Histogram"><a href="#直方图-Histogram" class="headerlink" title="直方图 (Histogram)"></a>直方图 (Histogram)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.tips()<br><br><span class="hljs-comment"># 绘制直方图</span><br>fig = px.histogram(<br>    df, <br>    x=<span class="hljs-string">&#x27;total_bill&#x27;</span>, <br>    nbins=<span class="hljs-number">20</span>,  <span class="hljs-comment"># 设置柱数</span><br>    title=<span class="hljs-string">&#x27;小费总额的直方图&#x27;</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="箱线图-Box-Plot"><a href="#箱线图-Box-Plot" class="headerlink" title="箱线图 (Box Plot)"></a>箱线图 (Box Plot)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.tips()<br><br><span class="hljs-comment"># 绘制箱线图</span><br>fig = px.box(<br>    df, <br>    x=<span class="hljs-string">&#x27;day&#x27;</span>, <br>    y=<span class="hljs-string">&#x27;total_bill&#x27;</span>, <br>    color=<span class="hljs-string">&#x27;smoker&#x27;</span>,  <span class="hljs-comment"># 按是否吸烟分色</span><br>    title=<span class="hljs-string">&#x27;每日小费的箱线图&#x27;</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="饼图-Pie-Chart"><a href="#饼图-Pie-Chart" class="headerlink" title="饼图 (Pie Chart)"></a>饼图 (Pie Chart)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.tips()<br><br><span class="hljs-comment"># 绘制饼图</span><br>fig = px.pie(<br>    df, <br>    names=<span class="hljs-string">&#x27;day&#x27;</span>,  <span class="hljs-comment"># 显示每一天</span><br>    values=<span class="hljs-string">&#x27;total_bill&#x27;</span>,  <span class="hljs-comment"># 根据小费总额计算比例</span><br>    title=<span class="hljs-string">&#x27;每日小费的饼图&#x27;</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="气泡图-Bubble-Plot"><a href="#气泡图-Bubble-Plot" class="headerlink" title="气泡图 (Bubble Plot)"></a>气泡图 (Bubble Plot)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.gapminder().query(<span class="hljs-string">&quot;year == 2007&quot;</span>)<br><br><span class="hljs-comment"># 绘制气泡图</span><br>fig = px.scatter(<br>    df, <br>    x=<span class="hljs-string">&#x27;gdpPercap&#x27;</span>, <br>    y=<span class="hljs-string">&#x27;lifeExp&#x27;</span>, <br>    size=<span class="hljs-string">&#x27;pop&#x27;</span>,  <span class="hljs-comment"># 气泡大小由人口决定</span><br>    color=<span class="hljs-string">&#x27;continent&#x27;</span>,  <span class="hljs-comment"># 按洲分色</span><br>    title=<span class="hljs-string">&#x27;2007年世界国家GDP与预期寿命的气泡图&#x27;</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="热力图-Heatmap"><a href="#热力图-Heatmap" class="headerlink" title="热力图 (Heatmap)"></a>热力图 (Heatmap)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.tips()<br><br><span class="hljs-comment"># 绘制热力图</span><br>fig = px.density_heatmap(<br>    df, <br>    x=<span class="hljs-string">&#x27;total_bill&#x27;</span>, <br>    y=<span class="hljs-string">&#x27;tip&#x27;</span>, <br>    title=<span class="hljs-string">&#x27;小费与总额的热力图&#x27;</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="面积图-Area-Chart"><a href="#面积图-Area-Chart" class="headerlink" title="面积图 (Area Chart)"></a>面积图 (Area Chart)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.gapminder().query(<span class="hljs-string">&quot;country == &#x27;Canada&#x27;&quot;</span>)<br><br><span class="hljs-comment"># 绘制面积图</span><br>fig = px.area(<br>    df, <br>    x=<span class="hljs-string">&#x27;year&#x27;</span>, <br>    y=<span class="hljs-string">&#x27;pop&#x27;</span>, <br>    title=<span class="hljs-string">&#x27;加拿大人口随时间的面积图&#x27;</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="散点矩阵-Scatter-Matrix-Pair-Plot"><a href="#散点矩阵-Scatter-Matrix-Pair-Plot" class="headerlink" title="散点矩阵 (Scatter Matrix / Pair Plot)"></a>散点矩阵 (Scatter Matrix / Pair Plot)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.iris()<br><br><span class="hljs-comment"># 绘制散点矩阵</span><br>fig = px.scatter_matrix(<br>    df, <br>    dimensions=[<span class="hljs-string">&#x27;sepal_width&#x27;</span>, <span class="hljs-string">&#x27;sepal_length&#x27;</span>, <span class="hljs-string">&#x27;petal_width&#x27;</span>, <span class="hljs-string">&#x27;petal_length&#x27;</span>], <br>    color=<span class="hljs-string">&#x27;species&#x27;</span>,  <span class="hljs-comment"># 按种类分色</span><br>    title=<span class="hljs-string">&#x27;鸢尾花数据集的散点矩阵&#x27;</span>,<br>    template=<span class="hljs-string">&#x27;plotly_dark&#x27;</span>  <span class="hljs-comment"># 使用暗黑主题</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="条形图-Horizontal-Bar-Plot"><a href="#条形图-Horizontal-Bar-Plot" class="headerlink" title="条形图 (Horizontal Bar Plot)"></a>条形图 (Horizontal Bar Plot)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 示例数据</span><br>df = px.data.gapminder().query(<span class="hljs-string">&quot;year == 2007&quot;</span>).sort_values(by=<span class="hljs-string">&#x27;gdpPercap&#x27;</span>, ascending=<span class="hljs-literal">False</span>)<br><br><span class="hljs-comment"># 绘制条形图</span><br>fig = px.bar(<br>    df, <br>    x=<span class="hljs-string">&#x27;gdpPercap&#x27;</span>, <br>    y=<span class="hljs-string">&#x27;country&#x27;</span>, <br>    orientation=<span class="hljs-string">&#x27;h&#x27;</span>,  <span class="hljs-comment"># 设置条形图为水平</span><br>    title=<span class="hljs-string">&#x27;2007年各国GDP的条形图&#x27;</span><br>)<br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="地理热力图"><a href="#地理热力图" class="headerlink" title="地理热力图"></a>地理热力图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 使用 gapminder 数据集，展示 2007 年世界各国的 GDP</span><br>df = px.data.gapminder().query(<span class="hljs-string">&quot;year == 2007&quot;</span>)<br><br><span class="hljs-comment"># 绘制地理热力图</span><br>fig = px.choropleth(<br>    df, <br>    locations=<span class="hljs-string">&quot;iso_alpha&quot;</span>,  <span class="hljs-comment"># 根据国家的 ISO alpha-3 代码来定位</span><br>    color=<span class="hljs-string">&quot;gdpPercap&quot;</span>,  <span class="hljs-comment"># GDP per capita 作为颜色强度</span><br>    hover_name=<span class="hljs-string">&quot;country&quot;</span>,  <span class="hljs-comment"># 悬停时显示的国家名称</span><br>    color_continuous_scale=px.colors.sequential.Plasma,  <span class="hljs-comment"># 使用连续颜色</span><br>    title=<span class="hljs-string">&#x27;2007年世界各国人均GDP&#x27;</span><br>)<br><br><span class="hljs-comment"># 显示图表</span><br>fig.show()<br><br></code></pre></td></tr></table></figure>
+<h2 id="等高线图"><a href="#等高线图" class="headerlink" title="等高线图"></a>等高线图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> plotly.graph_objects <span class="hljs-keyword">as</span> go<br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><br><span class="hljs-comment"># 创建一个示例数据集</span><br>x = np.linspace(-<span class="hljs-number">3.5</span>, <span class="hljs-number">3.5</span>, <span class="hljs-number">100</span>)<br>y = np.linspace(-<span class="hljs-number">3.5</span>, <span class="hljs-number">3.5</span>, <span class="hljs-number">100</span>)<br>x, y = np.meshgrid(x, y)<br>z = np.exp(-x**<span class="hljs-number">2</span> - y**<span class="hljs-number">2</span>)<br><br><span class="hljs-comment"># 创建一个DataFrame</span><br>df = pd.DataFrame(<span class="hljs-built_in">dict</span>(x=x.ravel(), y=y.ravel(), z=z.ravel()))<br><br><span class="hljs-comment"># 使用 go.Contour 创建等高线图</span><br>fig = go.Figure(data=go.Contour(<br>    z=z,<br>    x=x[<span class="hljs-number">0</span>],<br>    y=y[:,<span class="hljs-number">0</span>],<br>    colorscale=<span class="hljs-string">&#x27;Viridis&#x27;</span><br>))<br><br><span class="hljs-comment"># 更新布局</span><br>fig.update_layout(<br>    title=<span class="hljs-string">&#x27;等高线图&#x27;</span>,<br>    xaxis_title=<span class="hljs-string">&#x27;X&#x27;</span>,<br>    yaxis_title=<span class="hljs-string">&#x27;Y&#x27;</span>,<br>)<br><br><span class="hljs-comment"># 显示图表</span><br>fig.show()<br></code></pre></td></tr></table></figure>
+<h1 id="收藏"><a href="#收藏" class="headerlink" title="收藏"></a>收藏</h1><h2 id="多子图直方图"><a href="#多子图直方图" class="headerlink" title="多子图直方图"></a>多子图直方图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><span class="hljs-keyword">import</span> plotly.graph_objs <span class="hljs-keyword">as</span> go<br><span class="hljs-keyword">from</span> plotly.subplots <span class="hljs-keyword">import</span> make_subplots  <span class="hljs-comment"># 导入 make_subplots</span><br><br><br><span class="hljs-comment"># 数据</span><br>data = pd.DataFrame(&#123;<br>    <span class="hljs-string">&#x27;高等数学&#x27;</span>: [<span class="hljs-number">65</span>, <span class="hljs-number">65</span>, <span class="hljs-number">67</span>, <span class="hljs-number">68</span>, <span class="hljs-number">70</span>, <span class="hljs-number">71</span>, <span class="hljs-number">75</span>, <span class="hljs-number">76</span>,<br>              <span class="hljs-number">77</span>, <span class="hljs-number">79</span>, <span class="hljs-number">80</span>, <span class="hljs-number">82</span>, <span class="hljs-number">83</span>, <span class="hljs-number">83</span>, <span class="hljs-number">83</span>, <span class="hljs-number">84</span>, <br>              <span class="hljs-number">84</span>, <span class="hljs-number">85</span>, <span class="hljs-number">86</span>, <span class="hljs-number">86</span>, <span class="hljs-number">87</span>, <span class="hljs-number">88</span>, <span class="hljs-number">88</span>, <span class="hljs-number">88</span>, <br>              <span class="hljs-number">91</span>, <span class="hljs-number">93</span>, <span class="hljs-number">93</span>, <span class="hljs-number">93</span>, <span class="hljs-number">93</span>, <span class="hljs-number">94</span>, <span class="hljs-number">95</span>, <span class="hljs-number">97</span>, <br>              <span class="hljs-number">99</span>, <span class="hljs-number">99</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>],<br>    <span class="hljs-string">&#x27;物理&#x27;</span>: [<span class="hljs-number">57</span>, <span class="hljs-number">60</span>, <span class="hljs-number">62</span>, <span class="hljs-number">64</span>, <span class="hljs-number">67</span>, <span class="hljs-number">67</span>, <span class="hljs-number">70</span>, <span class="hljs-number">72</span>, <span class="hljs-number">73</span>, <br>           <span class="hljs-number">74</span>, <span class="hljs-number">74</span>, <span class="hljs-number">74</span>, <span class="hljs-number">77</span>, <span class="hljs-number">77</span>, <span class="hljs-number">78</span>, <span class="hljs-number">78</span>, <span class="hljs-number">79</span>, <span class="hljs-number">80</span>, <br>           <span class="hljs-number">80</span>, <span class="hljs-number">81</span>, <span class="hljs-number">81</span>, <span class="hljs-number">81</span>, <span class="hljs-number">82</span>, <span class="hljs-number">82</span>, <span class="hljs-number">84</span>, <span class="hljs-number">84</span>, <span class="hljs-number">84</span>, <br>           <span class="hljs-number">84</span>, <span class="hljs-number">86</span>, <span class="hljs-number">87</span>, <span class="hljs-number">88</span>, <span class="hljs-number">93</span>, <span class="hljs-number">95</span>, <span class="hljs-number">96</span>, <span class="hljs-number">96</span>, <span class="hljs-number">98</span>, <br>           <span class="hljs-number">99</span>, <span class="hljs-number">99</span>]<br>&#125;)<br><br><span class="hljs-comment"># 创建两个子图</span><br>fig = make_subplots(rows=<span class="hljs-number">1</span>, cols=<span class="hljs-number">2</span>, subplot_titles=(<span class="hljs-string">&quot;高等数学成绩分布&quot;</span>, <span class="hljs-string">&quot;物理成绩分布&quot;</span>))<br><br><span class="hljs-comment"># 第一个子图：高等数学成绩直方图</span><br>fig.add_trace(<br>    go.Histogram(<br>        x=data[<span class="hljs-string">&#x27;高等数学&#x27;</span>],<br>        <span class="hljs-comment"># nbinsx=6, # 设置 x 轴上的区间个数 </span><br>        <span class="hljs-comment"># 设置区间上下限，例如从 0 到 10</span><br>        xbins=<span class="hljs-built_in">dict</span>(<br>            start=<span class="hljs-number">55</span>,<br>            end=<span class="hljs-number">100</span>,<br>            size=<span class="hljs-number">7</span>  <span class="hljs-comment"># 设置每个区间的宽度</span><br>        ),<br>        marker_color=px.colors.qualitative.Pastel1[<span class="hljs-number">0</span>],<br>        opacity=<span class="hljs-number">0.8</span>,<br>        marker_line_color=<span class="hljs-string">&#x27;black&#x27;</span>,<br>        marker_line_width=<span class="hljs-number">1</span><br>    ),<br>    row=<span class="hljs-number">1</span>, col=<span class="hljs-number">1</span><br>)<br><br><span class="hljs-comment"># 第二个子图：物理成绩直方图</span><br>fig.add_trace(<br>    go.Histogram(<br>        x=data[<span class="hljs-string">&#x27;物理&#x27;</span>],<br>        <span class="hljs-comment"># nbinsx=8,</span><br>        xbins=<span class="hljs-built_in">dict</span>(<br>            start=<span class="hljs-number">55</span>,<br>            end=<span class="hljs-number">100</span>,<br>            size=<span class="hljs-number">7</span>  <span class="hljs-comment"># 设置每个区间的宽度</span><br>        ),<br>        marker_color=px.colors.qualitative.Pastel1[<span class="hljs-number">1</span>],<br>        opacity=<span class="hljs-number">0.8</span>,<br>        marker_line_color=<span class="hljs-string">&#x27;black&#x27;</span>,<br>        marker_line_width=<span class="hljs-number">1</span><br>    ),<br>    row=<span class="hljs-number">1</span>, col=<span class="hljs-number">2</span><br>)<br><br><span class="hljs-comment"># 更新布局</span><br>fig.update_layout(<br>    width=<span class="hljs-number">1200</span>,<br>    height=<span class="hljs-number">600</span>,<br>    plot_bgcolor=<span class="hljs-string">&#x27;white&#x27;</span>,<br>    paper_bgcolor=<span class="hljs-string">&#x27;white&#x27;</span>,<br>    showlegend=<span class="hljs-literal">False</span>,<br>    title_font_size=<span class="hljs-number">24</span>,<br>    xaxis_title_font_size=<span class="hljs-number">18</span>,<br>    yaxis_title_font_size=<span class="hljs-number">18</span>,<br>    xaxis_tickfont_size=<span class="hljs-number">14</span>,<br>    yaxis_tickfont_size=<span class="hljs-number">14</span>,<br>)<br><br><span class="hljs-comment"># 更新各个子图的布局</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>):<br>    fig.update_xaxes(title_text=<span class="hljs-string">&quot;分数&quot;</span>, title_font_size=<span class="hljs-number">18</span>, tickfont_size=<span class="hljs-number">14</span>, row=<span class="hljs-number">1</span>, col=i)<br>    fig.update_yaxes(title_text=<span class="hljs-string">&quot;频数&quot;</span>, title_font_size=<span class="hljs-number">18</span>, tickfont_size=<span class="hljs-number">14</span>, row=<span class="hljs-number">1</span>, col=i)<br><br><span class="hljs-comment"># 显示图表</span><br>fig.show()<br><br><span class="hljs-comment"># 保存为 PDF 文件</span><br><span class="hljs-comment"># fig.write_image(&quot;fig/成绩分布直方图.pdf&quot;)</span><br><br></code></pre></td></tr></table></figure>
+<h2 id="茎叶图"><a href="#茎叶图" class="headerlink" title="茎叶图"></a>茎叶图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-keyword">import</span> plotly.express <span class="hljs-keyword">as</span> px<br><br><span class="hljs-comment"># 数据</span><br>data = pd.DataFrame(&#123;<br>    <span class="hljs-string">&#x27;高等数学&#x27;</span>: [<span class="hljs-number">65</span>, <span class="hljs-number">65</span>, <span class="hljs-number">67</span>, <span class="hljs-number">68</span>, <span class="hljs-number">70</span>, <span class="hljs-number">71</span>, <span class="hljs-number">75</span>, <span class="hljs-number">76</span>,<br>              <span class="hljs-number">77</span>, <span class="hljs-number">79</span>, <span class="hljs-number">80</span>, <span class="hljs-number">82</span>, <span class="hljs-number">83</span>, <span class="hljs-number">83</span>, <span class="hljs-number">83</span>, <span class="hljs-number">84</span>, <br>              <span class="hljs-number">84</span>, <span class="hljs-number">85</span>, <span class="hljs-number">86</span>, <span class="hljs-number">86</span>, <span class="hljs-number">87</span>, <span class="hljs-number">88</span>, <span class="hljs-number">88</span>, <span class="hljs-number">88</span>, <br>              <span class="hljs-number">91</span>, <span class="hljs-number">93</span>, <span class="hljs-number">93</span>, <span class="hljs-number">93</span>, <span class="hljs-number">93</span>, <span class="hljs-number">94</span>, <span class="hljs-number">95</span>, <span class="hljs-number">97</span>, <br>              <span class="hljs-number">99</span>, <span class="hljs-number">99</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>],<br>    <span class="hljs-string">&#x27;物理&#x27;</span>: [<span class="hljs-number">57</span>, <span class="hljs-number">60</span>, <span class="hljs-number">62</span>, <span class="hljs-number">64</span>, <span class="hljs-number">67</span>, <span class="hljs-number">67</span>, <span class="hljs-number">70</span>, <span class="hljs-number">72</span>, <span class="hljs-number">73</span>, <br>           <span class="hljs-number">74</span>, <span class="hljs-number">74</span>, <span class="hljs-number">74</span>, <span class="hljs-number">77</span>, <span class="hljs-number">77</span>, <span class="hljs-number">78</span>, <span class="hljs-number">78</span>, <span class="hljs-number">79</span>, <span class="hljs-number">80</span>, <br>           <span class="hljs-number">80</span>, <span class="hljs-number">81</span>, <span class="hljs-number">81</span>, <span class="hljs-number">81</span>, <span class="hljs-number">82</span>, <span class="hljs-number">82</span>, <span class="hljs-number">84</span>, <span class="hljs-number">84</span>, <span class="hljs-number">84</span>, <br>           <span class="hljs-number">84</span>, <span class="hljs-number">86</span>, <span class="hljs-number">87</span>, <span class="hljs-number">88</span>, <span class="hljs-number">93</span>, <span class="hljs-number">95</span>, <span class="hljs-number">96</span>, <span class="hljs-number">96</span>, <span class="hljs-number">98</span>, <br>           <span class="hljs-number">99</span>, <span class="hljs-number">99</span>]<br>&#125;)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">stem_and_leaf</span>(<span class="hljs-params">data</span>):<br>    stems = &#123;&#125;<br>    <span class="hljs-keyword">for</span> number <span class="hljs-keyword">in</span> data:<br>        stem, leaf = <span class="hljs-built_in">divmod</span>(number, <span class="hljs-number">10</span>)<br>        stems.setdefault(stem, []).append(leaf)<br>    <span class="hljs-keyword">return</span> stems<br><br><span class="hljs-comment"># 创建一个空的图表</span><br>fig = px.scatter(x=[<span class="hljs-number">0</span>], y=[<span class="hljs-number">0</span>], opacity=<span class="hljs-number">0</span>, title=<span class="hljs-string">&#x27;物理成绩茎叶图&#x27;</span>)  <span class="hljs-comment"># 使用透明的散点图来创建一个空图表</span><br><br><span class="hljs-comment"># 获取茎叶图数据</span><br>stems_math = stem_and_leaf(data[<span class="hljs-string">&#x27;物理&#x27;</span>])<br><br><span class="hljs-comment"># 计算茎叶图文本注释的总数</span><br>num_annotations = <span class="hljs-built_in">len</span>(stems_math)<br><br><span class="hljs-comment"># 在图表上添加茎叶图的文本</span><br><span class="hljs-keyword">for</span> i, (stem, leaves) <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(<span class="hljs-built_in">sorted</span>(stems_math.items())):<br>    text = <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;stem&#125;</span> | <span class="hljs-subst">&#123;<span class="hljs-string">&#x27; &#x27;</span>.join(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">str</span>, <span class="hljs-built_in">sorted</span>(leaves)))&#125;</span>&quot;</span><br>    <span class="hljs-comment"># 调整y位置使得文本居中</span><br>    y_position = <span class="hljs-number">1</span> - (i + <span class="hljs-number">0.5</span>) / num_annotations<br>    fig.add_annotation(<br>        x=<span class="hljs-number">0</span>, <br>        y=y_position,<br>        text=text,<br>        showarrow=<span class="hljs-literal">False</span>,<br>        xref=<span class="hljs-string">&#x27;paper&#x27;</span>,<br>        yref=<span class="hljs-string">&#x27;paper&#x27;</span>,<br>        xanchor=<span class="hljs-string">&#x27;left&#x27;</span>,<br>        yanchor=<span class="hljs-string">&#x27;middle&#x27;</span><br>    )<br><br><span class="hljs-comment"># 设置图表的尺寸</span><br>fig.update_layout(<br>    width=<span class="hljs-number">270</span>, <br>    height=<span class="hljs-number">270</span>, <br>    plot_bgcolor=<span class="hljs-string">&#x27;white&#x27;</span>, <br>    title_x=<span class="hljs-number">0.5</span>,  <span class="hljs-comment"># 将标题居中</span><br>    margin=<span class="hljs-built_in">dict</span>(l=<span class="hljs-number">50</span>, r=<span class="hljs-number">50</span>, b=<span class="hljs-number">50</span>, t=<span class="hljs-number">50</span>),<br>    xaxis=<span class="hljs-built_in">dict</span>(<br>        showticklabels=<span class="hljs-literal">False</span>,  <span class="hljs-comment"># 不显示刻度标签</span><br>        showgrid=<span class="hljs-literal">False</span>,        <span class="hljs-comment"># 不显示网格线</span><br>        zeroline=<span class="hljs-literal">False</span>,        <span class="hljs-comment"># 不显示零线</span><br>        showline=<span class="hljs-literal">False</span>,        <span class="hljs-comment"># 不显示坐标轴线</span><br>        visible=<span class="hljs-literal">False</span>,         <span class="hljs-comment"># 隐藏x轴</span><br>    ),<br>    yaxis=<span class="hljs-built_in">dict</span>(<br>        showticklabels=<span class="hljs-literal">False</span>,  <span class="hljs-comment"># 不显示刻度标签</span><br>        showgrid=<span class="hljs-literal">False</span>,        <span class="hljs-comment"># 不显示网格线</span><br>        zeroline=<span class="hljs-literal">False</span>,        <span class="hljs-comment"># 不显示零线</span><br>        showline=<span class="hljs-literal">False</span>,        <span class="hljs-comment"># 不显示坐标轴线</span><br>        visible=<span class="hljs-literal">False</span>,         <span class="hljs-comment"># 隐藏x轴</span><br>    )<br>)<br><br><span class="hljs-comment"># 显示图表</span><br>fig.show()<br><br><span class="hljs-comment"># 如果需要保存为图片</span><br><span class="hljs-comment"># fig.write_image(&quot;fig/物理成绩茎叶图.pdf&quot;)</span><br><br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BC%96%E7%A8%8B%E5%8F%8A%E4%B8%93%E4%B8%9A%E8%BD%AF%E4%BB%B6/" class="category-chain-item">编程及专业软件</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+        <a href="/tags/Plotly/" class="print-no-link">#Plotly</a>
+      
+        <a href="/tags/%E7%BB%98%E5%9B%BE/" class="print-no-link">#绘图</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Plotly 学习</div>
+      <div>https://haodongcui.github.io/posts/24092523.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>HaoDong Cui</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年9月25日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年9月28日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/24092812.html" title="Mathematica">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Mathematica</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/24091716.html" title="如何推荐一本书 晨星LL">
+                        <span class="hidden-mobile">如何推荐一本书 晨星LL</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"MpdQCG0Lx5c7K12ZHWYLIKPu-gzGzoHsz","appKey":"xmeTAtfM3ivQvLqoob3KxMEU","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/custom/js/duration.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      鲁ICP备2024115962号
+    </a>
+  </span>
+  
+</div>
+
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
