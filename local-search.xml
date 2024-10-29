@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>测试</title>
+    <link href="/post/test-2kykep.html"/>
+    <url>/post/test-2kykep.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>dsfd</p><h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><p>引言</p><h2 id="第一节"><a href="#第一节" class="headerlink" title="第一节"></a>第一节</h2><p>引言</p><p>测试一下哦<img src="/post/test-2kykep/3930B378-20241029004116-xw52u0p.png" alt="3930B378">​</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">git init<br>git remote add origin git@github<span class="hljs-selector-class">.com</span>:haodongcui/hexo-source-repo<span class="hljs-selector-class">.git</span><br>git checkout -<span class="hljs-selector-tag">b</span> main<br></code></pre></td></tr></table></figure><p>‍</p><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> .<br><span class="hljs-symbol">git</span> commit -m <span class="hljs-string">&quot;github update&quot;</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">push</span> origin main<br></code></pre></td></tr></table></figure><p>‍</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>临时</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>偶吼吼地测试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《凡人修仙传》时间线梳理</title>
     <link href="/posts/24100319.html"/>
     <url>/posts/24100319.html</url>
@@ -72,9 +97,9 @@
     
     <tags>
       
-      <tag>Plotly</tag>
-      
       <tag>Python</tag>
+      
+      <tag>Plotly</tag>
       
       <tag>绘图</tag>
       
@@ -396,9 +421,9 @@
     
     <tags>
       
-      <tag>软件使用</tag>
-      
       <tag>Linux</tag>
+      
+      <tag>软件使用</tag>
       
       <tag>软件安装</tag>
       
@@ -591,9 +616,9 @@
     
     <tags>
       
-      <tag>Latex</tag>
-      
       <tag>常用命令</tag>
+      
+      <tag>Latex</tag>
       
     </tags>
     
