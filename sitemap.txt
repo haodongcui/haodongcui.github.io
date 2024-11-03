@@ -1,5 +1,7 @@
 https://haodongcui.github.io/about/index.html
 https://haodongcui.github.io/custom/css/macpanel.css
+https://haodongcui.github.io/posts/24110322.html
+https://haodongcui.github.io/posts/24091123.html
 https://haodongcui.github.io/posts/e2cd5a67.html
 https://haodongcui.github.io/posts/24091515.html
 https://haodongcui.github.io/posts/24091017.html
@@ -23,7 +25,6 @@ https://haodongcui.github.io/posts/20240820.html
 https://haodongcui.github.io/posts/6821829b.html
 https://haodongcui.github.io/posts/24091716.html
 https://haodongcui.github.io/posts/20240810b.html
-https://haodongcui.github.io/posts/24091123.html
 https://haodongcui.github.io/posts/20240830104749.html
 https://haodongcui.github.io/posts/4617152c.html
 https://haodongcui.github.io/
@@ -69,8 +70,10 @@ https://haodongcui.github.io/tags/nodejs/
 https://haodongcui.github.io/categories/math/
 https://haodongcui.github.io/categories/%E5%8D%9A%E5%AE%A2/
 https://haodongcui.github.io/categories/%E6%88%90%E9%95%BF%E5%BD%95/
-https://haodongcui.github.io/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/
+https://haodongcui.github.io/categories/%E6%88%90%E9%95%BF%E5%BD%95/
+https://haodongcui.github.io/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/
 https://haodongcui.github.io/categories/%E7%BC%96%E7%A8%8B%E5%8F%8A%E4%B8%93%E4%B8%9A%E8%BD%AF%E4%BB%B6/
+https://haodongcui.github.io/categories/%E8%8B%B1%E8%AF%AD/
 https://haodongcui.github.io/categories/%E8%8B%B1%E8%AF%AD/
 https://haodongcui.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A4%A7%E6%9D%82%E7%83%A9/
 https://haodongcui.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%A4%A7%E6%9D%82%E7%83%A9/
