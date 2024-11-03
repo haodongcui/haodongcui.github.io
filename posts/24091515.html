@@ -23,11 +23,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="裴礼文总结">
 <meta property="og:url" content="https://haodongcui.github.io/posts/24091515.html">
-<meta property="og:site_name" content="川无尽势">
+<meta property="og:site_name" content="吹落星如雨">
 <meta property="og:description" content="数学归纳法第一数学归纳法先证$n&#x3D;1$成立，再证若$n&#x3D;k$成立，推得$n&#x3D;k+1$成立 第二数学归纳法（完整归纳法）先证$n&#x3D;1$成立，再证若$n\leq k$成立，推得$n&#x3D;k+1$成立 反向归纳法先证对$\forall n&#x3D;2^{k}$成立，再证若$n&#x3D;k+1$成立，推得$n&#x3D;k$成立 $2^k$可替换为$k$的无穷序列 极限证明极限的存在性  $\varepsilon-N$定义及其否定 C">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-15T07:28:31.000Z">
-<meta property="article:modified_time" content="2024-10-24T13:11:35.313Z">
+<meta property="article:modified_time" content="2024-11-02T15:07:00.000Z">
 <meta property="article:author" content="HaoDong Cui">
 <meta property="article:tag" content="裴礼文">
 <meta property="article:tag" content="数学分析">
@@ -37,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>裴礼文总结 - 川无尽势</title>
+  <title>裴礼文总结 - 吹落星如雨</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -145,7 +145,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>川无尽势</strong>
+      <strong>吹落星如雨</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -393,7 +393,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-10-24T21:11:35+08:00
+                    本文最后更新于 2024-11-02T23:07:00+08:00
                   
                   
 
@@ -439,10 +439,8 @@
 </li>
 <li>罕见：$e^{ t }$乘积先求导再积分构造</li>
 </ul>
-<p>Stirling公式</p>
-<script type="math/tex; mode=display">
-n! = \sqrt{ 2\pi n } (\frac{n}{e})^{n}e^{ \frac{\theta_{n}}{12n} },\quad 0\leq\theta_{n}\leq 1</script><p>Wallis公式</p>
-<script type="math/tex; mode=display">
+<h2 id="Stirling公式"><a href="#Stirling公式" class="headerlink" title="Stirling公式"></a>Stirling公式</h2><script type="math/tex; mode=display">
+n! = \sqrt{ 2\pi n } (\frac{n}{e})^{n}e^{ \frac{\theta_{n}}{12n} },\quad 0\leq\theta_{n}\leq 1</script><h2 id="Wallis公式"><a href="#Wallis公式" class="headerlink" title="Wallis公式"></a>Wallis公式</h2><script type="math/tex; mode=display">
 \begin{align}
 I_{n} & = \int_{0}^{\frac{\pi}{2}}\sin^nx\mathrm{d}x = \int_{0}^{\frac{\pi}{2}}\cos^nx\mathrm{d}x =
 \begin{cases}
@@ -454,8 +452,7 @@ I_{m,n} = \int_{0}^{\frac{\pi}{2}} \sin^mx \cos^nx\mathrm{d}x =
 \begin{cases}
 \frac{(m-1)!!(n-1)!!}{(m+n)!!} \frac{\pi}{2} & m,n \text{均为偶数} \\
 \frac{(m-1)!!(n-1)!!}{(m+n)!!} & \text{其他} \\
-\end{cases}</script><p>调和级数（欧拉级数）</p>
-<script type="math/tex; mode=display">
+\end{cases}</script><h2 id="调和级数（欧拉级数）"><a href="#调和级数（欧拉级数）" class="headerlink" title="调和级数（欧拉级数）"></a>调和级数（欧拉级数）</h2><script type="math/tex; mode=display">
 \sum_{k=1}^{n} \frac{1}{k} = \ln n + C + \varepsilon_{n}, \quad\lim_{ n \to \infty } \varepsilon_{n}=0</script><p>其中$C$为欧拉常数。</p>
 <p>两边夹法则</p>
 <ul>
@@ -475,8 +472,7 @@ I_{m,n} = \int_{0}^{\frac{\pi}{2}} \sin^mx \cos^nx\mathrm{d}x =
 </ul>
 </li>
 </ul>
-<p>常用Taylor公式</p>
-<script type="math/tex; mode=display">
+<h2 id="常用Taylor公式"><a href="#常用Taylor公式" class="headerlink" title="常用Taylor公式"></a>常用Taylor公式</h2><script type="math/tex; mode=display">
 \begin{align}
 & e^{x}=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}=1+\frac{x}{1!}+\frac{x^{2}}{2!}+\cdots\\ \\
 & \cos x=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{(2n)!}x^{2n}=1-\frac{x^{2}}{2!}+\frac{x^{4}}{4!}+\cdots\\ \\
@@ -599,7 +595,7 @@ f(x) & g(x) & h(x)
 <p>定义、Cauchy、运算性质<br>分部积分或变量代换转为别的式子</p>
 </blockquote>
 </blockquote>
-<h1 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h1><p>一致连续性</p>
+<h2 id="有理函数求积分（待）"><a href="#有理函数求积分（待）" class="headerlink" title="有理函数求积分（待）"></a>有理函数求积分（待）</h2><h1 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h1><p>一致连续性</p>
 <ul>
 <li>定义</li>
 <li>Cauchy准则</li>
@@ -608,18 +604,21 @@ f(x) & g(x) & h(x)
 <li>反证+序列</li>
 </ul>
 <script type="math/tex; mode=display">
-(1-x)^{-\frac{1}{2}} = \sum_{i=1}^{\infty} \frac{(2n-1)!!}{(2n)!!} x^n , \quad |x|<1</script><h1 id="不等式专题"><a href="#不等式专题" class="headerlink" title="不等式专题"></a>不等式专题</h1><blockquote>
+(1-x)^{-\frac{1}{2}} = \sum_{i=1}^{\infty} \frac{(2n-1)!!}{(2n)!!} x^n , \quad |x|<1</script><h2 id="一致收敛（待）"><a href="#一致收敛（待）" class="headerlink" title="一致收敛（待）"></a>一致收敛（待）</h2><h1 id="不等式专题"><a href="#不等式专题" class="headerlink" title="不等式专题"></a>不等式专题</h1><blockquote>
 <p>乘积到乘积：Cauchy不等式 -&gt; Holder不等式<br>加法到加法：三角不等式 -&gt; Minkowski不等式<br>乘积到加法：均值不等式 -&gt; Young不等式</p>
 <p>Cauchy不等式</p>
 <script type="math/tex; mode=display">
 ||(x,y)|| \le ||x|| ||y||</script><p>Holder不等式</p>
 <script type="math/tex; mode=display">
-||fg||_{p} \le ||f||_{p} ||g||_{p}</script><p>Minkowski不等式</p>
+||fg||_{1} \le ||f||_{p} ||g||_{q}</script><p>Minkowski不等式</p>
 <script type="math/tex; mode=display">
 ||f+g||_{p} \le ||f||_{p} + ||g||_{p}</script></blockquote>
 <p>Young不等式</p>
 <script type="math/tex; mode=display">
-ab \le \frac{1}{p} a^{p} + \frac{1}{q} b^{q}</script><p>Cauchy不等式（连续）</p>
+ab \le \frac{1}{p} a^{p} + \frac{1}{q} b^{q}</script><p>Young不等式（推广）</p>
+<script type="math/tex; mode=display">
+ab \le \int_{0}^{a} f(x)dx + \int_{0}^{b} f^{-1}(y)dy</script><p>其中, $f:\mathbb{R}\to \mathbb{R}$连续其严格单调递增, $f(0)=0$.</p>
+<p>Cauchy不等式（连续）</p>
 <script type="math/tex; mode=display">
 \Big(\int_{a}^{b} f(x)g(x)\mathrm{d}x \Big)^{2}
 \le
@@ -650,8 +649,10 @@ ab \le \frac{1}{p} a^{p} + \frac{1}{q} b^{q}</script><p>Cauchy不等式（连续
 <li>初等变形</li>
 <li>若能事先看出极限，可用$\varepsilon-N$方法证明</li>
 </ul>
-<h1 id="有理函数求积分（待）"><a href="#有理函数求积分（待）" class="headerlink" title="有理函数求积分（待）"></a>有理函数求积分（待）</h1><h1 id="Stokes公式"><a href="#Stokes公式" class="headerlink" title="Stokes公式"></a>Stokes公式</h1><script type="math/tex; mode=display">
-\int_{d\Omega} \omega \le \int_{\Omega} d\omega</script>
+<h1 id="Stokes公式"><a href="#Stokes公式" class="headerlink" title="Stokes公式"></a>Stokes公式</h1><script type="math/tex; mode=display">
+\int_{d\Omega} \omega = \int_{\Omega} d\omega</script><h2 id="Green公式"><a href="#Green公式" class="headerlink" title="Green公式"></a>Green公式</h2><script type="math/tex; mode=display">
+\int_{\partial\Omega} Pdx+Qdy = \int_{\Omega} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dxdy</script><h1 id="随时补充"><a href="#随时补充" class="headerlink" title="随时补充"></a>随时补充</h1><p>凸函数在开区间上连续</p>
+
                 
               </div>
             
@@ -717,7 +718,7 @@ ab \le \frac{1}{p} a^{p} + \frac{1}{q} b^{q}</script><p>Cauchy不等式（连续
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月24日</div>
+          <div>2024年11月2日</div>
         </div>
       
       
