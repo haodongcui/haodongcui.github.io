@@ -27,7 +27,7 @@
 <meta property="og:description" content="下载项目初始化.Git1git init 添加库1git remote add origin 源码地址 将库里的代码下载到本地1git pull origin main 配置更新配置更新地址1git remote add upstream 想要拉取更新的库 依据此库来对本地代码进行更新 查看当前仓库的远程仓库地址和原仓库地址1git remote -v 获取更新1git fetch upstrea">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-09T12:00:09.000Z">
-<meta property="article:modified_time" content="2024-10-15T16:50:00.000Z">
+<meta property="article:modified_time" content="2024-11-03T14:31:00.000Z">
 <meta property="article:author" content="HaoDong Cui">
 <meta property="article:tag" content="软件使用">
 <meta property="article:tag" content="Git">
@@ -270,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          279 字
+          343 字
         
       </span>
     
@@ -429,7 +429,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-10-16T00:50:00+08:00
+                    本文最后更新于 2024-11-03T22:31:00+08:00
                   
                   
 
@@ -456,6 +456,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 配置socks5代理</span><br>git config --global http.proxy socks5 127.0.0.1:7890<br>git config --global https.proxy socks5 127.0.0.1:7890<br> <br><span class="hljs-comment"># 配置http代理</span><br>git config --global http.proxy 127.0.0.1:7890<br>git config --global https.proxy 127.0.0.1:7890<br></code></pre></td></tr></table></figure>
 <p><strong>查看代理命令：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global --get http.proxy<br>git config --global --get https.proxy<br></code></pre></td></tr></table></figure></p>
 <p><strong>取消代理命令:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.proxy<br>git config --global --<span class="hljs-built_in">unset</span> https.proxy<br></code></pre></td></tr></table></figure></p>
+<h1 id="本地连接仓库并推送"><a href="#本地连接仓库并推送" class="headerlink" title="本地连接仓库并推送"></a>本地连接仓库并推送</h1><h2 id="本地连接仓库"><a href="#本地连接仓库" class="headerlink" title="本地连接仓库"></a>本地连接仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br>git remote add origin &lt;远程仓库地址&gt;<br>git checkout -b main <span class="hljs-comment"># 设置分支为main</span><br></code></pre></td></tr></table></figure>
+<h2 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;&lt;message&gt;&quot;</span><br>git push origin main<br></code></pre></td></tr></table></figure>
+<p>或强制推送覆盖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;&lt;message&gt;&quot;</span><br>git push -f origin main<br></code></pre></td></tr></table></figure><br>其中<code>-f</code>全拼为<code>--force</code></p>
 
                 
               </div>
@@ -522,7 +525,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月16日</div>
+          <div>2024年11月3日</div>
         </div>
       
       
@@ -553,9 +556,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/20240810a.html" title="数学建模笔记（模型篇）">
+                      <a href="/posts/20240810b.html" title="博客之Hexo的数学公式渲染">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数学建模笔记（模型篇）</span>
+                        <span class="hidden-mobile">博客之Hexo的数学公式渲染</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
