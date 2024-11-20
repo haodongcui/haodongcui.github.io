@@ -4,39 +4,25 @@
   
   
   <entry>
-    <title></title>
-    <link href="/posts/0.html"/>
-    <url>/posts/0.html</url>
+    <title>六级挖掘</title>
+    <link href="/posts/24112010.html"/>
+    <url>/posts/24112010.html</url>
     
-    <content type="html"><![CDATA[<h1 id="Runtime-API-Examples"><a href="#Runtime-API-Examples" class="headerlink" title="Runtime API Examples"></a>Runtime API Examples</h1><p>This page demonstrates usage of some of the runtime APIs provided by VitePress.</p><p>The main <code>useData()</code> API can be used to access site, theme, and page data for the current page. It works in both <code>.md</code> and <code>.vue</code> files:</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs md"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span></span><br>import &#123; useData &#125; from &#x27;vitepress&#x27;<br><br>const &#123; theme, page, frontmatter &#125; = useData()<br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><br><span class="hljs-section">## Results</span><br><br><span class="hljs-section">### Theme Data</span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span></span>&#123;&#123; theme &#125;&#125;<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></span><br><br><span class="hljs-section">### Page Data</span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span></span>&#123;&#123; page &#125;&#125;<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></span><br><br><span class="hljs-section">### Page Frontmatter</span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span></span>&#123;&#123; frontmatter &#125;&#125;<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></span><br></code></pre></td></tr></table></figure><script setup>import { useData } from 'vitepress'const { site, theme, page, frontmatter } = useData()</script><h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="Theme-Data"><a href="#Theme-Data" class="headerlink" title="Theme Data"></a>Theme Data</h3><pre></pre><h3 id="Page-Data"><a href="#Page-Data" class="headerlink" title="Page Data"></a>Page Data</h3><pre></pre><h3 id="Page-Frontmatter"><a href="#Page-Frontmatter" class="headerlink" title="Page Frontmatter"></a>Page Frontmatter</h3><pre></pre><h2 id="More"><a href="#More" class="headerlink" title="More"></a>More</h2><p>Check out the documentation for the <a href="https://vitepress.dev/reference/runtime-api#usedata">full list of runtime APIs</a>.</p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/posts/undefined.html"/>
-    <url>/posts/undefined.html</url>
-    
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>Section A<br>双人对话，关注选项的主语和动词</p><p>Section B<br>单人论述<br>第一题的答案一般在开篇第一句话<br>最后一题答案可能在中间</p>]]></content>
     
     
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/posts/0.html"/>
-    <url>/posts/0.html</url>
-    
-    <content type="html"><![CDATA[<h1 id="Markdown-Extension-Examples"><a href="#Markdown-Extension-Examples" class="headerlink" title="Markdown Extension Examples"></a>Markdown Extension Examples</h1><p>This page demonstrates some of the built-in markdown extensions provided by VitePress.</p><h2 id="Syntax-Highlighting"><a href="#Syntax-Highlighting" class="headerlink" title="Syntax Highlighting"></a>Syntax Highlighting</h2><p>VitePress provides Syntax Highlighting powered by <a href="https://github.com/shikijs/shiki">Shiki</a>, with additional features like line-highlighting:</p><p><strong>Input</strong></p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs md"><span class="hljs-code">```js&#123;4&#125;</span><br><span class="hljs-code">export default &#123;</span><br><span class="hljs-code">  data () &#123;</span><br><span class="hljs-code">    return &#123;</span><br><span class="hljs-code">      msg: &#x27;Highlighted!&#x27;</span><br><span class="hljs-code">    &#125;</span><br><span class="hljs-code">  &#125;</span><br><span class="hljs-code">&#125;</span><br><span class="hljs-code">```</span><br></code></pre></td></tr></table></figure><p><strong>Output</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js&#123;4&#125;">export default &#123;<br>  data () &#123;<br>    return &#123;<br>      msg: &#x27;Highlighted!&#x27;<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="Custom-Containers"><a href="#Custom-Containers" class="headerlink" title="Custom Containers"></a>Custom Containers</h2><p><strong>Input</strong></p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs md">::: info<br>This is an info box.<br>:::<br><br>::: tip<br>This is a tip.<br>:::<br><br>::: warning<br>This is a warning.<br>:::<br><br>::: danger<br>This is a dangerous warning.<br>:::<br><br>::: details<br>This is a details block.<br>:::<br></code></pre></td></tr></table></figure><p><strong>Output</strong></p><p>::: info<br>This is an info box.<br>:::</p><p>::: tip<br>This is a tip.<br>:::</p><p>::: warning<br>This is a warning.<br>:::</p><p>::: danger<br>This is a dangerous warning.<br>:::</p><p>::: details<br>This is a details block.<br>:::</p><h2 id="More"><a href="#More" class="headerlink" title="More"></a>More</h2><p>Check out the documentation for the <a href="https://vitepress.dev/guide/markdown">full list of markdown extensions</a>.</p>]]></content>
+    <categories>
+      
+      <category>英语</category>
+      
+    </categories>
     
     
+    <tags>
+      
+      <tag>六级</tag>
+      
+    </tags>
     
   </entry>
   
