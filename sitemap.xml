@@ -20,6 +20,15 @@
   </url>
   
   <url>
+    <loc>https://haodongcui.github.io/posts/e2cd5a67.html</loc>
+    
+    <lastmod>2024-11-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://haodongcui.github.io/posts/24112010.html</loc>
     
     <lastmod>2024-11-20</lastmod>
@@ -74,15 +83,6 @@
   </url>
   
   <url>
-    <loc>https://haodongcui.github.io/posts/24110719.html</loc>
-    
-    <lastmod>2024-11-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://haodongcui.github.io/posts/24110710.html</loc>
     
     <lastmod>2024-11-07</lastmod>
@@ -113,15 +113,6 @@
     <loc>https://haodongcui.github.io/posts/24091123.html</loc>
     
     <lastmod>2024-11-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://haodongcui.github.io/posts/e2cd5a67.html</loc>
-    
-    <lastmod>2024-11-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -721,13 +712,6 @@
   
   <url>
     <loc>https://haodongcui.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2024-11-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://haodongcui.github.io/categories/Latex%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2024-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
