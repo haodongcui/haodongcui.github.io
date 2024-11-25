@@ -8,7 +8,7 @@
     <link href="/posts/24112010.html"/>
     <url>/posts/24112010.html</url>
     
-    <content type="html"><![CDATA[<p>Section A<br>双人对话，关注选项的主语和动词</p><p>Section B<br>单人论述<br>第一题的答案一般在开篇第一句话<br>最后一题答案可能在中间<br>注意人称，如选项主语为”He”，就注意什么时候用”He”，或者什么时候引入人名</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="听力"><a href="#听力" class="headerlink" title="听力"></a>听力</h1><p>Section A<br>Conversation 对话</p><ul><li>双人对话，关注选项的主语和动词</li></ul><p>Section B<br>Passages 文章<br>单人论述，一男二女<br>第一题的答案一般在开篇第一句话<br>最后一题答案可能在中间<br>注意人称，如选项主语为”He”，就注意什么时候用”He”，或者什么时候引入人名</p><p>Section C<br>Recording 讲座<br>单人论述，<br>第一题答案一般在首句之后</p><h1 id="题型与分值分布"><a href="#题型与分值分布" class="headerlink" title="题型与分值分布"></a>题型与分值分布</h1><p><img src="/posts/24112010/IMG-六级挖掘-20241122231115653.png" alt></p>]]></content>
     
     
     <categories>
@@ -85,7 +85,7 @@
     <link href="/posts/24110721.html"/>
     <url>/posts/24110721.html</url>
     
-    <content type="html"><![CDATA[<p>$\mathbb{R}^{n},s,c_{0},c,l^p(1\le p&lt;\infty),$</p>]]></content>
+    <content type="html"><![CDATA[<p>11个空间<br>$\mathbb{R}^{n}$<br>$s$<br>$c_{0}$<br>$c$<br>$l^p$<br>$l^{\infty}$<br>$P[a,b]$<br>$C[a,b]$<br>$S$<br>$L^p$<br>$L^{\infty}$</p><h1 id="巴拿赫空间"><a href="#巴拿赫空间" class="headerlink" title="巴拿赫空间"></a>巴拿赫空间</h1><p>完备的赋范线性空间称为巴拿赫空间<br>$\mathbb{R}^{n}$ 赋范、完备、巴拿赫空间<br>$s$ 不赋范<br>$c_{0}$ 赋范、完备、巴拿赫空间<br>$c$ 赋范、完备、巴拿赫空间<br>$l^p$ 赋范、完备、巴拿赫空间（$p=1$不好证）<br>$l^{\infty}$ 赋范、完备、巴拿赫空间<br>$P[a,b]$ 赋范、不完备<br>$C[a,b]$ 赋范、完备、巴拿赫空间<br>$S$ 不赋范<br>$L^p$ 赋范、完备、巴拿赫空间<br>$L^{\infty}$ 赋范、完备、巴拿赫空间</p><h1 id="希尔伯特空间"><a href="#希尔伯特空间" class="headerlink" title="希尔伯特空间"></a>希尔伯特空间</h1><p>完备的内积空间称为希尔伯特空间<br>$\mathbb{R}^{n}$ 内积空间、完备、希尔伯特空间<br>$s$ 不是内积空间<br>$c_{0}$ 不是内积空间<br>$c$ 不是内积空间<br>$l^2$ 内积空间、完备、希尔伯特空间<br>$l^p(p\ne2)$ 不是内积空间<br>$l^{\infty}$ 不是内积空间<br>$P[a,b]$ 不是内积空间<br>$C[a,b]$ 不是内积空间<br>$S$ 不赋范、不是内积空间<br>$L^2$ 内积空间、完备、希尔伯特空间<br>$L^p(p\ne2)$ 不是内积空间<br>$L^{\infty}$ 不是内积空间</p>]]></content>
     
     
     <categories>
