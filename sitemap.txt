@@ -13,6 +13,7 @@ https://haodongcui.github.io/posts/24110322.html
 https://haodongcui.github.io/posts/24091123.html
 https://haodongcui.github.io/posts/6615fc99.html
 https://haodongcui.github.io/posts/24102921.html
+https://haodongcui.github.io/posts/24112622.html
 https://haodongcui.github.io/posts/20240810a.html
 https://haodongcui.github.io/posts/20240821.html
 https://haodongcui.github.io/posts/20240821.html
@@ -44,6 +45,7 @@ https://haodongcui.github.io/tags/%E7%BB%98%E5%9B%BE/
 https://haodongcui.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/
 https://haodongcui.github.io/tags/nvm/
 https://haodongcui.github.io/tags/nodejs/
+https://haodongcui.github.io/tags/LLM/
 https://haodongcui.github.io/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/
 https://haodongcui.github.io/tags/math/
 https://haodongcui.github.io/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/
@@ -79,6 +81,7 @@ https://haodongcui.github.io/tags/%E5%89%AF%E5%B1%8F/
 https://haodongcui.github.io/tags/Latex/
 https://haodongcui.github.io/categories/%E7%BC%96%E7%A8%8B%E5%8F%8A%E4%B8%93%E4%B8%9A%E8%BD%AF%E4%BB%B6/
 https://haodongcui.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%A4%A7%E6%9D%82%E7%83%A9/
+https://haodongcui.github.io/categories/CS/
 https://haodongcui.github.io/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/
 https://haodongcui.github.io/categories/Math/
 https://haodongcui.github.io/categories/math/

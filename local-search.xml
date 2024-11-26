@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>大模型学习笔记</title>
+    <link href="/posts/24112622.html"/>
+    <url>/posts/24112622.html</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>【【全748集】清华大佬终于把AI大模型（LLM）讲清楚了！通俗易懂，2024最新内部版！拿走不谢，学不会我退出IT圈！】<a href="https://www.bilibili.com/video/BV1rS411F735?p=5&amp;vd_source=843d23f787e2142024994ca54dd188ee">https://www.bilibili.com/video/BV1rS411F735?p=5&amp;vd_source=843d23f787e2142024994ca54dd188ee</a></p></blockquote><h1 id="1-1自然语言处理基础"><a href="#1-1自然语言处理基础" class="headerlink" title="1-1自然语言处理基础"></a>1-1自然语言处理基础</h1><h2 id="Word-Representation-词表示"><a href="#Word-Representation-词表示" class="headerlink" title="Word Representation 词表示"></a>Word Representation 词表示</h2><p><strong>One-Hot Representation</strong><br>利用单位向量表示单词，空间维度为为单词列表长度<br>劣势：正交系，相似度始终为0</p><p><strong>Co-Occurrence Counts (同现计数)</strong><br>represnet word by contexts<br>劣势：单词出现频次少，则不准确</p><p><strong>Word Embedding</strong><br>分布式的词表示，建立一个低维的稠密向量空间<br>代表性工作：Word2Vec</p><h2 id="Language-Model-语言模型"><a href="#Language-Model-语言模型" class="headerlink" title="Language Model 语言模型"></a>Language Model 语言模型</h2><p>根据前文预测下一句话</p><p>考虑两个概率<br>Conditional probability 根据前文预测的下一句话的概率<br>Joint probability 预测的内容成一句话的概率</p><p><strong>N-gram</strong><br>基于Markov假设，e.g.<br>Trigram (N=3)，只考虑邻近的两个词，如<br>$P(learn|Never,too,late,to)\approx P(learn|late,to)$<br>劣势：仅考虑词组，句子在含义上的相似度无法表示等</p><p><strong>Network Language Model</strong><br>分布式的，建立一个低维的稠密向量空间</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LLM</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>六级挖掘</title>
     <link href="/posts/24112010.html"/>
     <url>/posts/24112010.html</url>
