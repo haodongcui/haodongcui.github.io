@@ -1,0 +1,294 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.2.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"><title>Latex 常用操作 | 東</title><link rel="stylesheet" href="/_astro/_slug_.D5l4FfDp.css"></head> <body> <header> <nav class="header-nav-bar"> <!-- 主题切换 --> <div class="hamburger"> <span class="hamburger_line"></span> <span class="hamburger_line"></span> <span class="hamburger_line"></span> </div> <div class="header-nav-container"> <a class="header-nav-item" href="/">🏡首页</a> <a class="header-nav-item" href="/posts">🪶博客</a> <a class="header-nav-item" href="/tags">🏷️标签</a> <a class="header-nav-item" href="/nav">🚀导航</a> <a class="header-nav-item" href="/about">💕关于</a> </div> <div class="header-social-container"> <!-- github --> <a href="https://github.com/haodongcui" class="header-social-item" target="_blank" rel="noopener noreferrer"> <img src="/_astro/github.Dy8Sk3W5_ZRgFSN.svg" alt="GitHub" width="32" height="32" loading="lazy" decoding="async"> </a> </div> </nav> </header> <main class="main-content-wrapper">  <div class="post-content-info"> <h1>Latex 常用操作</h1> <a class="post-content-info-author">作者: HaoDong Cui</a> <a class="post-content-info-date">发表于: 2024-07-31</a> <!-- <br/> --> <a class="post-content-info-categories">分类: 编程及专业软件</a> <a class="post-content-info-tags">标签: Latex, 常用命令</a> </div>  <h2 id="导言区">导言区</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#6A737D">% 文档类</span></span>
+<span class="line"><span style="color:#F97583">\documentclass</span><span style="color:#E1E4E8">[13pt]{</span><span style="color:#79B8FF">article</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 中文宏包</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">ctex</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 设置页面</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">geometry</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 插图片</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">graphicx</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 子图并排</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">subfigure</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 设置标题 重命名为英文</span></span>
+<span class="line"><span style="color:#F97583">\renewcommand</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\figurename</span><span style="color:#E1E4E8">}{Figure}</span></span>
+<span class="line"><span style="color:#F97583">\renewcommand</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\tablename</span><span style="color:#E1E4E8">}{Table}</span></span>
+<span class="line"><span style="color:#F97583">\renewcommand</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\contentsname</span><span style="color:#E1E4E8">}{Contents}</span></span>
+<span class="line"><span style="color:#6A737D">% 设置摘要页缩减 </span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">changepage</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 便于修改字体</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">fontspec</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 设置页眉页脚</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">fancyhdr</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 清空页眉页脚</span></span>
+<span class="line"><span style="color:#79B8FF">\pagestyle</span><span style="color:#E1E4E8">{fancy}</span></span>
+<span class="line"><span style="color:#6A737D">% 设置列表缩进</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">[shortlabels]{</span><span style="color:#79B8FF">enumitem</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 设置修改默认的section标题大小、粗细</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">titlesec</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">\titleformat</span><span style="color:#E1E4E8">*{</span><span style="color:#79B8FF">\section</span><span style="color:#E1E4E8">}{</span><span style="color:#79B8FF">\LARGE\bfseries</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">\titleformat</span><span style="color:#E1E4E8">*{</span><span style="color:#79B8FF">\subsection</span><span style="color:#E1E4E8">}{</span><span style="color:#79B8FF">\Large\bfseries</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">\titleformat</span><span style="color:#E1E4E8">*{</span><span style="color:#79B8FF">\subsubsection</span><span style="color:#E1E4E8">}{</span><span style="color:#79B8FF">\Large\bfseries</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 添加书签,实现pdf跳转功能</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">hyperref</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">\hypersetup</span><span style="color:#E1E4E8">{hidelinks,</span></span>
+<span class="line"><span style="color:#E1E4E8">	colorlinks=true,</span></span>
+<span class="line"><span style="color:#E1E4E8">	allcolors=black,</span></span>
+<span class="line"><span style="color:#E1E4E8">	pdfstartview=Fit,</span></span>
+<span class="line"><span style="color:#E1E4E8">	breaklinks=true</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 使用数学宏包</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">amsmath</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 设置表格的列格式</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">array</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 三线表宏包</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">booktabs</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 设置产考文献不输出默认名</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">etoolbox</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">\patchcmd</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\thebibliography</span><span style="color:#E1E4E8">}{</span><span style="color:#79B8FF">\section*</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\refname</span><span style="color:#E1E4E8">}}{}{}{}</span></span>
+<span class="line"><span style="color:#6A737D">% 引入网站作为参考文献</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">url</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 设置等宽的代码字体</span></span>
+<span class="line"><span style="color:#79B8FF">\setmonofont</span><span style="color:#E1E4E8">{Courier New}</span></span>
+<span class="line"><span style="color:#6A737D">% 颜色</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">xcolor</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#6A737D">% 代码高亮方案宏包</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">listings</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">\definecolor</span><span style="color:#E1E4E8">{CPPLight}  {HTML} {686868}</span></span>
+<span class="line"><span style="color:#79B8FF">\definecolor</span><span style="color:#E1E4E8">{CPPSteel}  {HTML} {888888}</span></span>
+<span class="line"><span style="color:#79B8FF">\definecolor</span><span style="color:#E1E4E8">{CPPDark}   {HTML} {262626}</span></span>
+<span class="line"><span style="color:#79B8FF">\definecolor</span><span style="color:#E1E4E8">{CPPBlue}   {HTML} {4172A3}</span></span>
+<span class="line"><span style="color:#79B8FF">\definecolor</span><span style="color:#E1E4E8">{CPPGreen}  {HTML} {487818}</span></span>
+<span class="line"><span style="color:#79B8FF">\definecolor</span><span style="color:#E1E4E8">{CPPBrown}  {HTML} {A07040}</span></span>
+<span class="line"><span style="color:#79B8FF">\definecolor</span><span style="color:#E1E4E8">{CPPRed}    {HTML} {AD4D3A}</span></span>
+<span class="line"><span style="color:#79B8FF">\definecolor</span><span style="color:#E1E4E8">{CPPViolet} {HTML} {7040A0}</span></span>
+<span class="line"><span style="color:#79B8FF">\definecolor</span><span style="color:#E1E4E8">{CPPGray}  {HTML} {B8B8B8}</span></span></code></pre>
+<h2 id="字符">字符</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#6A737D">%花体</span></span>
+<span class="line"><span style="color:#79B8FF">\mathcal</span><span style="color:#E1E4E8">{R}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">%希腊字母</span></span>
+<span class="line"><span style="color:#79B8FF">\varepsilon</span><span style="color:#6A737D"> %伊普西龙</span></span></code></pre>
+<p><img src="https://cdn.nlark.com/yuque/__latex/903be6f861bace4034113178118962e7.svg#card=math&#x26;code=%花体
+\mathcal{R}
+
+%希腊字母
+\varepsilon %&#x26;id=OGw7Z" alt=""></p>
+<h2 id="自定义-hypothesis-环境">自定义 hypothesis 环境</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#6A737D">% 定义新的定理样式</span></span>
+<span class="line"><span style="color:#79B8FF">\newtheoremstyle</span><span style="color:#E1E4E8">{Hstyle}</span><span style="color:#6A737D">% name</span></span>
+<span class="line"><span style="color:#E1E4E8">{3pt}</span><span style="color:#6A737D">% Space above</span></span>
+<span class="line"><span style="color:#E1E4E8">{3pt}</span><span style="color:#6A737D">% Space below</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\itshape</span><span style="color:#E1E4E8">}</span><span style="color:#6A737D">% Body font</span></span>
+<span class="line"><span style="color:#E1E4E8">{}</span><span style="color:#6A737D">% Indent amount</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\bfseries</span><span style="color:#E1E4E8">}</span><span style="color:#6A737D">% Theorem head font</span></span>
+<span class="line"><span style="color:#E1E4E8">{.}</span><span style="color:#6A737D">% Punctuation after theorem head</span></span>
+<span class="line"><span style="color:#E1E4E8">{ }</span><span style="color:#6A737D">% Space after theorem head</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\thmname</span><span style="color:#E1E4E8">{#1}</span><span style="color:#79B8FF">\thmnumber</span><span style="color:#E1E4E8">{(#2)}}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">% 应用新的定理样式</span></span>
+<span class="line"><span style="color:#79B8FF">\theoremstyle</span><span style="color:#E1E4E8">{Hstyle}</span></span>
+<span class="line"><span style="color:#79B8FF">\newtheorem</span><span style="color:#E1E4E8">{hypothesis}{}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">% 设置自动编号样式</span></span>
+<span class="line"><span style="color:#F97583">\renewcommand</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\thehypothesis</span><span style="color:#E1E4E8">}{H</span><span style="color:#79B8FF">\arabic</span><span style="color:#E1E4E8">{hypothesis}}</span></span></code></pre>
+<h2 id="长度尺寸">长度尺寸</h2>
+<p>在 LaTeX 中，有很多不同的长度单位和尺寸参数用于排版。以下是一些常用的长度单位和尺寸参数的说明及其使用方法：### 尺寸参数</p>
+<ol>
+<li><code>\linewidth</code>
+<ul>
+<li>表示当前环境的宽度。例如，在 <code>document</code> 环境中，它表示页面正文的宽度，而在 <code>minipage</code> 或 <code>parbox</code> 环境中，它表示这些框的宽度。</li>
+<li>用途：调整元素的宽度以适应当前环境。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\begin</span><span style="color:#E1E4E8">{center}</span></span>
+<span class="line"><span style="color:#79B8FF">\rule</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\linewidth</span><span style="color:#E1E4E8">}{1mm}</span></span>
+<span class="line"><span style="color:#79B8FF">\end</span><span style="color:#E1E4E8">{center}</span></span></code></pre>
+<ol>
+<li><code>\textwidth</code>
+<ul>
+<li>表示文本区域的宽度，通常指页面正文的宽度（不包括页边距）。</li>
+<li>用途：定义表格或图片的宽度，以适应页面的文本宽度。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\includegraphics</span><span style="color:#E1E4E8">[width=</span><span style="color:#79B8FF">\textwidth</span><span style="color:#E1E4E8">]{example-image}</span></span></code></pre>
+<ol>
+<li><code>\textheight</code>
+<ul>
+<li>表示文本区域的高度，通常指页面正文的高度（不包括页眉和页脚）。</li>
+<li>用途：设置图片或表格的高度。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\includegraphics</span><span style="color:#E1E4E8">[height=</span><span style="color:#79B8FF">\textheight</span><span style="color:#E1E4E8">]{example-image}</span></span></code></pre>
+<ol>
+<li><code>\columnwidth</code>
+<ul>
+<li>表示当前列的宽度。在单栏文档中，它等于 <code>\textwidth</code>，在双栏文档中，它等于单栏的宽度。</li>
+<li>用途：调整多栏文档中元素的宽度。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\begin</span><span style="color:#E1E4E8">{figure*}</span></span>
+<span class="line"><span style="color:#79B8FF">\includegraphics</span><span style="color:#E1E4E8">[width=</span><span style="color:#79B8FF">\columnwidth</span><span style="color:#E1E4E8">]{example-image}</span></span>
+<span class="line"><span style="color:#79B8FF">\end</span><span style="color:#E1E4E8">{figure*}</span></span></code></pre>
+<h3 id="长度单位">长度单位</h3>
+<ol>
+<li><code>pt</code><strong>（point）</strong>
+<ul>
+<li>点（pt），LaTeX 中最基本的长度单位，1 pt = 1/72.27 英寸。</li>
+<li>用途：设置字体大小、行间距等。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\fontsize</span><span style="color:#E1E4E8">{12pt}{14pt}</span><span style="color:#79B8FF">\selectfont</span></span></code></pre>
+<ol>
+<li><code>cm</code><strong>（centimeter）</strong>
+<ul>
+<li>厘米（cm）。</li>
+<li>用途：设置元素的宽度、高度或其他尺寸。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\setlength</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\parindent</span><span style="color:#E1E4E8">}{1cm}</span></span></code></pre>
+<ol>
+<li><code>mm</code><strong>（millimeter）</strong>
+<ul>
+<li>毫米（mm）。</li>
+<li>用途：设置较小尺寸的元素。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\setlength</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\fboxsep</span><span style="color:#E1E4E8">}{3mm}</span></span></code></pre>
+<ol>
+<li><code>in</code><strong>（inch）</strong>
+<ul>
+<li>英寸（in）。</li>
+<li>用途：设置元素的宽度、高度或其他尺寸。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\setlength</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\textwidth</span><span style="color:#E1E4E8">}{6.5in}</span></span></code></pre>
+<ol>
+<li><code>ex</code>
+<ul>
+<li><code>ex</code> 单位是当前字体中小写字母 “x” 的高度。</li>
+<li>用途：与字体大小相关的布局调整。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\setlength</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\parskip</span><span style="color:#E1E4E8">}{1ex}</span></span></code></pre>
+<ol>
+<li><code>em</code>
+<ul>
+<li><code>em</code> 单位是当前字体的宽度，通常等于大写字母 “M” 的宽度。</li>
+<li>用途：与字体大小相关的布局调整。</li>
+<li>示例：</li>
+</ul>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\setlength</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\parindent</span><span style="color:#E1E4E8">}{2em}</span></span></code></pre>
+<h3 id="使用示例">使用示例</h3>
+<p>以下是一个综合示例，展示了如何在 LaTeX 中使用这些尺寸参数和单位：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#F97583">\documentclass</span><span style="color:#E1E4E8">[12pt]{</span><span style="color:#79B8FF">article</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#F97583">\usepackage</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">graphicx</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">\begin</span><span style="color:#E1E4E8">{document}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">% 使用 \linewidth 设置一个宽度为当前环境宽度的水平线</span></span>
+<span class="line"><span style="color:#79B8FF">\noindent\rule</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\linewidth</span><span style="color:#E1E4E8">}{1pt}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">% 插入一个宽度为 \textwidth 的图片</span></span>
+<span class="line"><span style="color:#79B8FF">\includegraphics</span><span style="color:#E1E4E8">[width=</span><span style="color:#79B8FF">\textwidth</span><span style="color:#E1E4E8">]{example-image}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">% 使用 \textheight 设置一个宽度为当前文本高度一半的图片</span></span>
+<span class="line"><span style="color:#79B8FF">\includegraphics</span><span style="color:#E1E4E8">[height=0.5</span><span style="color:#79B8FF">\textheight</span><span style="color:#E1E4E8">]{example-image}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">% 使用 \columnwidth 设置一个宽度为当前列宽度的图片</span></span>
+<span class="line"><span style="color:#79B8FF">\includegraphics</span><span style="color:#E1E4E8">[width=</span><span style="color:#79B8FF">\columnwidth</span><span style="color:#E1E4E8">]{example-image}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">% 设置段落缩进为 1 cm</span></span>
+<span class="line"><span style="color:#79B8FF">\setlength</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\parindent</span><span style="color:#E1E4E8">}{1cm}</span></span>
+<span class="line"><span style="color:#E1E4E8">This is a paragraph with a 1 cm indentation.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">% 设置段落间距为 1 ex</span></span>
+<span class="line"><span style="color:#79B8FF">\setlength</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">\parskip</span><span style="color:#E1E4E8">}{1ex}</span></span>
+<span class="line"><span style="color:#E1E4E8">This is a paragraph with a 1 ex space between paragraphs.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">\end</span><span style="color:#E1E4E8">{document}</span></span></code></pre>
+<p>通过理解和使用这些尺寸参数和单位，可以更灵活地控制 LaTeX 文档的排版和布局。</p>
+<h2 id="表格宽度控制">表格宽度控制</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#6A737D">	%\usepackage{array} 详细控制居中与列宽</span></span>
+<span class="line"><span style="color:#E1E4E8">	</span></span>
+<span class="line"><span style="color:#79B8FF">	\begin</span><span style="color:#E1E4E8">{table}[htbp]</span></span>
+<span class="line"><span style="color:#79B8FF">		\centering</span></span>
+<span class="line"><span style="color:#F97583">		\label</span><span style="color:#E1E4E8">{</span><span style="color:#FFAB70">tabel:符号说明</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">		\begin</span><span style="color:#E1E4E8">{tabular}{</span></span>
+<span class="line"><span style="color:#E1E4E8">				>{</span><span style="color:#79B8FF">\centering\arraybackslash</span><span style="color:#E1E4E8">}p{</span><span style="color:#79B8FF">\textwidth</span><span style="color:#E1E4E8">/3}</span></span>
+<span class="line"><span style="color:#E1E4E8">				>{</span><span style="color:#79B8FF">\centering\arraybackslash</span><span style="color:#E1E4E8">}p{</span><span style="color:#79B8FF">\textwidth</span><span style="color:#E1E4E8">/3}</span></span>
+<span class="line"><span style="color:#E1E4E8">				}</span></span>
+<span class="line"><span style="color:#79B8FF">			\toprule</span></span>
+<span class="line"><span style="color:#E1E4E8">			符号 </span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8"> 意义 </span><span style="color:#F97583">\\</span></span>
+<span class="line"><span style="color:#79B8FF">			\midrule</span></span>
+<span class="line"><span style="color:#9ECBFF">			$</span><span style="color:#79B8FF">Q_i</span><span style="color:#9ECBFF">$</span><span style="color:#F97583"> &#x26;</span><span style="color:#E1E4E8"> 品类</span><span style="color:#9ECBFF">$</span><span style="color:#79B8FF">i</span><span style="color:#9ECBFF">$</span><span style="color:#E1E4E8">的总销量 </span><span style="color:#F97583">\\</span></span>
+<span class="line"><span style="color:#9ECBFF">			$</span><span style="color:#79B8FF">P_I</span><span style="color:#9ECBFF">$</span><span style="color:#F97583"> &#x26;</span><span style="color:#E1E4E8"> 品类</span><span style="color:#9ECBFF">$</span><span style="color:#79B8FF">i</span><span style="color:#9ECBFF">$</span><span style="color:#E1E4E8">的平均销量 </span><span style="color:#F97583">\\</span></span>
+<span class="line"><span style="color:#79B8FF">			\bottomrule</span></span>
+<span class="line"><span style="color:#79B8FF">		\end</span><span style="color:#E1E4E8">{tabular}</span></span>
+<span class="line"><span style="color:#79B8FF">	\end</span><span style="color:#E1E4E8">{table}</span></span></code></pre>
+<h2 id="并排图片">并排图片</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="latex"><code><span class="line"><span style="color:#79B8FF">\begin</span><span style="color:#E1E4E8">{figure}[htbp]</span></span>
+<span class="line"><span style="color:#79B8FF">    \centering</span></span>
+<span class="line"><span style="color:#79B8FF">    \subfigure</span><span style="color:#E1E4E8">[图1的标题]{</span></span>
+<span class="line"><span style="color:#79B8FF">        \includegraphics</span><span style="color:#E1E4E8">[width=0.45</span><span style="color:#79B8FF">\textwidth</span><span style="color:#E1E4E8">]{example-image-a}</span></span>
+<span class="line"><span style="color:#F97583">        \label</span><span style="color:#E1E4E8">{</span><span style="color:#FFAB70">fig:subfig1</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#79B8FF">    \hspace</span><span style="color:#E1E4E8">{0.05</span><span style="color:#79B8FF">\textwidth</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">    \subfigure</span><span style="color:#E1E4E8">[图2的标题]{</span></span>
+<span class="line"><span style="color:#79B8FF">        \includegraphics</span><span style="color:#E1E4E8">[width=0.45</span><span style="color:#79B8FF">\textwidth</span><span style="color:#E1E4E8">]{example-image-b}</span></span>
+<span class="line"><span style="color:#F97583">        \label</span><span style="color:#E1E4E8">{</span><span style="color:#FFAB70">fig:subfig2</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#79B8FF">    \caption</span><span style="color:#E1E4E8">{两个图并排显示的示例}</span></span>
+<span class="line"><span style="color:#F97583">    \label</span><span style="color:#E1E4E8">{</span><span style="color:#FFAB70">fig:subfigures</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#79B8FF">\end</span><span style="color:#E1E4E8">{figure}</span></span></code></pre>
+<h2 id="vscode-暗黑预览">VSCode 暗黑预览</h2>
+<p>VSCode 的 LaTeX Workshop 插件, 如果要切换为暗色主题，可更改设置:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#9ECBFF">"latex-workshop.view.pdf.theme"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"dark"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">"latex-workshop.view.pdf.invert"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.89</span></span></code></pre>
+<h2 id="align-与-aligned-多行公式">align 与 aligned 多行公式</h2>
+<ol>
+<li>align 环境：</li>
+</ol>
+<ul>
+<li>直接用于排列多行公式。</li>
+<li>每行公式默认都有自己的编号（除非使用\nonumber 或\notag 命令禁用）。</li>
+<li>通常不嵌套在 equation 环境中使用，因为 equation 环境是为单一公式设计的。</li>
+</ul>
+<ol start="2">
+<li>aligned 环境：</li>
+</ol>
+<ul>
+<li>通常用作其他数学环境（如 equation）内的子环境，用于对齐一组公式。</li>
+<li>不会为公式组中的每行公式生成独立的编号。整个 aligned 块在外部环境的控制下作为一个单元来编号。</li>
+<li>常见的用法是将 aligned 嵌套在 equation 环境中，以便为整个公式块生成单一编号。</li>
+</ul>
+<p>参考链接：<a href="https://blog.csdn.net/HaoZiHuang/article/details/136344346"># latex aligned环境和align环境 区别</a></p>
+<h2 id="组合数">组合数</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>\binom{n}{k}</span></span></code></pre>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo fence="true">(</mo><mfrac linethickness="0px"><mi>n</mi><mi>k</mi></mfrac><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\binom{n}{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="mord"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span>
+<h1 id="latex-常用操作">Latex 常用操作</h1>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>x</mi><mo>~</mo></mover></mrow><annotation encoding="application/x-tex">\tilde{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6679em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3.35em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">~</span></span></span></span></span></span></span></span></span></span>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⊂</mo></mrow><annotation encoding="application/x-tex">\subset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">⊂</span></span></span></span>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⊃</mo></mrow><annotation encoding="application/x-tex">\supset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">⊃</span></span></span></span></p>   </main> <footer> <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2024115962号-3</a><br> <div class="busuanzi">
+本站访客数 <span id="busuanzi_value_site_uv"></span> 人次 本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+</div> <!-- <a>本站访客数 xx 人次, 本站总访问量 xx 次</a> --> </footer> </body></html>

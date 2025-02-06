@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.2.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"><title>conda 常用命令 | 東</title><link rel="stylesheet" href="/_astro/_slug_.D5l4FfDp.css"></head> <body> <header> <nav class="header-nav-bar"> <!-- 主题切换 --> <div class="hamburger"> <span class="hamburger_line"></span> <span class="hamburger_line"></span> <span class="hamburger_line"></span> </div> <div class="header-nav-container"> <a class="header-nav-item" href="/">🏡首页</a> <a class="header-nav-item" href="/posts">🪶博客</a> <a class="header-nav-item" href="/tags">🏷️标签</a> <a class="header-nav-item" href="/nav">🚀导航</a> <a class="header-nav-item" href="/about">💕关于</a> </div> <div class="header-social-container"> <!-- github --> <a href="https://github.com/haodongcui" class="header-social-item" target="_blank" rel="noopener noreferrer"> <img src="/_astro/github.Dy8Sk3W5_ZRgFSN.svg" alt="GitHub" width="32" height="32" loading="lazy" decoding="async"> </a> </div> </nav> </header> <main class="main-content-wrapper">  <div class="post-content-info"> <h1>conda 常用命令</h1> <a class="post-content-info-author">作者: HaoDong Cui</a> <a class="post-content-info-date">发表于: 2024-07-31</a> <!-- <br/> --> <a class="post-content-info-categories">分类: 编程及专业软件</a> <a class="post-content-info-tags">标签: 常用命令, conda, Anaconda, 软件使用</a> </div>  <h1 id="conda-命令">conda 命令</h1>
+<h2 id="环境管理">环境管理</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#6A737D"># 查看环境配置</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --show</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 查看虚拟环境列表</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> env</span><span style="color:#9ECBFF"> list</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> info</span><span style="color:#79B8FF"> --env</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> info</span><span style="color:#79B8FF"> -e</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 创建虚拟环境</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> create</span><span style="color:#79B8FF"> -n</span><span style="color:#9ECBFF"> env_name</span><span style="color:#9ECBFF"> python=</span><span style="color:#79B8FF">3.8</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 克隆虚拟环境(克隆A，创建B)</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> create</span><span style="color:#79B8FF"> -n</span><span style="color:#9ECBFF"> B</span><span style="color:#79B8FF"> --clone</span><span style="color:#9ECBFF"> A</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 激活虚拟环境</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> activate</span><span style="color:#9ECBFF"> env_name</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 退出虚拟环境</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> activate</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> deactivate</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 删除虚拟环境</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> remove</span><span style="color:#79B8FF"> --name</span><span style="color:#9ECBFF"> env_name</span><span style="color:#79B8FF"> --all</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 删除某环境的某包</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> remove</span><span style="color:#79B8FF"> --name</span><span style="color:#9ECBFF"> env_name</span><span style="color:#9ECBFF"> package_name</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 导出环境</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> env</span><span style="color:#9ECBFF"> export</span><span style="color:#79B8FF"> --name</span><span style="color:#9ECBFF"> env_name</span><span style="color:#F97583"> ></span><span style="color:#9ECBFF"> env_name.yml</span></span>
+<span class="line"></span></code></pre>
+<h2 id="包管理">包管理</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#6A737D"># 查询当前环境的包</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> list</span></span>
+<span class="line"><span style="color:#6A737D"># 查询源中是否有包</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> search</span><span style="color:#9ECBFF"> package_name</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 当前环境安装包</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> package_name</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> package_name</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> conda_forge</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">指定源</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> numpy=</span><span style="color:#79B8FF">0.20.3</span></span>
+<span class="line"><span style="color:#6A737D"># 更新包</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> update</span><span style="color:#9ECBFF"> package_name</span></span>
+<span class="line"><span style="color:#6A737D"># 卸载包</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> unstall</span><span style="color:#9ECBFF"> package_name</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># python版本管理</span></span>
+<span class="line"><span style="color:#6A737D"># 更新python指定版本</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> python=</span><span style="color:#79B8FF">3.5</span></span>
+<span class="line"><span style="color:#6A737D"># 更新python最新版本</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> update</span><span style="color:#9ECBFF"> python</span></span>
+<span class="line"></span></code></pre>
+<h2 id="源管理">源管理</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#6A737D"># 查询源(两条命令选其一即可)</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --get</span><span style="color:#9ECBFF"> channels</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --show</span><span style="color:#9ECBFF"> channels</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 追加源</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --add</span><span style="color:#9ECBFF"> channels</span><span style="color:#9ECBFF"> conda-forge</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 移除源</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --remove</span><span style="color:#9ECBFF"> channels</span><span style="color:#9ECBFF"> conda-forge</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># pip设置源</span></span>
+<span class="line"><span style="color:#6A737D"># 设置清华源</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> config</span><span style="color:#9ECBFF"> set</span><span style="color:#9ECBFF"> global.index-url</span><span style="color:#9ECBFF"> https://pypi.tuna.tsinghua.edu.cn/simple</span></span>
+<span class="line"></span></code></pre>
+<h2 id="包整理">包整理</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#6A737D"># 必要包</span></span>
+<span class="line"><span style="color:#B392F0">os</span></span>
+<span class="line"><span style="color:#B392F0">numpy</span></span>
+<span class="line"><span style="color:#B392F0">pandas</span></span>
+<span class="line"><span style="color:#B392F0">matplotlib</span></span>
+<span class="line"><span style="color:#B392F0">scipy</span></span>
+<span class="line"><span style="color:#B392F0">seaborn</span></span>
+<span class="line"><span style="color:#B392F0">scikit-learn</span></span>
+<span class="line"><span style="color:#B392F0">jupyter</span><span style="color:#9ECBFF"> notebook</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 机器/深度学习</span></span>
+<span class="line"><span style="color:#B392F0">tensorflow-gpu</span></span>
+<span class="line"><span style="color:#B392F0">keras</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 命令</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> numpy</span><span style="color:#9ECBFF"> pandas</span><span style="color:#9ECBFF"> matplotlib</span><span style="color:#9ECBFF"> scipy</span><span style="color:#9ECBFF"> seaborn</span><span style="color:#9ECBFF"> scikit-learn</span><span style="color:#9ECBFF"> openpyxl</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> jupyter</span><span style="color:#9ECBFF"> notebook</span></span>
+<span class="line"><span style="color:#6A737D"># 或</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> numpy</span><span style="color:#9ECBFF"> pandas</span><span style="color:#9ECBFF"> matplotlib</span><span style="color:#9ECBFF"> scipy</span><span style="color:#9ECBFF"> seaborn</span><span style="color:#9ECBFF"> scikit-learn</span><span style="color:#9ECBFF"> openpyxl</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> jupyter</span><span style="color:#9ECBFF"> notebook</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 可能注意</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> openpyxl</span></span></code></pre>
+<h1 id="特别注意">特别注意</h1>
+<h2 id="tensorflow-gpu-安装">tensorflow-gpu 安装</h2>
+<p>注意对应关系
+tensorflow-gpu
+<img alt="image.png" width="1595" height="173" loading="lazy" decoding="async" src="/_astro/IMG-conda%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-20250119010934590.0TbYsFVA_adoxa.webp" ></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> tenforflow-gpu=</span><span style="color:#79B8FF">2.6.0</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> keras=</span><span style="color:#79B8FF">2.6.0</span></span></code></pre>
+<h2 id="pytorch-安装">pytorch 安装</h2>
+<p>ptorch
+<img alt="image.png" width="854" height="809" loading="lazy" decoding="async" src="/_astro/IMG-conda%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-20250119010934601.CaD9JL7t_ZN2kQn.webp" >
+<img alt="image.png" width="1255" height="487" loading="lazy" decoding="async" src="/_astro/IMG-conda%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-20250119010934637.D-iUT4eW_Z3qlpf.webp" ></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> pytorch</span><span style="color:#9ECBFF"> torchvision</span><span style="color:#9ECBFF"> torchaudio</span><span style="color:#9ECBFF"> pytorch-cuda=</span><span style="color:#79B8FF">12.1</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> pytorch</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> nvidia</span></span></code></pre>
+<h2 id="cvxpy-注意事项">cvxpy 注意事项</h2>
+<p>cvxpy
+python=3.7.2</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> conda-forge</span><span style="color:#9ECBFF"> lapack</span></span>
+<span class="line"><span style="color:#B392F0">conda</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -c</span><span style="color:#9ECBFF"> cvxgrp</span><span style="color:#9ECBFF"> cvxpy</span></span></code></pre>
+<h2 id="condarc-文件">.condarc 文件</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="txt"><code><span class="line"><span>.condarcchannels:</span></span>
+<span class="line"><span>  - [https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/)</span></span>
+<span class="line"><span>  - [http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/](http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/)</span></span>
+<span class="line"><span>  - [http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/](http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/)</span></span>
+<span class="line"><span>  - [http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free](http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free)</span></span>
+<span class="line"><span>  - [http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r](http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r)</span></span>
+<span class="line"><span>  - [http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro](http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro)</span></span>
+<span class="line"><span>  - [http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2](http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2)</span></span>
+<span class="line"><span>  - default</span></span>
+<span class="line"><span>envs_dirs:</span></span>
+<span class="line"><span>  - D://04_App_tech//Anaconoda//envs</span></span></code></pre>   </main> <footer> <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2024115962号-3</a><br> <div class="busuanzi">
+本站访客数 <span id="busuanzi_value_site_uv"></span> 人次 本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+</div> <!-- <a>本站访客数 xx 人次, 本站总访问量 xx 次</a> --> </footer> </body></html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.2.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"><title>Python 常用操作 | 東</title><link rel="stylesheet" href="/_astro/_slug_.D5l4FfDp.css"></head> <body> <header> <nav class="header-nav-bar"> <!-- 主题切换 --> <div class="hamburger"> <span class="hamburger_line"></span> <span class="hamburger_line"></span> <span class="hamburger_line"></span> </div> <div class="header-nav-container"> <a class="header-nav-item" href="/">🏡首页</a> <a class="header-nav-item" href="/posts">🪶博客</a> <a class="header-nav-item" href="/tags">🏷️标签</a> <a class="header-nav-item" href="/nav">🚀导航</a> <a class="header-nav-item" href="/about">💕关于</a> </div> <div class="header-social-container"> <!-- github --> <a href="https://github.com/haodongcui" class="header-social-item" target="_blank" rel="noopener noreferrer"> <img src="/_astro/github.Dy8Sk3W5_ZRgFSN.svg" alt="GitHub" width="32" height="32" loading="lazy" decoding="async"> </a> </div> </nav> </header> <main class="main-content-wrapper">  <div class="post-content-info"> <h1>Python 常用操作</h1> <a class="post-content-info-author">作者: HaoDong Cui</a> <a class="post-content-info-date">发表于: 2024-08-30</a> <!-- <br/> --> <a class="post-content-info-categories">分类: 编程及专业软件</a> <a class="post-content-info-tags">标签: Python</a> </div>  <h1 id="python-常用操作">Python 常用操作</h1>
+<h2 id="matplotlib-中文和负号">matplotlib 中文和负号</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> matplotlib.pyplot </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> plt</span></span>
+<span class="line"><span style="color:#E1E4E8">plt.rcParams[</span><span style="color:#9ECBFF">'font.family'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'SimHei'</span><span style="color:#6A737D">  # 中文</span></span>
+<span class="line"><span style="color:#E1E4E8">plt.rcParams[</span><span style="color:#9ECBFF">'axes.unicode_minus'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> False</span><span style="color:#6A737D">      # 显示负号</span></span>
+<span class="line"><span style="color:#F97583">%</span><span style="color:#E1E4E8">config InlineBackend.figure_format </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'retina'</span><span style="color:#6A737D"> # notebook画图更清晰，非notebook不需要</span></span></code></pre>
+<h2 id="pandas-索引切片">pandas 索引切片</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 基于标签索引</span></span>
+<span class="line"><span style="color:#E1E4E8">df.loc[行索引, 列索引]</span></span>
+<span class="line"><span style="color:#E1E4E8">df.loc[行索引]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 基于整数索引</span></span>
+<span class="line"><span style="color:#E1E4E8">df.iloc[行索引, 列索引] </span></span>
+<span class="line"><span style="color:#E1E4E8">df.iloc[行索引]</span></span></code></pre>
+<p>都适用于布尔数组</p>
+<h2 id="pandas--dataframe-转-numpy-数组">pandas  DataFrame 转 Numpy 数组</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#E1E4E8">d </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> df.values</span></span>
+<span class="line"><span style="color:#E1E4E8">d </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> np.numpy(df)</span></span></code></pre>
+<h2 id="pandas--apply-自定义函数">pandas  apply 自定义函数</h2>
+<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/340770847">Pandas数据处理(五) — apply() 方法介绍！ - 知乎 (zhihu.com)</a></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">df.apply(func, </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">raw</span><span style="color:#F97583">=</span><span style="color:#79B8FF">False</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">result_type</span><span style="color:#F97583">=</span><span style="color:#79B8FF">None</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">args</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">(), </span><span style="color:#F97583">**</span><span style="color:#E1E4E8">kwds)</span></span>
+<span class="line"></span></code></pre>
+<ul>
+<li>
+<p>func 代表的是传入的函数或 lambda 表达式；</p>
+</li>
+<li>
+<p>axis 参数可提供的有两个，该参数默认为 0/列</p>
+<ul>
+<li>0 或者 index ，表示函数处理的是每一列；</li>
+<li>1 或 columns ，表示处理的是每一行;</li>
+</ul>
+</li>
+<li>
+<p>raw 是 bool 类型，默认为 False;</p>
+<ul>
+<li>False ，表示把每一行或列作为 Series 传入函数中；</li>
+<li>True，表示接受的是 ndarray 数据类型；</li>
+</ul>
+</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 构造df</span></span>
+<span class="line"><span style="color:#E1E4E8">df  </span><span style="color:#F97583">=</span><span style="color:#E1E4E8">pd.DataFrame([[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">,</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">,</span><span style="color:#79B8FF">9</span><span style="color:#E1E4E8">]]</span><span style="color:#F97583">*</span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">,</span><span style="color:#FFAB70">columns</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> [</span><span style="color:#9ECBFF">'A'</span><span style="color:#E1E4E8">,</span><span style="color:#9ECBFF">'B'</span><span style="color:#E1E4E8">,</span><span style="color:#9ECBFF">'A'</span><span style="color:#E1E4E8">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 求行/列均值</span></span>
+<span class="line"><span style="color:#E1E4E8">df.apply(np.mean, </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">) </span><span style="color:#6A737D"># axis=1表示对列操作</span></span>
+<span class="line"><span style="color:#E1E4E8">df.apply(np.mean, </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">) </span><span style="color:#6A737D"># axis=1表示对行操作</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 对行/列开方</span></span>
+<span class="line"><span style="color:#E1E4E8">df.apply(np.sqrt, </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">) </span><span style="color:#6A737D"># axis=1表示对列操作</span></span>
+<span class="line"><span style="color:#E1E4E8">df.apply(np.sqrt, </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">) </span><span style="color:#6A737D"># axis=1表示对行操作</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 自定义函数（如：求每行的非零元素个数）</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> count_nonzero</span><span style="color:#E1E4E8">(row):</span></span>
+<span class="line"><span style="color:#E1E4E8">    count </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8"> r </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> row:</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> r </span><span style="color:#F97583">!=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">            count </span><span style="color:#F97583">+=</span><span style="color:#79B8FF"> 1</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> count</span></span>
+<span class="line"><span style="color:#E1E4E8">df[</span><span style="color:#9ECBFF">'非零元素个数'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> df.apply(count_nonzero, </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span></code></pre>
+<h2 id="pandas--query-筛选函数">pandas  query 筛选函数</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># 普通筛选</span></span>
+<span class="line"><span style="color:#E1E4E8">df.query(</span><span style="color:#9ECBFF">'country=="china"'</span><span style="color:#E1E4E8">) </span><span style="color:#6A737D"># 筛选df中country==china的行</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 变量筛选</span></span>
+<span class="line"><span style="color:#E1E4E8">country_name </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> 'china'</span></span>
+<span class="line"><span style="color:#E1E4E8">df.query(</span><span style="color:#9ECBFF">'country==@country_name'</span><span style="color:#E1E4E8">) </span><span style="color:#6A737D"># 使用@</span></span>
+<span class="line"><span style="color:#E1E4E8">df.query(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">"country=='</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">country_name</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">'"</span><span style="color:#E1E4E8">) </span><span style="color:#6A737D"># 使用f-string</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 判断条件</span></span>
+<span class="line"><span style="color:#E1E4E8">df.query(</span><span style="color:#9ECBFF">'year>2001'</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h2 id="pandas--reset_index-重置索引">pandas  reset_index 重置索引</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#E1E4E8">df.reset_index(</span><span style="color:#FFAB70">inplace</span><span style="color:#F97583">=</span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">) </span><span style="color:#6A737D"># 重置索引</span></span></code></pre>
+<h2 id="plotly-导出图片陷入死循环">plotly 导出图片陷入死循环</h2>
+<p>不要安装最新版本的 kaleido，使用下面的语句安装 <code>0.1</code> 版本的 <code>kaleido</code></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#E1E4E8">pip install </span><span style="color:#FDAEB7;font-style:italic">--</span><span style="color:#E1E4E8">upgrade </span><span style="color:#9ECBFF">"kaleido==0.1.*"</span></span></code></pre>
+<h2 id="jupyter-导出为-markdown">jupyter 导出为 markdown</h2>
+<p>安装 <code>nbconvert</code> 库及依赖 <code>pandoc</code>，使用如下命令</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>pip install nbconvert</span></span>
+<span class="line"><span>pip install pandoc</span></span></code></pre>
+<p>在 <code>LearnPlotly.ipynb</code> 文件所在目录下，右键打开终端，输入如下转换命令</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">jupyter</span><span style="color:#9ECBFF"> nbconvert</span><span style="color:#9ECBFF"> LearnPlotly.ipynb</span><span style="color:#79B8FF"> --to</span><span style="color:#9ECBFF"> markdown</span></span></code></pre>   </main> <footer> <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2024115962号-3</a><br> <div class="busuanzi">
+本站访客数 <span id="busuanzi_value_site_uv"></span> 人次 本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+</div> <!-- <a>本站访客数 xx 人次, 本站总访问量 xx 次</a> --> </footer> </body></html>

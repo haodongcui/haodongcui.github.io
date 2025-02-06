@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.2.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"><title>Git 常用操作 | 東</title><link rel="stylesheet" href="/_astro/_slug_.D5l4FfDp.css"></head> <body> <header> <nav class="header-nav-bar"> <!-- 主题切换 --> <div class="hamburger"> <span class="hamburger_line"></span> <span class="hamburger_line"></span> <span class="hamburger_line"></span> </div> <div class="header-nav-container"> <a class="header-nav-item" href="/">🏡首页</a> <a class="header-nav-item" href="/posts">🪶博客</a> <a class="header-nav-item" href="/tags">🏷️标签</a> <a class="header-nav-item" href="/nav">🚀导航</a> <a class="header-nav-item" href="/about">💕关于</a> </div> <div class="header-social-container"> <!-- github --> <a href="https://github.com/haodongcui" class="header-social-item" target="_blank" rel="noopener noreferrer"> <img src="/_astro/github.Dy8Sk3W5_ZRgFSN.svg" alt="GitHub" width="32" height="32" loading="lazy" decoding="async"> </a> </div> </nav> </header> <main class="main-content-wrapper">  <div class="post-content-info"> <h1>Git 常用操作</h1> <a class="post-content-info-author">作者: HaoDong Cui</a> <a class="post-content-info-date">发表于: 2024-08-09</a> <!-- <br/> --> <a class="post-content-info-categories">分类: 软件大杂烩</a> <a class="post-content-info-tags">标签: Git, 软件使用</a> </div>  <h1 id="下载项目">下载项目</h1>
+<h3 id="初始化-git">初始化 <code>.Git</code></h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> init</span></span></code></pre>
+<h3 id="添加库">添加库</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> remote</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> origin</span><span style="color:#9ECBFF"> 源码地址</span></span></code></pre>
+<h3 id="将库里的代码下载到本地">将库里的代码下载到本地</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> pull</span><span style="color:#9ECBFF"> origin</span><span style="color:#9ECBFF"> main</span></span></code></pre>
+<h1 id="配置更新">配置更新</h1>
+<h3 id="配置更新地址">配置更新地址</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> remote</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> upstream</span><span style="color:#9ECBFF"> 想要拉取更新的库</span></span></code></pre>
+<p>依据此库来对本地代码进行更新</p>
+<h3 id="查看当前仓库的远程仓库地址和原仓库地址">查看当前仓库的远程仓库地址和原仓库地址</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> remote</span><span style="color:#79B8FF"> -v</span></span></code></pre>
+<h3 id="获取更新">获取更新</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> fetch</span><span style="color:#9ECBFF"> upstream</span></span></code></pre>
+<h3 id="将更新代码和本地代码合并">将更新代码和本地代码合并</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> merge</span><span style="color:#9ECBFF"> upstream/master</span></span></code></pre>
+<h1 id="报错及相关链接">报错及相关链接</h1>
+<p>fatal: unable to access ‘<a href="https://github.com/ver-gas/Mathematical-modeling.git/">https://github.com/ver-gas/Mathematical-modeling.git/</a>’: Failed to connect to github.com port 443 after 21274 ms: Couldn’t connect to server</p>
+<p>参考链接：<a href="https://blog.csdn.net/qq_43546721/article/details/139506583">完美解决 git 报错 “fatal: unable to access ‘https://github.com/…/.git‘: Recv failure Connection was rese-CSDN博客</a></p>
+<p><a href="https://www.cnblogs.com/goloving/p/15017769.html#:~:text=%E6%B5%85%E6%9E%90.gitigno#:~:text=%E6%B5%85%E6%9E%90.gitigno">浅析.gitignore文件不起作用的原因及其解决办法 - 古兰精 - 博客园 (cnblogs.com)</a></p>
+<h2 id="git-代理问题">git 代理问题</h2>
+<p>参考链接：<a href="https://blog.csdn.net/wtl1992/article/details/131743283">开启了代理，但是git仍然连接拒绝的解决方法_git设置代理不起作用-CSDN博客</a></p>
+<p>windows 中 git 默认不会使用系统代理</p>
+<p><strong>设置代理命令：</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># 配置socks5代理</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#9ECBFF"> http.proxy</span><span style="color:#9ECBFF"> socks5</span><span style="color:#9ECBFF"> 127.0.0.1:7890</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#9ECBFF"> https.proxy</span><span style="color:#9ECBFF"> socks5</span><span style="color:#9ECBFF"> 127.0.0.1:7890</span></span>
+<span class="line"><span style="color:#E1E4E8"> </span></span>
+<span class="line"><span style="color:#6A737D"># 配置http代理</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#9ECBFF"> http.proxy</span><span style="color:#9ECBFF"> 127.0.0.1:7890</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#9ECBFF"> https.proxy</span><span style="color:#9ECBFF"> 127.0.0.1:7890</span></span></code></pre>
+<p><strong>查看代理命令：</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#79B8FF"> --get</span><span style="color:#9ECBFF"> http.proxy</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#79B8FF"> --get</span><span style="color:#9ECBFF"> https.proxy</span></span></code></pre>
+<p><strong>取消代理命令:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#79B8FF"> --unset</span><span style="color:#9ECBFF"> http.proxy</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#79B8FF"> --unset</span><span style="color:#9ECBFF"> https.proxy</span></span></code></pre>
+<h1 id="本地连接仓库并推送">本地连接仓库并推送</h1>
+<h2 id="本地连接仓库">本地连接仓库</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> init</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> remote</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> origin</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">远程仓库地</span><span style="color:#E1E4E8">址</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> checkout</span><span style="color:#79B8FF"> -b</span><span style="color:#9ECBFF"> main</span><span style="color:#6A737D"> # 设置分支为main</span></span></code></pre>
+<h2 id="推送">推送</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> .</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> commit</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> "&#x3C;message>"</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> push</span><span style="color:#9ECBFF"> origin</span><span style="color:#9ECBFF"> main</span></span></code></pre>
+<p>或强制推送覆盖</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> .</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> commit</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> "&#x3C;message>"</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> push</span><span style="color:#79B8FF"> -f</span><span style="color:#9ECBFF"> origin</span><span style="color:#9ECBFF"> main</span></span></code></pre>
+<p>其中 <code>-f</code> 全拼为 <code>--force</code></p>   </main> <footer> <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2024115962号-3</a><br> <div class="busuanzi">
+本站访客数 <span id="busuanzi_value_site_uv"></span> 人次 本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+</div> <!-- <a>本站访客数 xx 人次, 本站总访问量 xx 次</a> --> </footer> </body></html>

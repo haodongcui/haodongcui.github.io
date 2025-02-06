@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.2.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"><title>wsl2 使用 | 東</title><link rel="stylesheet" href="/_astro/_slug_.D5l4FfDp.css"></head> <body> <header> <nav class="header-nav-bar"> <!-- 主题切换 --> <div class="hamburger"> <span class="hamburger_line"></span> <span class="hamburger_line"></span> <span class="hamburger_line"></span> </div> <div class="header-nav-container"> <a class="header-nav-item" href="/">🏡首页</a> <a class="header-nav-item" href="/posts">🪶博客</a> <a class="header-nav-item" href="/tags">🏷️标签</a> <a class="header-nav-item" href="/nav">🚀导航</a> <a class="header-nav-item" href="/about">💕关于</a> </div> <div class="header-social-container"> <!-- github --> <a href="https://github.com/haodongcui" class="header-social-item" target="_blank" rel="noopener noreferrer"> <img src="/_astro/github.Dy8Sk3W5_ZRgFSN.svg" alt="GitHub" width="32" height="32" loading="lazy" decoding="async"> </a> </div> </nav> </header> <main class="main-content-wrapper">  <div class="post-content-info"> <h1>wsl2 使用</h1> <a class="post-content-info-author">作者: HaoDong Cui</a> <a class="post-content-info-date">发表于: 2024-08-21</a> <!-- <br/> --> <a class="post-content-info-categories">分类: 计算机大杂烩</a> <a class="post-content-info-tags">标签: 计算机, wsl2, Linux, Ubuntu</a> </div>  <p>操作系统：Windows11</p>
+<p>在任务栏搜索栏中，搜索“功能”，打开“启用或关闭 Windows 功能”，开启“适用于 Windows 的 Linux 子系统”和“虚拟化平台”，开启后会提示重启电脑，重启即可。</p>
+<h3 id="安装">安装</h3>
+<p>打开终端，安装（默认是 <code>Ubuntu</code>）</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> --install</span></span></code></pre>
+<p>Linux 输入密码时，是不显示的，输入正确按回车即可</p>
+<h3 id="查看已安装的子系统">查看已安装的子系统</h3>
+<p>查看已安装的子系统</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> --list</span><span style="color:#79B8FF"> -v</span></span></code></pre>
+<p>可简写为</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> -l</span><span style="color:#79B8FF"> -v</span></span></code></pre>
+<h3 id="查看可安装的发行版">查看可安装的发行版</h3>
+<p>查看可安装的发行版</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> --list</span><span style="color:#79B8FF"> --online</span></span></code></pre>
+<p>可简写为</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> -l</span><span style="color:#79B8FF"> --online</span></span></code></pre>
+<p>下载指定的发行版（比如 <code>kali-linux</code> 是可安装的发行版，现安装它作演示）</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> --install</span><span style="color:#9ECBFF"> kali-linux</span></span></code></pre>
+<h3 id="卸载">卸载</h3>
+<p>卸载 <code>kali-linux</code></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> --unregister</span><span style="color:#9ECBFF"> kali-linux</span></span></code></pre>
+<p>查看现有子系统</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> -l</span><span style="color:#79B8FF"> -v</span></span></code></pre>
+<h3 id="备份与恢复">备份与恢复</h3>
+<p>导出 <code>Ubuntu</code> 子系统至目前所在目录的 <code>ubuntu.tar</code></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> --export</span><span style="color:#9ECBFF"> Ubuntu</span><span style="color:#9ECBFF"> ubuntu.tar</span></span></code></pre>
+<p>从 <code>ubuntu.tar</code> 的路径导入，并命名为 <code>Ubuntu2</code></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> --import</span><span style="color:#9ECBFF"> Ubuntu2</span><span style="color:#9ECBFF"> E:</span><span style="color:#79B8FF">\D</span><span style="color:#9ECBFF">esktop</span><span style="color:#79B8FF">\u</span><span style="color:#9ECBFF">buntu.tar</span></span></code></pre>
+<p>查看现有子系统</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> -l</span><span style="color:#79B8FF"> -v</span></span></code></pre>
+<h3 id="退出子系统">退出子系统</h3>
+<p>进入子系统后，退出回到命令行</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#79B8FF">exit</span></span></code></pre>
+<h3 id="关闭子系统">关闭子系统</h3>
+<p>关闭所有子系统</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> --shutdown</span></span></code></pre>
+<p>查看现有子系统状态</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="shell"><code><span class="line"><span style="color:#B392F0">wsl</span><span style="color:#79B8FF"> -l</span><span style="color:#79B8FF"> -v</span></span></code></pre>
+<h2 id="图形界面">图形界面</h2>
+<p><a href="https://blog.csdn.net/m0_51194302/article/details/127891929">wsl安装ubuntu并设置gnome图形界面详细步骤（win11+ubuntu18）_wslubuntu图形界面-CSDN博客</a></p>   </main> <footer> <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2024115962号-3</a><br> <div class="busuanzi">
+本站访客数 <span id="busuanzi_value_site_uv"></span> 人次 本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+</div> <!-- <a>本站访客数 xx 人次, 本站总访问量 xx 次</a> --> </footer> </body></html>
