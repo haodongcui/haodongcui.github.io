@@ -54,7 +54,7 @@ pnpm dev
 
 ## 碎碎念
 
->从一个未接触过前端、看不懂文档的小白, 到能自定义一个博客, 最开始是被 Jekyll 的亮眼和 Hexo 的花哨程度深深吸引住了, 然后就是跟着**搜索引擎**这个大师不断地摸索, 后面AI兴起就又坐上了火箭, 前前后后涉及了 [Jekyll](https://jekyllcn.com/docs/home/), [Hexo](https://hexo.io/zh-cn/), [Gitbook](https://www.gitbook.com/), [Vuepress](https://vuepress.vuejs.org/zh/), [Vitepress](https://vitepress.dev/zh/), [Astro](https://astro.build/), 入门了 Html, Css, Js, Vue, Astro, Tailwind, Unocss (都是浮于表面, 属于刚入门的程度, 不过接触新技术挺令人兴奋的haha), 最后又回到了 Vitepress, 因为要忙于学业, 开发这个博客断断续续的, 所以总体时间跨度上有半年左右, 不过实现自己预想功能(折腾)的过程还是挺有趣的ha~ha~.
+>从一个未接触过前端、看不懂文档的小白, 到能自定义一个博客, 最开始是被 Jekyll 的亮眼和 Hexo 的花哨深深吸引住了, 然后就是跟着**搜索引擎**这个大师不断地摸索, 后面也用上了AI, 前前后后涉及了 [Jekyll](https://jekyllcn.com/docs/home/), [Hexo](https://hexo.io/zh-cn/), [Gitbook](https://www.gitbook.com/), [Vuepress](https://vuepress.vuejs.org/zh/), [Vitepress](https://vitepress.dev/zh/), [Astro](https://astro.build/), 入门了 Html, Css, Js, Nodejs, Vue, Astro, Tailwind, Unocss (都是浮于表面, 属于刚入门的程度, 不过接触新技术挺令人兴奋的haha), 最后又回到了 Vitepress, 学业原因, 开发这个博客断断续续的, 所以总体时间跨度上有半年左右, 不过实现自己预想功能(折腾)的过程还是挺有趣的ha~ha~.
 
 为什么选择 [vitepress](https://vitepress.dev/zh/) 呢? 
 - 一是, 功能丰富, 可定制性强, 相对 Jekyll, Gitbook 来说.
@@ -63,7 +63,7 @@ pnpm dev
 - 四是, 它的构建产物是一个单页面应用, 页面之间无缝切换, 这是相比 Astro 来说, 我更喜欢的一点. 
 
 
-做的比较简陋, 混乱, 也没整理, 有时间了再整理打包一下, 先假装用 README 提前开个香槟, haha.
+做的比较简陋, 混乱, 也没整理, 有时间了再整理打包一下, 先假装用 README 提前开个香槟, 也算是为这个项目画上了一个句号辽, haha～～.
 
 
 
