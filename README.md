@@ -1,11 +1,10 @@
-
 ## vitepress-blog-origin
 
-[vitepress-blog-origin](https://github.com/haodongcui/vitepress-blog-origin), 一个简洁但漂亮的 vitepress 博客, 算不上主题, 主要是自定义了布局样式, 实现了个人博客所需的基本功能.
+[vitepress-blog-origin](https://github.com/haodongcui/vitepress-blog-origin), 一个简洁且漂亮的 vitepress 博客, 由 [haodongcui](https://github.com/haodongcui) 开发.
 
 ![preview of dark mode](./preview2025-2-8.png)
 
-由 [haodongcui](https://github.com/haodongcui) 开发, 作为个人博客, 使用 vitepress 搭建, 只在默认主题的基础上进行修改, 自定义了布局样式, 实现了个人博客的功能.
+该博客, 使用 vitepress 搭建, 仅在默认主题的基础上进行了修改, 自定义了布局样式, 实现了个人博客的大部分功能, 算不上 vitepress 主题, 时间原因, 也暂未整理和打包发布.
 
 
 
@@ -29,7 +28,7 @@
 
 ## 使用
 
-> ***不建议使用***, 因为结构较混乱, 可以借鉴的最多也就: 文章列表的实现 、适配于 obsidian 的文件结构、 vitepress 的配色调整.
+> ***暂不建议使用***, 因为结构较混乱, 还未整理, 且技术力简陋, 可以借鉴的最多也就: 文章列表的实现 、适配于 obsidian 的文件结构、 vitepress 的配色调整.
 
 如果不嫌弃的话,可以直接:
 ```bash
@@ -55,13 +54,13 @@ pnpm dev
 
 ## 碎碎念
 
->从一个未接触过前端、看不懂文档的小白, 到能自定义一个博客, 最开始是被Hexo的花哨程度深深吸引住了, 然后就是跟着**搜索引擎**这个大师不断地摸索, 前前后后涉及了 [Jekyll](https://jekyllcn.com/docs/home/), [Hexo](https://hexo.io/zh-cn/), [Gitbook](https://www.gitbook.com/), [Vuepress](https://vuepress.vuejs.org/zh/), [Vitepress](https://vitepress.dev/zh/), [Astro](https://astro.build/), 入门了 Html, Css, Js, Vue, Astro, Tailwind, Unocss (都是浮于表面, 属于刚入门的程度, 不过接触新技术挺令人兴奋的haha), 最后又回到了 Vitepress, 因为要忙于学业, 开发这个博客断断续续的, 所以总体时间跨度上有半年左右, 不过实现自己预想功能(折腾)的过程还是挺有趣的ha~ha~.
+>从一个未接触过前端、看不懂文档的小白, 到能自定义一个博客, 最开始是被 Jekyll 的亮眼和 Hexo 的花哨程度深深吸引住了, 然后就是跟着**搜索引擎**这个大师不断地摸索, 后面AI兴起就又坐上了火箭, 前前后后涉及了 [Jekyll](https://jekyllcn.com/docs/home/), [Hexo](https://hexo.io/zh-cn/), [Gitbook](https://www.gitbook.com/), [Vuepress](https://vuepress.vuejs.org/zh/), [Vitepress](https://vitepress.dev/zh/), [Astro](https://astro.build/), 入门了 Html, Css, Js, Vue, Astro, Tailwind, Unocss (都是浮于表面, 属于刚入门的程度, 不过接触新技术挺令人兴奋的haha), 最后又回到了 Vitepress, 因为要忙于学业, 开发这个博客断断续续的, 所以总体时间跨度上有半年左右, 不过实现自己预想功能(折腾)的过程还是挺有趣的ha~ha~.
 
 为什么选择 [vitepress](https://vitepress.dev/zh/) 呢? 
 - 一是, 功能丰富, 可定制性强, 相对 Jekyll, Gitbook 来说.
 - 二是, 轻便, 现代, 相比 Hexo 来说.
 - 三是, 它未来可期, 相比 Vuepress 来说, hahaha.
-- 四是, 它的构建产物是一个单页面应用, 页面之间无缝切换, 这是相比 Astro, 我更喜欢的一点. 
+- 四是, 它的构建产物是一个单页面应用, 页面之间无缝切换, 这是相比 Astro 来说, 我更喜欢的一点. 
 
 
 做的比较简陋, 混乱, 也没整理, 有时间了再整理打包一下, 先假装用 README 提前开个香槟, haha.
