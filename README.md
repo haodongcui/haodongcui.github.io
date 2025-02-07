@@ -3,7 +3,10 @@
 
 [vitepress-blog-origin](https://github.com/haodongcui/vitepress-blog-origin), 一个简洁但漂亮的 vitepress 博客, 算不上主题, 主要是自定义了布局样式, 实现了个人博客所需的基本功能.
 
-由 haodongcui 开发, 作为个人博客, 使用 vitepress 搭建, 只在默认主题的基础上进行修改, 自定义了布局样式, 实现了个人博客的功能.
+![preview of dark mode](./preview2025-2-8.png)
+
+由 [haodongcui](https://github.com/haodongcui) 开发, 作为个人博客, 使用 vitepress 搭建, 只在默认主题的基础上进行修改, 自定义了布局样式, 实现了个人博客的功能.
+
 
 
 ## 功能
@@ -13,19 +16,20 @@
 - [x] 数学公式(插件)
 - [x] 导航栏毛玻璃效果(插件)
 - [x] 代码块mac样式(插件)
-- [x] 内容与开发分离的文件结构,使用 Obsidian 作为 "后端" (haha)
+- [x] 内容与开发分离的文件结构, 使用 Obsidian 作为 "后端" (haha)
+- [x] 附了一个我喜欢的 obsidian 主题, 见 `docs/.obsidian/snippets/`.
 - [x] 文章列表
 - [x] 分类页面
 - [x] 评论系统(仅giscus)
 
 
-### 待实现或优化功能
+### 待实现或待优化功能
 - [ ] 标签页面(有,但暂不好用)
 
 
 ## 使用
 
-> ***不建议使用***, 因为结构较混乱, 可以借鉴的最多也就: 文章列表的实现 或 vitepress 的配色调整.
+> ***不建议使用***, 因为结构较混乱, 可以借鉴的最多也就: 文章列表的实现 、适配于 obsidian 的文件结构、 vitepress 的配色调整.
 
 如果不嫌弃的话,可以直接:
 ```bash
@@ -39,6 +43,13 @@ pnpm install
 ```bash
 pnpm dev
 ```
+## obsidian 使用
+
+以 `docs/` 目录为 `obsidian` 仓库的根目录, 
+
+只有其中的 `blog-posts/`, `blog-essays/`, `blog-info` 三个文件夹会打包发布 `github pages`,
+
+`docs/` 下的其他文件夹、文件, 均不会发布, 故可以用来存放一些不想公开的内容, 如日记等.
 
 
 
@@ -64,3 +75,4 @@ pnpm dev
 - 文章列表实现参考: [vitepress-blog-pure](https://github.com/airene/vitepress-blog-pure)
 - 文章列表实现参考: [文章列表](https://juejin.cn/post/6896382276389732359)
 - 配色参考: [charm | astro](https://astro-charm.vercel.app/)
+- Github secrets 配置参考: [Github Actions 入门](https://zhuanlan.zhihu.com/p/364366127)
