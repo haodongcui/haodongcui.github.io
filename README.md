@@ -7,7 +7,7 @@
 
 ![preview of dark mode](./preview2025-2-8.png)
 
-该博客, 使用 vitepress 搭建, 仅在默认主题的基础上进行了修改, 自定义了布局样式, 实现了个人博客的大部分功能, 算不上 vitepress 主题, 时间原因, 也暂未整理和打包发布.
+该博客, 使用 vitepress 搭建, 仅在默认主题的基础上进行了修改, 自定义了布局样式, 实现了个人博客的大部分功能, 暂未导出主题配置文件.
 
 
 
@@ -16,33 +16,44 @@
 ### 已实现的功能
 除了默认主题的功能外, 已实现了以下功能:
 - [x] 数学公式(插件)
-- [x] 导航栏毛玻璃效果(插件)
-- [x] 代码块mac样式(插件)
+- [x] 导航栏毛玻璃效果
+- [x] 代码块mac样式
 - [x] 内容与开发分离的文件结构, 使用 Obsidian 作为 "后端" (haha)
 - [x] 附了一个我喜欢的 obsidian 主题, 见 `docs/.obsidian/snippets/`.
+- [x] 首页
 - [x] 文章列表
 - [x] 分类页面
 - [x] 标签页面
 - [x] 评论系统(仅giscus)
+- [x] 文章顶部 `标题` / `时间` / `分类` / `标签` 展示
+- [x] 侧边栏目录宽度自适应
+
+
+> [!TIP]特点：
+> 文章列表的实现 
+> 适配于 obsidian 的文件结构
+> 样式简洁明了.
 
 
 
 ## 使用
 
-> ***暂不建议使用***, 因为结构较混乱, 还未整理, 且技术力简陋, 可以借鉴的最多也就: 文章列表的实现 、适配于 obsidian 的文件结构、 vitepress 的配色调整.
+工具: `Git` / `NodeJs` / `pnpm`(可选) / `Obsidian`
 
-如果不嫌弃的话,可以直接:
 ```bash
-git clone git@github.com:haodongcui/vitepress-blog-origin.git
+git clone https://github.com/haodongcui/vitepress-blog-origin.git
 ```
+
 安装依赖
 ```bash
 pnpm install
 ```
+
 启动项目预览
 ```bash
 pnpm dev
 ```
+
 或其他如`npm` / `yarn` 都可.
 
 ## obsidian 使用
@@ -57,17 +68,16 @@ pnpm dev
 
 ## 碎碎念
 
->从一个未接触过前端、看不懂文档的小白, 到能自定义一个博客, 最开始是被 Jekyll 的亮眼和 Hexo 的花哨深深吸引住了, 然后就是跟着**搜索引擎**这个大师不断地摸索, 后面也用上了AI, 前前后后涉及了 [Jekyll](https://jekyllcn.com/docs/home/), [Hexo](https://hexo.io/zh-cn/), [Gitbook](https://www.gitbook.com/), [Vuepress](https://vuepress.vuejs.org/zh/), [Vitepress](https://vitepress.dev/zh/), [Astro](https://astro.build/), 入门了 Html, Css, Js, Nodejs, Vue, Astro, Tailwind, Unocss (都是用到啥就学啥, 杂而不深，堪堪能用, 不过接触新技术挺令人兴奋的haha), 最后又回到了 Vitepress, 学业原因, 开发这个博客断断续续的, 所以总体时间跨度上有半年左右, 不过实现自己预想功能(折腾)的过程还是挺有趣的ha~ha~.
+>从一个未接触过前端、看不懂文档的小白, 到能自定义一个博客, 这一路真的很惊奇。
+>最开始是被 Jekyll 的亮眼和 Hexo 的花哨深深吸引住了, 于是跟着**搜索引擎**这个大师不断地摸索, 再站上 AI 的浪潮, 
+>前前后后涉及了 [Jekyll](https://jekyllcn.com/docs/home/), [Hexo](https://hexo.io/zh-cn/), [Gitbook](https://www.gitbook.com/), [Vuepress](https://vuepress.vuejs.org/zh/), [Vitepress](https://vitepress.dev/zh/), [Astro](https://astro.build/), 入门了 Git, Html, Css, Js, Nodejs, Vue, Astro, Tailwind, Unocss (用啥学啥, 杂而不深，堪堪能用, 不过接触新技术挺令人兴奋的haha), 最后又回到了 Vitepress. 
+>学业原因, 开发这个博客断断续续的 (其实本质上是对自己的博客修修补补), 所以总体时间跨度上有半年左右, 不过实现自己预想功能(折腾)的过程超级有趣的 ha~ha~.
 
 为什么选择 [vitepress](https://vitepress.dev/zh/) 呢? 
 - 一是, 功能丰富, 可定制性强, 相对 Jekyll, Gitbook 来说.
 - 二是, 轻便, 现代, 相比 Hexo 来说.
 - 三是, 它未来可期, 相比 Vuepress 来说, hahaha.
-- 四是, 它的构建产物是一个单页面应用, 页面之间无缝切换, 这是相比 Astro 来说, 我更喜欢的一点. (其实是我还不会优化haha)
-
-
-做的比较简陋, 混乱, 也没整理, 有时间了再整理打包一下, 先假装用 README 提前开个香槟, 也算是为这个项目画上了一个句号辽, haha～～.
-
+- 四是, 它的构建产物是一个单页面应用`SPA`, 页面之间无缝切换, 这是相比 Astro 来说, 我更喜欢的一点. (其实是我还不会优化haha)
 
 
 ## 参考
