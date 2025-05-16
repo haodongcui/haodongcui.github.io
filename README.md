@@ -2,7 +2,7 @@ My name is Haodong Cui (崔浩东), a passionate lifelong learner. And this page
 
 ### Index
 - [My Website](https://haodongcui.github.io) and its [Mirror](https://cuihd.com/)
-- [My Website of blog](https://haodongcui.github.io/blog/)
+- [My Blog Website](https://haodongcui.github.io/blog/)
 - [My Github](https://github.com/haodongcui)
 
 ### Projects
