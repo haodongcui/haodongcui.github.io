@@ -2,7 +2,7 @@ My name is Haodong Cui (崔浩东), a passionate lifelong learner. And this page
 
 
 ### Education
-- Xinjiang University, Mathmatics, 2022-2026
+- Xinjiang University, Mathmatics and Applied Mathematics, 2022-2026
 
 
 ### Index
