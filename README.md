@@ -1,13 +1,4 @@
 
-<!-- <img src="/images/cuihd.webp" width=50% > -->
-<!-- <img src="https://github.com/haodongcui/haodongcui.github.io/blob/main/img/cuihd.webp?raw=true" width=50% > -->
-<!-- ![cuihd](/images/cuihd.webp){:.image--xl.rounded.shadow} -->
-<!-- <img src="/images/cuihd.webp" width=50% > -->
-
-<img src="{{ '/images/cuihd.webp' | relative_url }}" width="30%">
-
-![cuihd](/images/cuihd.webp){: width="30%" .image--xl.rounded.shadow}
-
 ## 😍 About me
 
 **Haodong Cui 崔浩东**
@@ -16,6 +7,10 @@ E-mail: cuihd2004@163.com
 
 [[Github](https://github.com/haodongcui)]
 [[ORCID](https://orcid.org/0009-0008-0029-0921)]
+
+<img src="{{ '/images/cuihd.webp' | relative_url }}" width="30%" >
+
+<!-- ![cuihd](/images/cuihd.webp){: width="30%" .image--xl.rounded.shadow} -->
 
 I am currently an undergraduate student at Xinjiang University and will be pursuing my master's degree at Huazhong University of Science and Technology in 2026. My undergraduate GPA ranks 1 out of 120.
 
@@ -39,5 +34,3 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 - [2025美赛论文](/files/2025comapPaper.pdf)
 - [XJU-Math-Wiki](https://haodongcui.github.io/xju-math-wiki/)
 - [魔改vitepress主题](https://github.com/haodongcui/vitepress-pure-blog)
-
-
