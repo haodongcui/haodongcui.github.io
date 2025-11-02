@@ -4,3 +4,8 @@ baseurl: /
 author:
   name: Haodong Cui
   email: cuihd2004@163.com
+
+# static_files:
+#   - assets/images/
+#   - assets/js/
+#   - assets/css/

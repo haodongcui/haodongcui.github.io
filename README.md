@@ -7,8 +7,11 @@ E-mail: cuihd2004@163.com
 [[ORCID](https://orcid.org/0009-0008-0029-0921)]
 [[CSDN](https://blog.csdn.net/haodongcui/)]
 
-<img src="{{ '/images/cuihd.webp' | relative_url }}" width="50%" >
-<!-- ![cuihd](/images/cuihd.webp){: width="30%" .image--xl.rounded.shadow} -->
+
+<!-- 头像样式：手机端大，电脑端小 -->
+<img src="{{ '/images/cuihd.webp' | relative_url }}" width=80% class="avatar" >
+<style>@media (min-width: 768px) {  .avatar { width: 40% !important; }  }</style>
+
 
 I am currently an undergraduate student at Xinjiang University and will be pursuing my master's degree at Huazhong University of Science and Technology in 2026. My undergraduate GPA ranks 1 out of 120. I am interested in the field of Control Theory, Large Language Models, Safety, Reinforcement Learning, and Agent.
 
