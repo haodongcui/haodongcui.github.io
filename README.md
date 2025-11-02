@@ -26,8 +26,8 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 
 
 # 📖 Educations
-- 2026.09-2029.06, Master of Control Science, Huazhong University of Science and Technology
-- 2022.09-2026.06, Bachelor of Mathematics and Applied Mathematics, Xinjiang University
+- 2026.09-2029.06, Master of Control Science, Huazhong University of Science and Technology (HUST)
+- 2022.09-2026.06, Bachelor of Mathematics and Applied Mathematics, Xinjiang University (XJU)
     - GPA ranks 1 out of 120
 
 <!-- # 🌱 Internships -->
