@@ -1,7 +1,7 @@
-<!-- <title>Haodong Cui 崔浩东</title> -->
 
-<!-- <img src="/img/cuihd.webp" width=50% > -->
-<img src="https://raw.githubusercontent.com/haodongcui/haodongcui.github.io/refs/heads/main/img/cuihd.webp" width=50% >
+<!-- <img src="/images/cuihd.webp" width=50% > -->
+<!-- <img src="https://github.com/haodongcui/haodongcui.github.io/blob/main/img/cuihd.webp?raw=true" width=50% > -->
+![cuihd](/images/cuihd.webp)
 
 ## 😍 About me
 
