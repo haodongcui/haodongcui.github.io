@@ -1,19 +1,14 @@
-name: Deploy Jekyll site to Pages
+name: Deploy Jekyll to GitHub Pages
 
 on:
   push:
     branches: ["main"]
-  
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   build:
@@ -22,30 +17,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'  # 使用与 GitHub Pages 兼容的 Ruby 版本
-          bundler-cache: true
-          
       - name: Setup Pages
         uses: actions/configure-pages@v3
-        with:
-          # 明确指定 Jekyll 配置
-          jekyll-format: html
-          
+        
       - name: Build with Jekyll
-        # 使用更稳定的构建方式
-        run: |
-          gem install jekyll
-          jekyll build --baseurl "${{ github.baseurl }}"
-        env:
-          JEKYLL_ENV: production
-          # 强制使用 _config.yml 中的配置
-          JEKYLL_FORCE_BUILD: true
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
           
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
 
   deploy:
     environment:
@@ -56,4 +38,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
