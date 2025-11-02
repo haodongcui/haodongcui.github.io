@@ -32,7 +32,8 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 - 2022.09-2026.06, Bachelor of Mathematics, Xinjiang University (XJU)
     - GPA ranks 1 out of 120
 
-<!-- # 🌱 Internships -->
+## 🌱 Internships and Experiences
+- 2023.08-2023.08, Tsinghua University, Department of Mathematical Science, short-term academic activity
 
 ## 🏅 Honors and Awards
 - 2025.11, Merit Student Pacemaker, Xinjiang University
