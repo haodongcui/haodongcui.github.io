@@ -27,20 +27,20 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
     - The 21st Chinese Intelligent Systems Conference (CISC 2025)
 
 
-# 📖 Educations
+## 📖 Educations
 - 2026.09-2029.06, Master of Control Science, Huazhong University of Science and Technology (HUST)
 - 2022.09-2026.06, Bachelor of Mathematics and Applied Mathematics, Xinjiang University (XJU)
     - GPA ranks 1 out of 120
 
 <!-- # 🌱 Internships -->
 
-# 🏅 Honors and Awards
+## 🏅 Honors and Awards
 - 2025.11, Merit Student Pacemaker, Xinjiang University
 - 2025.10, National Scholarship, Xinjiang University
 - 2025.01, Meritorious Winner, American Mathematical Contest in Modeling
 - 2024.11, Provincial First Prize, Chinese Mathematical Contest
 
-# 🕹️ Projects
+## 🕹️ Projects
 - [Archive-LLMs](https://github.com/haodongcui/Archive-LLMs/)
 - [Our Work in 2025 COMAP](/files/2025comapPaper.pdf)
 - [XJU-Math-Wiki](https://haodongcui.github.io/xju-math-wiki/)
