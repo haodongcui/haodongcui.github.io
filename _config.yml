@@ -5,10 +5,6 @@ author:
   name: Haodong Cui
   email: cuihd2004@163.com
 
-# 添加图片路径配置
-include:
-  - images
-
 # static_files:
 #   - assets/images/
 #   - assets/js/
