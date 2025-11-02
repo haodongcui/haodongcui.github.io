@@ -8,7 +8,7 @@ E-mail: cuihd2004@163.com
 [[CSDN](https://blog.csdn.net/haodongcui/)]
 
 
-<img src="{{ './images/cuihd.webp' | relative_url }}" width=40% >
+<img src="{{ 'images/cuihd.webp' | relative_url }}" width=40% >
 
 
 I am currently an undergraduate student at Xinjiang University and will be pursuing my master's degree at Huazhong University of Science and Technology in 2026. My undergraduate GPA ranks 1 out of 120. I am interested in the field of Control Theory, Large Language Models, Safety, Reinforcement Learning, and Agent.
