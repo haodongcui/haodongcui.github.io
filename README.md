@@ -1,7 +1,7 @@
 
 <!-- <img src="/images/cuihd.webp" width=50% > -->
 <!-- <img src="https://github.com/haodongcui/haodongcui.github.io/blob/main/img/cuihd.webp?raw=true" width=50% > -->
-![cuihd](/images/cuihd.webp){:width=50%}
+![cuihd](/images/cuihd.webp){:.image--xl.rounded.shadow}
 
 ## 😍 About me
 
@@ -31,7 +31,7 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 
 ## 💽 Projects
 - [LLMs学习归档](https://github.com/haodongcui/Archive-LLMs/)
-- [2025美赛论文](https://haodongcui.github.io/files/2025comapPaper.pdf)
+- [2025美赛论文](/files/2025comapPaper.pdf)
 - [XJU-Math-Wiki](https://haodongcui.github.io/xju-math-wiki/)
 - [魔改vitepress主题](https://github.com/haodongcui/vitepress-pure-blog)
 
