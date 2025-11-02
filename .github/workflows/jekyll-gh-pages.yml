@@ -1,44 +1,52 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy Jekyll site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+  
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+        
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: '3.1'  # 使用与 GitHub Pages 兼容的 Ruby 版本
+          bundler-cache: true
+          
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          # 明确指定 Jekyll 配置
+          jekyll-format: html
+          
+      - name: Build with Jekyll
+        # 使用更稳定的构建方式
+        run: |
+          gem install jekyll
+          jekyll build --baseurl "${{ github.baseurl }}"
+        env:
+          JEKYLL_ENV: production
+          # 强制使用 _config.yml 中的配置
+          JEKYLL_FORCE_BUILD: true
+          
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
@@ -48,4 +56,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2
