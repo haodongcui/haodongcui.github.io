@@ -5,7 +5,7 @@ E-mail: cuihd2004@163.com
 
 [[Github](https://github.com/haodongcui)]
 [[ORCID](https://orcid.org/0009-0008-0029-0921)]
-[[SCDN](https://blog.csdn.net/haodongcui/)]
+[[CSDN](https://blog.csdn.net/haodongcui/)]
 
 <img src="{{ '/images/cuihd.webp' | relative_url }}" width="40%" >
 <!-- ![cuihd](/images/cuihd.webp){: width="30%" .image--xl.rounded.shadow} -->
