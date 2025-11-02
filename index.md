@@ -41,7 +41,7 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 - 2024.11, Provincial First Prize, Chinese Mathematical Contest
 
 # 💽 Projects
-- [LLMs学习归档](https://github.com/haodongcui/Archive-LLMs/)
-- [2025美赛论文](/files/2025comapPaper.pdf)
+- [Archive-LLMs](https://github.com/haodongcui/Archive-LLMs/)
+- [Our Work in 2025 Comap](/files/2025comapPaper.pdf)
 - [XJU-Math-Wiki](https://haodongcui.github.io/xju-math-wiki/)
-- [魔改vitepress主题](https://github.com/haodongcui/vitepress-pure-blog)
+- [Modified Vitepress Theme](https://github.com/haodongcui/vitepress-pure-blog)
