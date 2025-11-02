@@ -42,6 +42,6 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 
 # 🕹️ Projects
 - [Archive-LLMs](https://github.com/haodongcui/Archive-LLMs/)
-- [Our Work in 2025 Comap](/files/2025comapPaper.pdf)
+- [Our Work in 2025 COMAP](/files/2025comapPaper.pdf)
 - [XJU-Math-Wiki](https://haodongcui.github.io/xju-math-wiki/)
 - [Modified Vitepress Theme](https://github.com/haodongcui/vitepress-pure-blog)
