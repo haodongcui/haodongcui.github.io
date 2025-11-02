@@ -1,7 +1,8 @@
 
 <!-- <img src="/images/cuihd.webp" width=50% > -->
 <!-- <img src="https://github.com/haodongcui/haodongcui.github.io/blob/main/img/cuihd.webp?raw=true" width=50% > -->
-![cuihd](/images/cuihd.webp){:.image--xl.rounded.shadow}
+<!-- ![cuihd](/images/cuihd.webp){:.image--xl.rounded.shadow} -->
+<img src="/images/cuihd.webp" width=50% >
 
 ## 😍 About me
 
