@@ -9,8 +9,9 @@ E-mail: cuihd2004@163.com
 
 
 <!-- 头像样式：手机端大，电脑端小 -->
-<img src="{{ '/images/cuihd.webp' | relative_url }}" width='100%' class='avatar' >
+<img src="{{ '/img/cuihd.webp' | relative_url }}" width='100%' class='avatar' >
 <style>@media (min-width: 768px) {  .avatar { width: 30% !important; }  }</style>
+
 
 I am currently an undergraduate student at Xinjiang University and will be pursuing my master's degree at Huazhong University of Science and Technology in 2026. My undergraduate GPA ranks 1 out of 120. I am interested in the field of Control Theory, Large Language Models, Safety, Reinforcement Learning, and Agent.
 
@@ -47,3 +48,8 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 - [Our Work in 2025 COMAP](/files/2025comapPaper.pdf)
 - [XJU-Math-Wiki](https://haodongcui.github.io/xju-math-wiki/)
 - [Modified Vitepress Theme](https://github.com/haodongcui/vitepress-pure-blog)
+
+---
+<script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.abbr.min.js" defer></script>
+This page has been viewed <span id="busuanzi_page_pv">...</span> times totally, 
+and <span id="busuanzi_today_uv">...</span> visitors today
