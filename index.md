@@ -51,5 +51,5 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 
 ---
 <script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.abbr.min.js" defer></script>
-This page has been viewed <span id="busuanzi_page_pv">...</span> times totally, 
+This page has been viewed <span id="busuanzi_page_pv">...</span> times with <span id="busuanzi_page_uv">...</span> visitors totally, 
 and <span id="busuanzi_today_uv">...</span> visitors today
