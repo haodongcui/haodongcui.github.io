@@ -27,6 +27,11 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
     - Haoyun Tang, **Haodong Cui**, Mingyu Ma, Cheng Hu*, Tingting Shi
     - The 21st Chinese Intelligent Systems Conference (CISC 2025)
 
+<li>
+Spatial Sampling-based Passivity and Synchronization of Multiweighted Coupled Reaction-diffusion Neural Networks.
+</li>
+
+<h3>Spatial Sampling-based Passivity and Synchronization of Multiweighted Coupled Reaction-diffusion Neural Networks</h3>
 
 ## 📖 Educations
 - 2026.09-2029.06, Master of Control Science, Huazhong University of Science and Technology (HUST)
