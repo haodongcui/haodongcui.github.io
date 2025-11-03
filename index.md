@@ -20,26 +20,27 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 ## 📜 Publications
 <!-- - Spatial Sampling-based Passivity and Synchronization of Multiweighted Coupled Reaction-diffusion Neural Networks. -->
 - Spatial Sampling-based Passivity and Synchronization ...
-    - **Haodong Cui**, Haoyun Tang, Mingyu Ma, Cheng Hu*, Tingting Shi.
+  - **Haodong Cui**, Haoyun Tang, Mingyu Ma, Cheng Hu*, Tingting Shi.
     <!-- - Communications in Nonlinear Science and Numerical Simulation (CNSNS). -->
-
 - Adaptive Passivity-based Synchronization of Spatiotemporal Neural Networks with Multi-weighted Coupling under Spatially Point Measurements.
-    - Haoyun Tang, **Haodong Cui**, Mingyu Ma, Cheng Hu*, Tingting Shi.
-    - The 21st Chinese Intelligent Systems Conference (CISC 2025).
+  - Haoyun Tang, **Haodong Cui**, Mingyu Ma, Cheng Hu*, Tingting Shi.
+  - The 21st Chinese Intelligent Systems Conference (CISC 2025).
 
 ## 📖 Educations
 - 2026.09-2029.06, Master of Control Science, Huazhong University of Science and Technology (HUST)
 - 2022.09-2026.06, Bachelor of Mathematics, Xinjiang University (XJU)
-    - GPA ranks 1 out of 120
+  - GPA ranks 1 out of 120
 
 ## 🌏 Internships and Experiences
 - 2023.08-2023.08, Tsinghua University, Department of Mathematical Science, short-term academic activity
 
 ## 🏅 Honors and Awards
 - 2025.11, Merit Student Pacemaker, Xinjiang University
-- 2025.10, National Scholarship, Xinjiang University
+- 2025.10, National Scholarship, Ministry of Education
 - 2025.01, Meritorious Winner, American Mathematical Contest in Modeling
 - 2024.11, Provincial First Prize, Chinese Mathematical Contest
+- 2024
+- 2024.10, Academic Excellence Scholarship, Xinjiang Uygur Autonomous Region
 
 <!-- 🕹️ -->
 ## 🌱 Projects
