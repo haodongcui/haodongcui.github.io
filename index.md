@@ -38,8 +38,7 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 - 2025.11, Merit Student Pacemaker, Xinjiang University
 - 2025.10, National Scholarship, Ministry of Education
 - 2025.01, Meritorious Winner, American Mathematical Contest in Modeling
-- 2024.11, Provincial First Prize, Chinese Mathematical Contest
-- 2024
+- 2024.11, Provincial First Prize, Chinese Mathematical Contes
 - 2024.10, Academic Excellence Scholarship, Xinjiang Uygur Autonomous Region
 
 <!-- 🕹️ -->
