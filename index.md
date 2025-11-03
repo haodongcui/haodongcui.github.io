@@ -18,20 +18,14 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 <!-- ## 🔥 News -->
 
 ## 📜 Publications
-<!-- - Spatial Sampling-based Passivity and Synchronization of Multiweighted Coupled Reaction-diffusion Neural Networks -->
+<!-- - Spatial Sampling-based Passivity and Synchronization of Multiweighted Coupled Reaction-diffusion Neural Networks. -->
 - Spatial Sampling-based Passivity and Synchronization ...
-    - **Haodong Cui**, Haoyun Tang, Mingyu Ma, Cheng Hu*, Tingting Shi
-    <!-- - Communications in Nonlinear Science and Numerical Simulation (CNSNS) -->
+    - **Haodong Cui**, Haoyun Tang, Mingyu Ma, Cheng Hu*, Tingting Shi.
+    <!-- - Communications in Nonlinear Science and Numerical Simulation (CNSNS). -->
 
-- Adaptive Passivity-based Synchronization of Spatiotemporal Neural Networks with Multi-weighted Coupling under Spatially Point Measurements
-    - Haoyun Tang, **Haodong Cui**, Mingyu Ma, Cheng Hu*, Tingting Shi
-    - The 21st Chinese Intelligent Systems Conference (CISC 2025)
-
-<li>
-Spatial Sampling-based Passivity and Synchronization of Multiweighted Coupled Reaction-diffusion Neural Networks.
-</li>
-
-<h3>Spatial Sampling-based Passivity and Synchronization of Multiweighted Coupled Reaction-diffusion Neural Networks</h3>
+- Adaptive Passivity-based Synchronization of Spatiotemporal Neural Networks with Multi-weighted Coupling under Spatially Point Measurements.
+    - Haoyun Tang, **Haodong Cui**, Mingyu Ma, Cheng Hu*, Tingting Shi.
+    - The 21st Chinese Intelligent Systems Conference (CISC 2025).
 
 ## 📖 Educations
 - 2026.09-2029.06, Master of Control Science, Huazhong University of Science and Technology (HUST)
