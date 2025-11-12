@@ -12,8 +12,9 @@ E-mail: cuihd2004@163.com
 <img src="{{ '/img/cuihd.webp' | relative_url }}" width='100%' class='avatar' >
 <style>@media (min-width: 768px) {  .avatar { width: 30% !important; }  }</style>
 
+I am a 4th-year undergraduate in Mathematics at Xinjiang University (XJU, 新疆大学). In 2026, I will join the School of Artificial Intelligence and Automation (AIA, 人工智能与自动化学院) at Huazhong University of Science and Technology (HUST, 华中科技大学), advised by Prof. Zhigang Zeng (IEEE Fellow). My research interests span Control Theory, Reinforcement learning, Multimodal Large Language Models Safety, and Embodied Intelligence.
 
-I am currently an undergraduate student at Xinjiang University and will be pursuing my master's degree at Huazhong University of Science and Technology in 2026. My undergraduate GPA ranks 1 out of 120. I am interested in the field of Control Theory, Large Language Models, Safety, Reinforcement Learning, and Agent.
+I'm open to collaboration—feel free to reach me by e-mail.
 
 <!-- ## 🔥 News -->
 
@@ -28,17 +29,19 @@ I am currently an undergraduate student at Xinjiang University and will be pursu
 
 ## 📖 Educations
 - 2026.09-2029.06, Master of Control Science, Huazhong University of Science and Technology (HUST)
+  - Advisor: Prof. Zhigang Zeng
 - 2022.09-2026.06, Bachelor of Mathematics, Xinjiang University (XJU)
   - GPA ranks 1 out of 120
 
 ## 🌏 Internships and Experiences
-- 2023.08-2023.08, Tsinghua University, Department of Mathematical Science, short-term academic activity
+- 2023.08-2023.08, Tsinghua University, Department of Mathematical Science, short-term academic activity.
+<!-- - 2025.11-present, Tsinghua University, Center for Brain Inspired Computing Research, Research Intern. -->
 
 ## 🏅 Honors and Awards
 - 2025.11, Merit Student Pacemaker, Xinjiang University
 - 2025.10, National Scholarship, Ministry of Education
 - 2025.01, Meritorious Winner, American Mathematical Contest in Modeling
-- 2024.11, Provincial First Prize, Chinese Mathematical Contes
+- 2024.11, First Prize (Provincial), Chinese Mathematical Contes
 - 2024.10, Academic Excellence Scholarship, Xinjiang Uygur Autonomous Region
 
 <!-- 🕹️ -->
