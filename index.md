@@ -5,7 +5,6 @@ E-mail: cuihd2004@163.com
 
 [[Github](https://github.com/haodongcui)]
 [[ORCID](https://orcid.org/0009-0008-0029-0921)]
-[[CSDN](https://blog.csdn.net/haodongcui/)]
 
 
 <!-- 头像样式：手机端大，电脑端小 -->
