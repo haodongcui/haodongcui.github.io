@@ -27,12 +27,12 @@ I'm open to collaboration and feel free to reach me by E-mail.
   - The 21st Chinese Intelligent Systems Conference (CISC 2025).
 
 ## 📖 Educations
-- 2026.09-2029.06, Master of Control Science, Huazhong University of Science and Technology (HUST, 华中科技大学)
+- 2026.09-2029.06, Master of Control Science, Huazhong University of Science and Technology (HUST)
   - School of Artificial Intelligence and Automation (AIA)
   - Advisor: Prof. Zhigang Zeng (*IEEE Fellow*)
-- 2022.09-2026.06, Bachelor of Mathematics, Xinjiang University (XJU, 新疆大学)
+- 2022.09-2026.06, Bachelor of Mathematics, Xinjiang University (XJU)
   - College of Mathematics and System Science
-  - GPA ranks 1 out of 120
+  - GPA ranks 1 out of 289
 
 ## 🌏 Internships and Experiences
 - 2023.08-2023.08, Tsinghua University, Department of Mathematical Science, Short-term academic activity.
