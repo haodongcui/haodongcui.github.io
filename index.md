@@ -11,7 +11,7 @@ E-mail: cuihd2004@163.com
 <img src="{{ '/img/cuihd.webp' | relative_url }}" width='100%' class='avatar' >
 <style>@media (min-width: 768px) {  .avatar { width: 30% !important; }  }</style>
 
-I am a 4th-year undergraduate in Mathematics at Xinjiang University (XJU, 新疆大学). In 2026, I will join the School of Artificial Intelligence and Automation (AIA, 人工智能与自动化学院) at Huazhong University of Science and Technology (HUST, 华中科技大学), advised by Prof. Zhigang Zeng (IEEE Fellow). My research interests span Control Theory, Reinforcement Learning, Multimodal Large Language Models Safety, and Embodied Intelligence.
+I am a 4th-year undergraduate in Mathematics at Xinjiang University (XJU, 新疆大学). In 2026, I will join the School of Artificial Intelligence and Automation (AIA, 人工智能与自动化学院) at Huazhong University of Science and Technology (HUST, 华中科技大学), advised by Prof. Zhigang Zeng (IEEE Fellow). My research interests span Control Theory, Multimodal Large Language Models Safety and World Model.
 
 I'm open to collaboration and feel free to reach me by E-mail.
 
