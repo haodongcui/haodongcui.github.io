@@ -1,0 +1,219 @@
+/* Experience List Styles */
+ul.exp-list {
+    list-style: none;
+    margin: 12px 0;
+    padding-left: 0;
+}
+
+.exp-card {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.exp-logo {
+    width: auto;
+    height: 60px;
+    max-width: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    flex: 0 0 60px;
+}
+
+.exp-meta {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* 第一行：机构名在左，时间在右 */
+.exp-top {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.exp-org {
+    /* 加粗由 b 标签控制，不在此处设置 */
+}
+
+.exp-time {
+    color: #555;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    background: #f5f5f7;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.92em;
+}
+
+/* 第二行：岗位、导师 */
+.exp-sub {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+}
+
+.exp-role {
+    color: #222;
+    font-weight: 500;
+}
+
+.exp-mentor {
+    color: #666;
+}
+
+/* 可选简介 */
+.exp-desc {
+    color: #444;
+    font-size: 0.95em;
+    margin-top: 4px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .exp-card {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .exp-logo {
+        width: auto;
+        height: 50px;
+        max-width: 50px;
+        flex: 0 0 50px;
+    }
+    
+    .exp-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    
+    .exp-time {
+        margin-left: 0;
+    }
+    
+    .exp-role {
+        font-size: 0.95em;
+    }
+    
+    .exp-mentor {
+        font-size: 0.9em;
+    }
+    
+    .exp-desc {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .exp-card {
+        padding: 8px;
+        gap: 8px;
+        margin: 8px 0;
+    }
+    
+    .exp-logo {
+        width: auto;
+        height: 45px;
+        max-width: 45px;
+        flex: 0 0 45px;
+    }
+    
+    .exp-org {
+        font-size: 0.95em;
+    }
+    
+    .exp-time {
+        font-size: 0.85em;
+    }
+    
+    .exp-role {
+        font-size: 0.9em;
+    }
+    
+    .exp-mentor {
+        font-size: 0.85em;
+    }
+    
+    .exp-desc {
+        font-size: 0.85em;
+    }
+}
+
+/* Dark mode support - Manual toggle */
+html.dark-mode .exp-card {
+    background: #3a3a3a;
+    border: 1px solid #4a4a4a;
+}
+
+html.dark-mode .exp-logo {
+    border: 1px solid #555555;
+    background-color: #2d2d2d;
+}
+
+html.dark-mode .exp-time {
+    color: #b0b0b0;
+    background: #4a4a4a;
+}
+
+html.dark-mode .exp-role {
+    color: #e0e0e0;
+}
+
+html.dark-mode .exp-mentor {
+    color: #a0a0a0;
+}
+
+html.dark-mode .exp-desc {
+    color: #c0c0c0;
+}
+
+html.dark-mode .exp-org {
+    color: #e0e0e0;
+}
+
+/* Dark mode support - System preference */
+@media (prefers-color-scheme: dark) {
+    html:not(.light-mode) .exp-card {
+        background: #3a3a3a;
+        border: 1px solid #4a4a4a;
+    }
+    
+    html:not(.light-mode) .exp-logo {
+        border: 1px solid #555555;
+        background-color: #2d2d2d;
+    }
+    
+    html:not(.light-mode) .exp-time {
+        color: #b0b0b0;
+        background: #4a4a4a;
+    }
+    
+    html:not(.light-mode) .exp-role {
+        color: #e0e0e0;
+    }
+    
+    html:not(.light-mode) .exp-mentor {
+        color: #a0a0a0;
+    }
+    
+    html:not(.light-mode) .exp-desc {
+        color: #c0c0c0;
+    }
+    
+    html:not(.light-mode) .exp-org {
+        color: #e0e0e0;
+    }
+}
