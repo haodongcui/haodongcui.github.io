@@ -120,13 +120,13 @@
 
 /* Dark mode support - Manual toggle */
 html.dark-mode .info-avatar img {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
 }
 
 /* Dark mode support - System preference */
 @media (prefers-color-scheme: dark) {
     html:not(.light-mode) .info-avatar img {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
     }
 }
 

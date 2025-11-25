@@ -270,131 +270,131 @@ li p {
 
 /* Dark mode support - Manual toggle (via class) */
 html.dark-mode {
-    background-color: #1a1a1a;
+    background-color: #22222d;
 }
 
 html.dark-mode body {
-    color: #e0e0e0;
-    background-color: #2d2d2d;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    color: #e8e8e8;
+    background-color: #252530;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 html.dark-mode #layout-content {
-    background: #2d2d2d;
+    background: #252530;
 }
 
 html.dark-mode .nav-menu {
-    background-color: #3a3a3a;
-    border: 1px solid #4a4a4a;
+    background-color: #2d2d3f;
+    border: 1px solid #3a3a4f;
 }
 
 html.dark-mode .nav-menu a {
-    color: #6bb6ff;
+    color: #7fb3d3;
 }
 
 html.dark-mode .nav-menu a:hover {
-    background-color: #4a5568 !important;
-    color: #8cc8ff;
+    background-color: #353548 !important;
+    color: #9bc4e2;
 }
 
 html.dark-mode h1,
 html.dark-mode h2,
 html.dark-mode h3 {
-    color: #b0d4ff;
-    border-bottom: 1px solid #555555;
+    color: #d4dae8;
+    border-bottom: 1px solid #3a3a4f;
 }
 
 html.dark-mode a,
 html.dark-mode a > tt {
-    color: #6bb6ff;
+    color: #7fb3d3;
 }
 
 html.dark-mode a:hover {
-    color: #8cc8ff;
-    border-bottom: 1px solid #888888;
+    color: #9bc4e2;
+    border-bottom: 1px solid #5a5a6f;
 }
 
 html.dark-mode footer {
-    color: #b0b0b0;
+    color: #b8b8c8;
 }
 
 html.dark-mode footer #footer-text {
-    border-top: 1px solid #4a4a4a;
+    border-top: 1px solid #3a3a4f;
 }
 
 html.dark-mode .theme-toggle {
-    background-color: #3a3a3a;
-    border-color: #6bb6ff;
-    color: #6bb6ff;
+    background-color: #2d2d3f;
+    border-color: #7fb3d3;
+    color: #7fb3d3;
 }
 
 html.dark-mode .theme-toggle:hover {
-    background-color: #4a4a4a;
+    background-color: #353548;
 }
 
 /* Dark mode support - System preference (fallback) */
 @media (prefers-color-scheme: dark) {
     html:not(.light-mode) {
-        background-color: #1a1a1a;
+        background-color: #22222d;
     }
     
     html:not(.light-mode) body {
-        color: #e0e0e0;
-        background-color: #2d2d2d;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        color: #e8e8e8;
+        background-color: #252530;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }
     
     html:not(.light-mode) #layout-content {
-        background: #2d2d2d;
+        background: #252530;
     }
     
     html:not(.light-mode) .nav-menu {
-        background-color: #3a3a3a;
-        border: 1px solid #4a4a4a;
+        background-color: #2d2d3f;
+        border: 1px solid #3a3a4f;
     }
     
     html:not(.light-mode) .nav-menu a {
-        color: #6bb6ff;
+        color: #7fb3d3;
     }
     
     html:not(.light-mode) .nav-menu a:hover {
-        background-color: #4a5568 !important;
-        color: #8cc8ff;
+        background-color: #353548 !important;
+        color: #9bc4e2;
     }
     
     html:not(.light-mode) h1,
     html:not(.light-mode) h2,
     html:not(.light-mode) h3 {
-        color: #b0d4ff;
-        border-bottom: 1px solid #555555;
+        color: #d4dae8;
+        border-bottom: 1px solid #3a3a4f;
     }
     
     html:not(.light-mode) a,
     html:not(.light-mode) a > tt {
-        color: #6bb6ff;
+        color: #7fb3d3;
     }
     
     html:not(.light-mode) a:hover {
-        color: #8cc8ff;
-        border-bottom: 1px solid #888888;
+        color: #9bc4e2;
+        border-bottom: 1px solid #5a5a6f;
     }
     
     html:not(.light-mode) footer {
-        color: #b0b0b0;
+        color: #b8b8c8;
     }
     
     html:not(.light-mode) footer #footer-text {
-        border-top: 1px solid #4a4a4a;
+        border-top: 1px solid #3a3a4f;
     }
     
     html:not(.light-mode) .theme-toggle {
-        background-color: #3a3a3a;
-        border-color: #6bb6ff;
-        color: #6bb6ff;
+        background-color: #2d2d3f;
+        border-color: #7fb3d3;
+        color: #7fb3d3;
     }
     
     html:not(.light-mode) .theme-toggle:hover {
-        background-color: #4a4a4a;
+        background-color: #353548;
     }
 }
 

@@ -42,9 +42,7 @@ ul.exp-list {
     margin-bottom: 4px;
 }
 
-.exp-org {
-    /* 加粗由 b 标签控制，不在此处设置 */
-}
+/* .exp-org - 加粗由 b 标签控制，不在此处设置 */
 
 .exp-time {
     color: #555;
@@ -154,66 +152,68 @@ ul.exp-list {
 
 /* Dark mode support - Manual toggle */
 html.dark-mode .exp-card {
-    background: #3a3a3a;
-    border: 1px solid #4a4a4a;
+    background: #353548;
+    border: 1px solid #454560;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 html.dark-mode .exp-logo {
-    border: 1px solid #555555;
-    background-color: #2d2d2d;
+    border: 1px solid #454560;
+    background-color: #2d2d3f;
 }
 
 html.dark-mode .exp-time {
-    color: #b0b0b0;
-    background: #4a4a4a;
+    color: #c8c8d8;
+    background: #3d3d52;
 }
 
 html.dark-mode .exp-role {
-    color: #e0e0e0;
+    color: #e8e8e8;
 }
 
 html.dark-mode .exp-mentor {
-    color: #a0a0a0;
+    color: #b0b0b0;
 }
 
 html.dark-mode .exp-desc {
-    color: #c0c0c0;
+    color: #d0d0d0;
 }
 
 html.dark-mode .exp-org {
-    color: #e0e0e0;
+    color: #e8e8e8;
 }
 
 /* Dark mode support - System preference */
 @media (prefers-color-scheme: dark) {
     html:not(.light-mode) .exp-card {
-        background: #3a3a3a;
-        border: 1px solid #4a4a4a;
+        background: #353548;
+        border: 1px solid #454560;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
     
     html:not(.light-mode) .exp-logo {
-        border: 1px solid #555555;
-        background-color: #2d2d2d;
+        border: 1px solid #454560;
+        background-color: #2d2d3f;
     }
     
     html:not(.light-mode) .exp-time {
-        color: #b0b0b0;
-        background: #4a4a4a;
+        color: #c8c8d8;
+        background: #3d3d52;
     }
     
     html:not(.light-mode) .exp-role {
-        color: #e0e0e0;
+        color: #e8e8e8;
     }
     
     html:not(.light-mode) .exp-mentor {
-        color: #a0a0a0;
+        color: #b0b0b0;
     }
     
     html:not(.light-mode) .exp-desc {
-        color: #c0c0c0;
+        color: #d0d0d0;
     }
     
     html:not(.light-mode) .exp-org {
-        color: #e0e0e0;
+        color: #e8e8e8;
     }
 }

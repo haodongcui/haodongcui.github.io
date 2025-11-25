@@ -151,80 +151,82 @@ ul:has(.pub-card) {
 
 /* Dark mode support - Manual toggle */
 html.dark-mode .pub-card {
-    background-color: #3a3a3a;
-    border: 1px solid #4a4a4a;
+    background-color: #353548;
+    border: 1px solid #454560;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 html.dark-mode .pub-img-box {
-    background-color: #2d2d2d;
+    background-color: #2d2d3f;
 }
 
 html.dark-mode .pub-img {
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
 }
 
 html.dark-mode .pub-badge {
-    background-color: #4a90e2;
+    background-color: #5a9fd4;
     color: white;
 }
 
 html.dark-mode .pub-authors {
-    color: #b0b0b0;
+    color: #c8c8c8;
 }
 
 html.dark-mode .pub-venue {
-    color: #a0a0a0;
+    color: #b0b0b0;
 }
 
 html.dark-mode .pub-title {
-    color: #e0e0e0;
+    color: #e8e8e8;
 }
 
 html.dark-mode .pub-title a {
-    color: #6bb6ff;
+    color: #7fb3d3;
 }
 
 html.dark-mode .pub-title a:hover {
-    color: #8cc8ff;
+    color: #9bc4e2;
 }
 
 /* Dark mode support - System preference */
 @media (prefers-color-scheme: dark) {
     html:not(.light-mode) .pub-card {
-        background-color: #3a3a3a;
-        border: 1px solid #4a4a4a;
+        background-color: #353548;
+        border: 1px solid #454560;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
     
     html:not(.light-mode) .pub-img-box {
-        background-color: #2d2d2d;
+        background-color: #2d2d3f;
     }
     
     html:not(.light-mode) .pub-img {
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
     }
     
     html:not(.light-mode) .pub-badge {
-        background-color: #4a90e2;
+        background-color: #5a9fd4;
         color: white;
     }
     
     html:not(.light-mode) .pub-authors {
-        color: #b0b0b0;
+        color: #c8c8c8;
     }
     
     html:not(.light-mode) .pub-venue {
-        color: #a0a0a0;
+        color: #b0b0b0;
     }
     
     html:not(.light-mode) .pub-title {
-        color: #e0e0e0;
+        color: #e8e8e8;
     }
     
     html:not(.light-mode) .pub-title a {
-        color: #6bb6ff;
+        color: #7fb3d3;
     }
     
     html:not(.light-mode) .pub-title a:hover {
-        color: #8cc8ff;
+        color: #9bc4e2;
     }
 }
