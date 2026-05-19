@@ -1,232 +1,98 @@
-/* Publications List Styles */
-ul:has(.pub-card) {
-    padding-left: 0;
-    margin-left: 0;
-    width: 100%;
-}
-
-.pub-card {
-    width: 100%;
-    margin-bottom: 25px;
-    padding: 20px 25px;
-    border-radius: 6px;
-    border: 1px solid #e0e0e0;
-    display: flex;
-    gap: 20px;
-    box-sizing: border-box;
+.pub-list {
     list-style: none;
-    margin-left: 0;
-}
-
-.pub-img-box {
-    position: relative;
-    flex: 0 0 auto;
-    min-width: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border-radius: 4px;
-}
-
-.pub-img {
-    width: auto;
-    height: auto;
-    max-width: 280px;
-    max-height: 220px;
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-}
-
-.pub-badge {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    background-color: #003366;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 3px;
-    font-size: 0.8em;
-    font-weight: 600;
-}
-
-.pub-content {
-    flex: 1;
-    min-width: 0;
-}
-
-.pub-content p {
+    padding-left: 0;
     margin: 0;
 }
 
-.pub-title {
+.pub-card {
+    margin-bottom: 16px;
+    padding: 4px 0;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.pub-visual {
+    flex: 0 0 36%;
+    max-width: 36%;
+}
+
+.pub-figure-link {
+    display: block;
+}
+
+.pub-img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+.pub-badge {
+    display: none;
+}
+
+.pub-content {
+    flex: 1 1 64%;
+    min-width: 0;
+}
+
+.pub-text {
+    margin: 0;
+    line-height: 1.45;
+}
+
+.pub-title,
+.pub-title-text {
+    display: block;
     font-size: 1.05em;
-    font-weight: 500;
+    font-weight: 600;
+    color: #003366;
+    line-height: 1.4;
 }
 
 .pub-authors {
-    color: #555;
+    display: block;
+    color: #555555;
     font-size: 0.95em;
+    margin-top: 8px;
+}
+
+.pub-note {
+    display: block;
+    color: #666666;
+    font-size: 0.9em;
+    margin-top: 2px;
 }
 
 .pub-venue {
-    color: #666;
+    color: #666666;
+    display: block;
+    margin-top: 6px;
 }
 
-.pub-links {
-    margin-top: 8px;
-    display: inline-block;
+.pub-links-inline {
+    font-style: normal;
+    margin-left: 10px;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .pub-card {
         flex-direction: column;
-        padding: 15px;
-        gap: 15px;
+        gap: 14px;
     }
-    
-    .pub-img-box {
+
+    .pub-visual {
         flex: 0 0 auto;
+        max-width: 100%;
         width: 100%;
-        max-width: 100%;
     }
-    
-    .pub-img {
-        max-width: 100%;
-        width: auto;
-        height: auto;
-    }
-    
+
     .pub-content {
         width: 100%;
     }
-    
-    .pub-title {
-        font-size: 1em;
-    }
-    
-    .pub-authors {
-        font-size: 0.9em;
-    }
-    
-    .pub-venue {
-        font-size: 0.9em;
-    }
-}
 
-@media screen and (max-width: 480px) {
-    .pub-card {
-        padding: 12px;
-        gap: 12px;
-        margin-bottom: 20px;
-    }
-    
-    .pub-img-box {
-        flex: 0 0 auto;
-    }
-    
-    .pub-badge {
-        font-size: 0.75em;
-        padding: 3px 8px;
-    }
-    
-    .pub-title {
-        font-size: 0.95em;
-    }
-    
-    .pub-authors {
-        font-size: 0.85em;
-    }
-    
-    .pub-venue {
-        font-size: 0.85em;
-    }
-    
-    .pub-links {
-        font-size: 0.9em;
-    }
-}
-
-/* Dark mode support - Manual toggle */
-html.dark-mode .pub-card {
-    background-color: #353548;
-    border: 1px solid #454560;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-html.dark-mode .pub-img-box {
-    background-color: #2d2d3f;
-}
-
-html.dark-mode .pub-img {
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
-}
-
-html.dark-mode .pub-badge {
-    background-color: #5a9fd4;
-    color: white;
-}
-
-html.dark-mode .pub-authors {
-    color: #c8c8c8;
-}
-
-html.dark-mode .pub-venue {
-    color: #b0b0b0;
-}
-
-html.dark-mode .pub-title {
-    color: #e8e8e8;
-}
-
-html.dark-mode .pub-title a {
-    color: #7fb3d3;
-}
-
-html.dark-mode .pub-title a:hover {
-    color: #9bc4e2;
-}
-
-/* Dark mode support - System preference */
-@media (prefers-color-scheme: dark) {
-    html:not(.light-mode) .pub-card {
-        background-color: #353548;
-        border: 1px solid #454560;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    }
-    
-    html:not(.light-mode) .pub-img-box {
-        background-color: #2d2d3f;
-    }
-    
-    html:not(.light-mode) .pub-img {
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
-    }
-    
-    html:not(.light-mode) .pub-badge {
-        background-color: #5a9fd4;
-        color: white;
-    }
-    
-    html:not(.light-mode) .pub-authors {
-        color: #c8c8c8;
-    }
-    
-    html:not(.light-mode) .pub-venue {
-        color: #b0b0b0;
-    }
-    
-    html:not(.light-mode) .pub-title {
-        color: #e8e8e8;
-    }
-    
-    html:not(.light-mode) .pub-title a {
-        color: #7fb3d3;
-    }
-    
-    html:not(.light-mode) .pub-title a:hover {
-        color: #9bc4e2;
+    .pub-links-inline {
+        display: inline;
+        margin-left: 8px;
     }
 }

@@ -1,82 +1,103 @@
-// Theme toggle functionality
-(function() {
+(function () {
     'use strict';
-    
-    // 获取保存的主题或系统偏好
+
     function getInitialTheme() {
-        const savedTheme = localStorage.getItem('theme');
+        var savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             return savedTheme;
         }
-        // 如果没有保存的主题，使用系统偏好
+
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
-    
-    // 应用主题（不依赖DOM元素，用于初始化）
-    function setThemeClass(theme) {
-        const html = document.documentElement;
-        if (theme === 'dark') {
-            html.classList.add('dark-mode');
-            html.classList.remove('light-mode');
-        } else {
-            html.classList.add('light-mode');
-            html.classList.remove('dark-mode');
-        }
+
+    function applyThemeClass(theme) {
+        var html = document.documentElement;
+        html.classList.toggle('dark-mode', theme === 'dark');
+        html.classList.toggle('light-mode', theme !== 'dark');
     }
-    
-    // 初始化主题（在DOM加载前执行，避免闪烁）
-    const initialTheme = getInitialTheme();
-    setThemeClass(initialTheme);
-    
-    // DOM加载完成后设置按钮和事件
-    document.addEventListener('DOMContentLoaded', function() {
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = themeToggle.querySelector('.theme-icon');
-        const html = document.documentElement;
-        
-        // 更新图标
+
+    var initialTheme = getInitialTheme();
+    applyThemeClass(initialTheme);
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var html = document.documentElement;
+        var themeToggle = document.getElementById('theme-toggle');
+        var themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
+        var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        var navLinks = Array.prototype.slice.call(document.querySelectorAll('.top-nav-links a[href^="#"]'));
+        var sections = navLinks
+            .map(function (link) {
+                return document.querySelector(link.getAttribute('href'));
+            })
+            .filter(Boolean);
+
         function updateIcon() {
-            if (html.classList.contains('dark-mode')) {
-                themeIcon.textContent = '☀️';
-            } else {
-                themeIcon.textContent = '🌙';
+            if (!themeIcon) {
+                return;
             }
+
+            themeIcon.textContent = html.classList.contains('dark-mode') ? '☀️' : '🌙';
         }
-        
-        // 应用主题（完整版本，包括图标更新）
+
         function setTheme(theme) {
-            if (theme === 'dark') {
-                html.classList.add('dark-mode');
-                html.classList.remove('light-mode');
-                themeIcon.textContent = '☀️';
-            } else {
-                html.classList.add('light-mode');
-                html.classList.remove('dark-mode');
-                themeIcon.textContent = '🌙';
-            }
+            applyThemeClass(theme);
             localStorage.setItem('theme', theme);
+            updateIcon();
         }
-        
-        // 切换主题
+
         function toggleTheme() {
-            const currentTheme = html.classList.contains('dark-mode') ? 'dark' : 'light';
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
+            var currentTheme = html.classList.contains('dark-mode') ? 'dark' : 'light';
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
         }
-        
-        // 初始化图标
+
+        function setActiveNav(targetId) {
+            navLinks.forEach(function (link) {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + targetId);
+            });
+        }
+
         updateIcon();
-        
-        // 监听系统主题变化（仅在用户未手动设置时）
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            // 如果用户没有手动设置过主题，则跟随系统
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', toggleTheme);
+        }
+
+        function handleSystemThemeChange(event) {
             if (!localStorage.getItem('theme')) {
-                setTheme(e.matches ? 'dark' : 'light');
+                applyThemeClass(event.matches ? 'dark' : 'light');
+                updateIcon();
             }
-        });
-        
-        // 绑定点击事件
-        themeToggle.addEventListener('click', toggleTheme);
+        }
+
+        if (typeof mediaQuery.addEventListener === 'function') {
+            mediaQuery.addEventListener('change', handleSystemThemeChange);
+        } else if (typeof mediaQuery.addListener === 'function') {
+            mediaQuery.addListener(handleSystemThemeChange);
+        }
+
+        if (navLinks.length && sections.length) {
+            setActiveNav(sections[0].id);
+
+            var observer = new IntersectionObserver(function (entries) {
+                var visibleEntries = entries
+                    .filter(function (entry) {
+                        return entry.isIntersecting;
+                    })
+                    .sort(function (left, right) {
+                        return right.intersectionRatio - left.intersectionRatio;
+                    });
+
+                if (visibleEntries.length) {
+                    setActiveNav(visibleEntries[0].target.id);
+                }
+            }, {
+                rootMargin: '-18% 0px -58% 0px',
+                threshold: [0.15, 0.35, 0.6]
+            });
+
+            sections.forEach(function (section) {
+                observer.observe(section);
+            });
+        }
     });
 })();
-

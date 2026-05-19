@@ -1,132 +1,130 @@
-/* Info Header Styles */
-.info-header {
-    height: 220px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 20px;
-    display: flex;
-    align-items: flex-start;
-    gap: 25px;
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 40px;
+    text-align: left;
 }
 
-/* Avatar (profile image) */
-.info-avatar {
-    width: auto;
-    height: 220px;
-    padding-top: 0px;
-    text-align: center;
-    flex-shrink: 0;
+.sidebar-card {
+    padding: 0;
+}
+
+.profile-avatar {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.profile-avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.profile-name {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #333333;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.profile-subname {
+    font-size: 1.2rem;
+    color: #666666;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.profile-title {
+    color: #444444;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.profile-org {
+    color: #444444;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.profile-dept {
+    color: #555555;
+    font-size: 0.92rem;
+    margin-bottom: 15px;
+}
+
+.profile-info-list,
+.profile-social-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.profile-info-list li {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    color: #555555;
+    font-size: 0.9rem;
 }
 
-.info-avatar img {
-    border-radius: 0 !important;
-    width: auto;
-    height: 220px;
-    max-width: none;
-    object-fit: contain;
-    padding: 0;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.profile-info-list li i {
+    width: 16px;
+    text-align: center;
+    color: #333333;
 }
 
-/* Info content (right side of header) */
-.info-content {
-    position: relative;
-    flex: 1;
-    min-width: 0;
-    padding-left: 0;
-    padding-top: 10px;
+.profile-social-list {
+    margin-top: 20px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 15px;
 }
 
-.info-desc {
-    width: 100%;
-    max-width: 650px;
-    border-top: 0px;
-    border-bottom: 0px;
-    padding: 5px 0 5px 0;
+.profile-social-list li {
+    margin-bottom: 8px;
 }
 
-.info-desc p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    line-height: 1.6;
+.profile-social-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #424242;
+    font-size: 0.95rem;
 }
 
-.info-content h1 {
-    margin-top: 0;
-    margin-bottom: 0.3em;
+.profile-social-list a:hover {
+    color: #0066cc;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .info-header {
-        height: auto;
-        margin-top: 15px;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    
-    .info-avatar {
-        height: auto;
-        width: auto;
-    }
-    
-    .info-avatar img {
-        width: auto;
-        height: 180px;
-        max-width: none;
-    }
-    
-    .info-content {
+.profile-social-list i {
+    width: 16px;
+    text-align: center;
+}
+
+@media (max-width: 850px) {
+    .sidebar {
         width: 100%;
-        padding-left: 0;
-        padding-top: 0;
+        position: static;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .profile-avatar {
         text-align: center;
     }
-    
-    .info-desc {
-        width: 100%;
+
+    .profile-avatar img {
+        margin: 0 auto;
     }
-    
-    .info-content h1 {
-        font-size: 1.4em;
+
+    .profile-info-list li,
+    .profile-social-list a {
+        justify-content: center;
     }
 }
-
-@media screen and (max-width: 480px) {
-    .info-header {
-        margin-top: 10px;
-        gap: 15px;
-    }
-    
-    .info-avatar img {
-        width: auto;
-        height: 150px;
-        max-width: none;
-    }
-    
-    .info-content h1 {
-        font-size: 1.2em;
-    }
-    
-    .info-desc p {
-        font-size: 0.9em;
-    }
-}
-
-/* Dark mode support - Manual toggle */
-html.dark-mode .info-avatar img {
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
-}
-
-/* Dark mode support - System preference */
-@media (prefers-color-scheme: dark) {
-    html:not(.light-mode) .info-avatar img {
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
-    }
-}
-
