@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./css/publications.css?v=20260327">
     <link rel="stylesheet" href="./css/education.css?v=20260327">
     <link rel="stylesheet" href="./css/experience.css?v=20260520">
+    <link rel="stylesheet" href="./css/projects.css?v=20260529">
     <script>
         window.addEventListener('load', function () {
             var script = document.createElement('script');
@@ -92,6 +93,7 @@
                     <a href="#publications">Publications</a>
                     <a href="#education">Education</a>
                     <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
                     <a href="#awards">Awards</a>
                 </nav>
             </div>
@@ -271,11 +273,55 @@
                                 <span class="exp-mentor">Advisor: Assistant Prof. Shangqi Guo</span>
                             </div>
                             <ul class="exp-desc-list">
-                                <li>Worked on DreamerV3-based reinforcement learning systems for real-world robot navigation and locomotion, including Clearpath Jackal UGV and Unitree Go1 platforms.</li>
-                                <li>Built a real-data-to-policy learning and deployment workflow for multi-room, multi-target navigation: keyboard data collection, offline training on curated real trajectories, and pure inference deployment on the robot.</li>
-                                <li>Designed and refined reward/perception modules for target progress, ArUco-based distance estimation, dynamic obstacle avoidance, collision penalties, and odometry-depth consistency under noisy real scenes.</li>
-                                <li>Explored a DreamerV3 -> Walk-These-Ways PPO -> low-level SDK pipeline for Go1 locomotion, where high-level visual/proprioceptive policies adjust gait parameters before low-level motor execution.</li>
+                                <li>Worked on DreamerV3-based reinforcement learning systems for real-world robot navigation and locomotion on Clearpath Jackal UGV and Unitree Go1 platforms.</li>
+                                <li>Built real-data-to-policy workflows across keyboard data collection, offline training on curated trajectories, and pure inference deployment; selected projects: [<a href="https://github.com/haodongcui/Jackal-DreamerV3-Navigation" target="_blank" rel="noopener noreferrer">Jackal Navigation</a>], [<a href="https://github.com/haodongcui/Go1-DreamerV3-WTW" target="_blank" rel="noopener noreferrer">Go1 DreamerV3-WTW</a>].</li>
+                                <li>Designed reward, perception, and deployment modules for target progress, ArUco-based distance estimation, obstacle avoidance, odometry-depth consistency, and high-level gait/style adaptation.</li>
                             </ul>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section" id="projects">
+                <h2>Selected Projects</h2>
+                <ul class="project-list">
+                    <li class="project-card">
+                        <div class="project-thumb">
+                            <a href="https://github.com/haodongcui/Jackal-DreamerV3-Navigation" target="_blank" rel="noopener noreferrer">
+                                <img src="./img/projects/jackal-dreamerv3-navigation.gif" alt="Jackal multi-target navigation and obstacle avoidance demo" class="project-img" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-text">
+                                <span class="project-title">Jackal-DreamerV3 Navigation</span>
+                                <span class="project-links-inline">[<a href="https://github.com/haodongcui/Jackal-DreamerV3-Navigation" target="_blank" rel="noopener noreferrer">GitHub</a>]</span>
+                                <span class="project-keywords">
+                                    <i>Keywords: DreamerV3, ROS2, JAX, RealSense, ArUco, ZeroMQ</i>
+                                </span>
+                                <span class="project-desc">
+                                    Built a real-robot multi-target indoor navigation workflow on Clearpath Jackal, covering keyboard data collection, offline training, reward/perception design, and pure inference deployment.
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="project-card">
+                        <div class="project-thumb">
+                            <a href="https://github.com/haodongcui/Go1-DreamerV3-WTW" target="_blank" rel="noopener noreferrer">
+                                <img src="./img/projects/go1-dreamerv3-wtw.gif" alt="Unitree Go1 robot demo for the Go1 DreamerV3-WTW project" class="project-img" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-text">
+                                <span class="project-title">Go1-DreamerV3-WTW</span>
+                                <span class="project-links-inline">[<a href="https://github.com/haodongcui/Go1-DreamerV3-WTW" target="_blank" rel="noopener noreferrer">GitHub</a>]</span>
+                                <span class="project-keywords">
+                                    <i>Keywords: DreamerV3, Walk These Ways, Unitree Go1, Isaac Gym, LCM</i>
+                                </span>
+                                <span class="project-desc">
+                                    Integrated DreamerV3 as a high-level gait/style adaptation policy over the Walk These Ways low-level controller, with training/deployment scripts and real-robot bring-up utilities.
+                                </span>
+                            </p>
                         </div>
                     </li>
                 </ul>
@@ -293,7 +339,7 @@
             </section>
 
             <footer class="page-footer">
-                <p>© 2026 Haodong Cui | Last updated: March 27, 2026</p>
+                <p>© 2026 Haodong Cui | Last updated: May 29, 2026</p>
                 <p>
                     This page has been viewed <span id="busuanzi_site_pv">...</span> times by
                     <span id="busuanzi_site_uv">...</span> visitors totally, and

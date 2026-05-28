@@ -1,0 +1,123 @@
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    margin: 0.25rem 0 1rem;
+    padding: 0;
+}
+
+.project-list .project-card {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.94rem;
+    line-height: 1.48;
+    color: #374151;
+}
+
+.project-list .project-card:last-child {
+    border-bottom: 0;
+}
+
+.project-thumb {
+    width: 150px;
+    height: 112px;
+}
+
+.project-thumb a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: #f8fafc;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.project-content {
+    min-width: 0;
+}
+
+.project-list .project-text {
+    margin: 0;
+    font-size: 0.94rem;
+    line-height: 1.48;
+    color: #374151;
+}
+
+.project-title {
+    display: inline;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1.35;
+}
+
+.project-links-inline {
+    margin-left: 0.35rem;
+    white-space: nowrap;
+    font-size: 0.92rem;
+}
+
+.project-keywords {
+    display: block;
+    margin-top: 0.25rem;
+    color: #6b7280;
+    font-size: 0.89rem;
+    line-height: 1.35;
+}
+
+.project-desc {
+    display: block;
+    margin-top: 0.3rem;
+    color: #374151;
+    font-size: 0.93rem;
+    line-height: 1.48;
+}
+
+@media (max-width: 768px) {
+    .project-list .project-card {
+        grid-template-columns: 118px minmax(0, 1fr);
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .project-thumb {
+        width: 118px;
+        height: 92px;
+    }
+
+    .project-title {
+        display: block;
+    }
+
+    .project-links-inline {
+        display: inline-block;
+        margin-left: 0;
+        margin-top: 2px;
+    }
+}
+
+@media (max-width: 520px) {
+    .project-list .project-card {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .project-thumb {
+        width: 132px;
+        height: 100px;
+    }
+}

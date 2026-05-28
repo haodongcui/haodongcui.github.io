@@ -124,6 +124,10 @@ a:hover {
     content: "🎓";
 }
 
+#projects h2::before {
+    content: "💻";
+}
+
 #awards h2::before {
     content: "🏆";
 }
@@ -151,17 +155,17 @@ a:hover {
     margin-left: 0;
 }
 
-.section ul:not(.news-list):not(.pub-list):not(.edu-list) {
+.section ul:not(.news-list):not(.pub-list):not(.edu-list):not(.project-list) {
     margin-top: 0.2em;
     margin-bottom: 0.8em;
     padding-top: 0;
 }
 
-.section ul:not(.news-list):not(.pub-list):not(.edu-list) li p {
+.section ul:not(.news-list):not(.pub-list):not(.edu-list):not(.project-list) li p {
     margin-bottom: 0.3em;
 }
 
-.section ul:not(.news-list):not(.pub-list):not(.edu-list) {
+.section ul:not(.news-list):not(.pub-list):not(.edu-list):not(.project-list) {
     list-style-position: outside;
     list-style-type: square;
 }
