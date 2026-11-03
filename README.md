@@ -21,3 +21,4 @@ The older component styles and `js/theme.js` are retained for reference; the cur
 HaM-World's alphaXiv likes are a manually verified snapshot (17, checked October 31, 2026); update the count and its dated accessibility label/title together when refreshing it. The link opens alphaXiv, where visitors can like the paper.
 
 GitHub stars refresh from the public GitHub repository API on page load. A verified snapshot (14, checked October 31, 2026) remains visible if the API is unavailable or rate-limited. No API key or third-party proxy is used. Paper icons are inline SVGs, with no icon-font dependency.
+
